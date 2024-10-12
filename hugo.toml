@@ -1,6 +1,6 @@
 #baseURL = 'http://proyectosdwa.es/manuel'
-#baseURL = 'http://web.infenlaces.com/despliegue/contenido'
-baseURL = 'http://localhost:1313/'
+baseURL = 'http://web.infenlaces.com/despliegue/contenido'
+#baseURL = 'http://localhost:1313/'
 # theme= 'docsy'
 
 
