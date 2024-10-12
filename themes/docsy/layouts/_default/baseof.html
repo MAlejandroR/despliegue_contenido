@@ -1,0 +1,24 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage"
+      {{- with .Site.Language.LanguageDirection }} dir="{{ . }}" {{- end -}}
+      {{ with .Site.Language.Lang }} lang="{{ . }}" {{- end }} {{/**/ -}}
+class="no-js">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
+
+{{ partial "navbar.html" . }}
+<button onclick="window.print()" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    <i class="fas fa-file-pdf"></i> Imprimir como PDF
+</button>
+
+<div class="container-fluid td-default td-outer">
+    <main role="main" class="td-main">
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+</div>
+{{ partialCached "scripts.html" . }}
+</body>
+</html>
