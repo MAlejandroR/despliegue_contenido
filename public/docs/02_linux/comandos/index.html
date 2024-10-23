@@ -3,28 +3,27 @@
   <head><script src="/despliegue/contenido/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=despliegue/contenido/livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="canonical" type="text/html" href="http://localhost:1313/despliegue/contenido/docs/02_linux/">
-<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/despliegue/contenido/docs/02_linux/index.xml">
 <meta name="robots" content="noindex, nofollow">
 
 
 <link rel="shortcut icon" href="/despliegue/contenido/favicons/favicon.ico" >
 
-<title>Linux | Recursos de apoyo al aprendizaje</title>
-<meta name="description" content="Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.">
-<meta property="og:url" content="http://localhost:1313/despliegue/contenido/docs/02_linux/">
+<title>Comandos | Recursos de apoyo al aprendizaje</title>
+<meta name="description" content="Repaso de Comandos Generales de Linux y Redes Comandos Generales 1. ls Lista los archivos y directorios en el directorio actual. 1 ls -la -l: lista en formato largo. -a: incluye archivos ocultos. 2. cd Cambia de directorio. 1 cd /ruta/del/directorio 3. cp Copia archivos o directorios. 1 cp archivo_origen archivo_destino -r: para copiar directorios de forma recursiva. 4. mv Mueve o renombra archivos o directorios. 1 mv archivo_origen archivo_destino ">
+<meta property="og:url" content="http://localhost:1313/despliegue/contenido/docs/02_linux/comandos/">
   <meta property="og:site_name" content="Recursos de apoyo al aprendizaje">
-  <meta property="og:title" content="Linux">
-  <meta property="og:description" content="🐧 Objetivos Repaso y práctica con comandos de linux Creando una virtualización con vagrant Comando de linux Comandos básicos Comandos de ficheros Comandos de redes Comandos de seguridad Instalación de vagrant Qué es vagrant Vagrant es una herramienta de código abierto diseñada para la creación y gestión de entornos virtualizados de forma eficiente.">
+  <meta property="og:title" content="Comandos">
+  <meta property="og:description" content="Repaso de Comandos Generales de Linux y Redes Comandos Generales 1. ls Lista los archivos y directorios en el directorio actual. 1 ls -la -l: lista en formato largo. -a: incluye archivos ocultos. 2. cd Cambia de directorio. 1 cd /ruta/del/directorio 3. cp Copia archivos o directorios. 1 cp archivo_origen archivo_destino -r: para copiar directorios de forma recursiva. 4. mv Mueve o renombra archivos o directorios. 1 mv archivo_origen archivo_destino">
   <meta property="og:locale" content="es_es">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
 
-  <meta itemprop="name" content="Linux">
-  <meta itemprop="description" content="🐧 Objetivos Repaso y práctica con comandos de linux Creando una virtualización con vagrant Comando de linux Comandos básicos Comandos de ficheros Comandos de redes Comandos de seguridad Instalación de vagrant Qué es vagrant Vagrant es una herramienta de código abierto diseñada para la creación y gestión de entornos virtualizados de forma eficiente.">
-  <meta itemprop="wordCount" content="770">
+  <meta itemprop="name" content="Comandos">
+  <meta itemprop="description" content="Repaso de Comandos Generales de Linux y Redes Comandos Generales 1. ls Lista los archivos y directorios en el directorio actual. 1 ls -la -l: lista en formato largo. -a: incluye archivos ocultos. 2. cd Cambia de directorio. 1 cd /ruta/del/directorio 3. cp Copia archivos o directorios. 1 cp archivo_origen archivo_destino -r: para copiar directorios de forma recursiva. 4. mv Mueve o renombra archivos o directorios. 1 mv archivo_origen archivo_destino">
+  <meta itemprop="wordCount" content="482">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Linux">
-  <meta name="twitter:description" content="🐧 Objetivos Repaso y práctica con comandos de linux Creando una virtualización con vagrant Comando de linux Comandos básicos Comandos de ficheros Comandos de redes Comandos de seguridad Instalación de vagrant Qué es vagrant Vagrant es una herramienta de código abierto diseñada para la creación y gestión de entornos virtualizados de forma eficiente.">
+  <meta name="twitter:title" content="Comandos">
+  <meta name="twitter:description" content="Repaso de Comandos Generales de Linux y Redes Comandos Generales 1. ls Lista los archivos y directorios en el directorio actual. 1 ls -la -l: lista en formato largo. -a: incluye archivos ocultos. 2. cd Cambia de directorio. 1 cd /ruta/del/directorio 3. cp Copia archivos o directorios. 1 cp archivo_origen archivo_destino -r: para copiar directorios de forma recursiva. 4. mv Mueve o renombra archivos o directorios. 1 mv archivo_origen archivo_destino">
 
 
 
@@ -38,7 +37,7 @@
   crossorigin="anonymous"></script>
 
   </head>
-  <body class="td-section">
+  <body class="td-page">
     <header>
       <nav class="td-navbar js-navbar-scroll "  data-bs-theme="dark">
 <div class="container-fluid flex-column flex-md-row ">
@@ -116,561 +115,164 @@
     <div class="container-fluid td-outer">
       <div class="td-main">
         <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-desplieguecontenidodocs-li">
+  <a href="/despliegue/contenido/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-desplieguecontenidodocs"><span class="">Docs</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-desplieguecontenidodocs01_redes-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs01_redes-check"/>
+  <label for="m-desplieguecontenidodocs01_redes-check"><a href="/despliegue/contenido/docs/01_redes/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs01_redes"><i class="fa-solid fa-network-wired"></i><span class="">Redes</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs01_redes00_conceptos_basicos-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs01_redes00_conceptos_basicos-check"/>
+  <label for="m-desplieguecontenidodocs01_redes00_conceptos_basicos-check"><a href="/despliegue/contenido/docs/01_redes/00_conceptos_basicos/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs01_redes00_conceptos_basicos"><i class="fa-solid fa-network-wired"></i><span class="">Conceptos</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs01_redes01_internet-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs01_redes01_internet-check"/>
+  <label for="m-desplieguecontenidodocs01_redes01_internet-check"><a href="/despliegue/contenido/docs/01_redes/01_internet/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs01_redes01_internet"><i class="fas fa-globe"></i><span class="">Internet</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs01_redes02_capas-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs01_redes02_capas-check"/>
+  <label for="m-desplieguecontenidodocs01_redes02_capas-check"><a href="/despliegue/contenido/docs/01_redes/02_capas/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs01_redes02_capas"><i class="fas fa-comments"></i><span class="">Modelo OSI</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs01_redes03_subredes-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs01_redes03_subredes-check"/>
+  <label for="m-desplieguecontenidodocs01_redes03_subredes-check"><a href="/despliegue/contenido/docs/01_redes/03_subredes/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs01_redes03_subredes"><i class="fas fa-project-diagram"></i><span class="">Subredes</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs01_redes05_www-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs01_redes05_www-check"/>
+  <label for="m-desplieguecontenidodocs01_redes05_www-check"><a href="/despliegue/contenido/docs/01_redes/05_www/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs01_redes05_www"><i class="fas fa-exchange-alt"></i><span class="">www</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-desplieguecontenidodocs02_linux-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linux-check" checked/>
+  <label for="m-desplieguecontenidodocs02_linux-check"><a href="/despliegue/contenido/docs/02_linux/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs02_linux"><i class="fab fa-linux"></i><span class="">Linux</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-desplieguecontenidodocs02_linuxcomandos-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos-check" checked/>
+  <label for="m-desplieguecontenidodocs02_linuxcomandos-check"><a href="/despliegue/contenido/docs/02_linux/comandos/" title="Comandos" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxcomandos"><i class="fab fa-linux"></i><span class="td-sidebar-nav-active-item">comandos</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs03_docker-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs03_docker-check"/>
+  <label for="m-desplieguecontenidodocs03_docker-check"><a href="/despliegue/contenido/docs/03_docker/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs03_docker"><i class="fab fa-docker"></i><span class="">Docker</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs04_servicios-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs04_servicios-check"/>
+  <label for="m-desplieguecontenidodocs04_servicios-check"><a href="/despliegue/contenido/docs/04_servicios/" title="Servicios de internet" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs04_servicios"><i class="fas fa-server"></i><span class="">Servicios</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs05_git-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs05_git-check"/>
+  <label for="m-desplieguecontenidodocs05_git-check"><a href="/despliegue/contenido/docs/05_git/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs05_git"><i class="fab fa-git-alt"></i><span class="">Git</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs06_aws-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs06_aws-check"/>
+  <label for="m-desplieguecontenidodocs06_aws-check"><a href="/despliegue/contenido/docs/06_aws/" title="Amazon WS" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs06_aws"><i class="fab fa-aws"></i><span class="">AWS</span></a></label>
+  
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a id="print" href="/despliegue/contenido/docs/02_linux/_print/"><i class="fa-solid fa-print fa-fw"></i> Imprimir sección </a>
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#comandos-generales">Comandos Generales</a>
+      <ul>
+        <li><a href="#1-ls">1. <code>ls</code></a></li>
+        <li><a href="#2-cd">2. <code>cd</code></a></li>
+        <li><a href="#3-cp">3. <code>cp</code></a></li>
+        <li><a href="#4-mv">4. <code>mv</code></a></li>
+        <li><a href="#5-rm">5. <code>rm</code></a></li>
+        <li><a href="#6-cat">6. <code>cat</code></a></li>
+        <li><a href="#7-grep">7. <code>grep</code></a></li>
+        <li><a href="#8-chmod">8. <code>chmod</code></a></li>
+        <li><a href="#9-chown">9. <code>chown</code></a></li>
+        <li><a href="#10-find">10. <code>find</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#comandos-de-redes-y-comunicaciones">Comandos de Redes y Comunicaciones</a>
+      <ul>
+        <li><a href="#1-ifconfig">1. <code>ifconfig</code></a></li>
+        <li><a href="#2-ip">2. <code>ip</code></a></li>
+        <li><a href="#3-ping">3. <code>ping</code></a></li>
+        <li><a href="#4-netstat">4. <code>netstat</code></a></li>
+        <li><a href="#5-ss">5. <code>ss</code></a></li>
+        <li><a href="#6-traceroute">6. <code>traceroute</code></a></li>
+        <li><a href="#7-nslookup">7. <code>nslookup</code></a></li>
+        <li><a href="#8-dig">8. <code>dig</code></a></li>
+        <li><a href="#9-ftp--sftp">9. <code>ftp</code> / <code>sftp</code></a></li>
+        <li><a href="#10-scp">10. <code>scp</code></a></li>
+        <li><a href="#11-curl">11. <code>curl</code></a></li>
+        <li><a href="#12-wget">12. <code>wget</code></a></li>
+        <li><a href="#13-nmap">13. <code>nmap</code></a></li>
+        <li><a href="#14-ssh">14. <code>ssh</code></a></li>
+        <li><a href="#15-iptables">15. <code>iptables</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#comandos-útiles-para-configuración-de-redes">Comandos Útiles para Configuración de Redes</a>
+      <ul>
+        <li><a href="#1-hostname">1. <code>hostname</code></a></li>
+        <li><a href="#2-systemctl">2. <code>systemctl</code></a></li>
+        <li><a href="#3-nmcli">3. <code>nmcli</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#comandos-para-diagnóstico-de-red">Comandos para Diagnóstico de Red</a>
+      <ul>
+        <li><a href="#1-mtr">1. <code>mtr</code></a></li>
+        <li><a href="#2-tcpdump">2. <code>tcpdump</code></a></li>
+        <li><a href="#3-ethtool">3. <code>ethtool</code></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
+            
+
+          </aside>
           <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
             
+  
 
-
-
-
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/despliegue/contenido/docs/">Docs</a></li>
+  <li class="breadcrumb-item">
+    <a href="/despliegue/contenido/docs/02_linux/">Linux</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    comandos</li>
+  </ol>
+</nav>
+            
 <div class="td-content">
-<div class="pageinfo pageinfo-primary d-print-none">
-<p>
-Versión imprimible multipagina.
-<a href="#" onclick="print();return false;">Haga click aquí para imprimir</a>.
-</p><p>
-<a href="/despliegue/contenido/docs/02_linux/">Volver a la vista normal de esta página</a>.
-</p>
-</div>
-
-
-
-<h1 class="title">Linux</h1>
-
-
-
-
-
-    <ul>
-    
-  
-  
-  
-  
-
-  
-    
-    
+	<h1>Comandos</h1>
 	
-<li>1: <a href="#pg-050e14752b2ab5a489b221c4b6abf567">Comandos</a></li>
-
-
-    
-  
-
-    </ul>
-
-
-<div class="content">
-      <h1 id="penguin">&#x1f427;</h1>
-
-
-
-<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
-    <div style="background-color:darkgreen; color:white;
-    font-weight:bold; padding:10px; display: flex; align-items: center;">
-        
-        <span style="margin-right: 8px;">
-            <i class="fas  fa-check-circle"></i> 
-        </span>
-        
-        <span >Objetivos</span>
-    </div>
-
-    <h3 style="padding: 5px;font-weight:bold"> Repaso y práctica con comandos  de linux</h3>
-
-    <hr style="border-color:seagreen;border-width:3px"/>
-    
-    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
-        <ul>
-        
-        <li>Creando una virtualización con vagrant</li>
-            
-        <li>Comando de linux</li>
-            
-        <li>Comandos básicos</li>
-            
-        <li>Comandos de ficheros</li>
-            
-        <li>Comandos de redes</li>
-            
-        <li>Comandos de seguridad</li>
-            
-        
-        
-        
-        </ul>
-
-    </div>
-</div>
-
-<h1 id="instalación-de-vagrant">Instalación de vagrant</h1>
-<h2 id="qué-es-vagrant">Qué es vagrant</h2>
-<p><strong>Vagrant</strong> es una herramienta de código abierto diseñada para la creación y gestión de entornos virtualizados de forma eficiente.</p>
-<p>Su principal objetivo es proporcionar una forma fácil y reproducible de configurar, lanzar y gestionar 
-<strong>
-<span class="font-weight-bold text-primary">
-
-    máquinas virtuales
-
-
-</span>
-</strong>
-.</p>
-
-<strong>
-<span class="font-weight-bold text-primary">
-
-    Características de vagrant
-
-
-</span>
-</strong>
-
-<ul>
-<li>Definir la configuración de una máquina virtual en un archivo llamado 
-<strong>
-<span class="font-weight-bold text-primary">
-
-    Vagrantfile
-
-
-</span>
-</strong>
-.</li>
-<li>Crear entornos virtuales en pocos minutos con 
-<strong>
-<span class="font-weight-bold text-primary">
-
-    configuraciones personalizadas
-
-
-</span>
-</strong>
- (sistemas operativos, software, redes, etc.).</li>
-<li>Usar 
-<strong>
-<span class="font-weight-bold text-primary">
-
-    proveedores de virtualización
-
-
-</span>
-</strong>
- como VirtualBox, VMware, Docker, entre otros.</li>
-<li>
-<strong>
-<span class="font-weight-bold text-primary">
-
-    Automatizar
-
-
-</span>
-</strong>
- la instalación de software, lo que permite que todos los miembros del equipo de desarrollo trabajen en un entorno idéntico, evitando problemas de &ldquo;funciona en mi máquina&rdquo;.</li>
-</ul>
-
-
-<div class="alert alert-success" role="alert">
-<h4 class="alert-heading">En resumen</h4>
-
-    Vagrant nos facilita la configuración y el despliegue de entornos de desarrollo de manera rápida, repetible y escalable, simplificando la administración de <strong>infraestructuras virtuales</strong>.
-
-</div>
-
-<h3 id="instalación-en-windows">Instalación en Windows</h3>
-<br />
-<ul>
-<li>
-<p>Necesitamos tener instalados tanto 
-<strong>
-<span class="font-weight-bold text-primary">
-
-    <a href="https://www.virtualbox.org/wiki/Downloads">Virtualbox</a>
-
-
-</span>
-</strong>
- como 
-<strong>
-<span class="font-weight-bold text-primary">
-
-    <a href="https://developer.hashicorp.com/vagrant/install?product_intent=vagrant">Vagrant</a>
-
-
-</span>
-</strong>
-.</p>
-</li>
-<li>
-<p>Lo primero será lo descargamos y posteriormente procedemos a la instalación</p>
-</li>
-<li>
-<p>Seleccionaremos en función del sistema operativo.</p>
-</li>
-<li>
-<p>
-<strong>
-<span class="font-weight-bold text-primary">
-
-    En windows
-
-
-</span>
-</strong>
-, lo instalaremos  siguiendo las instrucciones del asistente de instalación (El proceso es sencillo).</p>
-</li>
-</ul>
-<h3 id="instalación-en-ubuntu">Instalación en ubuntu</h3>
-<p>Cómo siempre, lo primero 
-<strong>
-<span class="font-weight-bold text-primary">
-
-    Actualizar el sistema
-
-
-</span>
-</strong>
-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
-</span></span><span style="display:flex;"><span>sudo apt upgrade -y
-</span></span></code></pre></div><p>*Como hemos comentado, 
-<strong>
-<span class="font-weight-bold text-primary">
-
-    vagrant
-
-
-</span>
-</strong>
- requiere tener instaladas algunas dependencias, como 
-<strong>
-<span class="font-weight-bold text-primary">
-
-    VirtualBox
-
-
-</span>
-</strong>
-, que es el proveedor de virtualización más común que Vagrant utiliza.</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">apt</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">virtualbox</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">y</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-<p>Ahora vamos 
-<strong>
-<span class="font-weight-bold text-primary">
-
-    a descargar e instalar Vagrant
-
-
-</span>
-</strong>
-.</p>
-<p>Es posible que  vagrant no está en el repositorio de ubuntu, por lo que descargaríamos el fichero 
-<strong>
-<span class="font-weight-bold text-primary">
-
-    .deb
-
-
-</span>
-</strong>
- para proceder a la instalación</p>
-
-<strong>
-<span class="font-weight-bold text-primary">
-
-    Añadiendo el repositorio de HashiCorp
-
-
-</span>
-</strong>
-
-<ul>
-<li>Añadir la clave GPG
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">curl</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">fsSL</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">apt</span><span style="color:#f92672">.</span><span style="color:#a6e22e">releases</span><span style="color:#f92672">.</span><span style="color:#a6e22e">hashicorp</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">gpg</span> <span style="color:#f92672">|</span> <span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">apt</span><span style="color:#f92672">-</span><span style="color:#a6e22e">key</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">-</span></span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-<li>Añadir el repositorio de HashiCorp a tu lista de fuentes
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">apt</span><span style="color:#f92672">-</span><span style="color:#a6e22e">add</span><span style="color:#f92672">-</span><span style="color:#a6e22e">repository</span> <span style="color:#e6db74">&#34;deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main&#34;</span></span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<p>Con el repositorio añadido, instalamos Vagrant :
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">apt</span> <span style="color:#a6e22e">update</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">apt</span> <span style="color:#a6e22e">install</span> <span style="color:#a6e22e">vagrant</span> 
-</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<p>Para asegurarte de que Vagrant se ha instalado correctamente, miramos su versión
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">vagrant</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">version</span></span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="configuración-y-uso-de-vagrant">Configuración y uso de vagrant</h3>
-<p>Una vez instalado, da lo mismo que tengamos windows o linux, funcionaremos de la misma forma.</p>
-<ul>
-<li>Abrimos un terminal (en windows mucho mejor un power shell)</li>
-<li>Crea un directorio para nuestro proyecto de vagrant (es una forma de hablar, vamos a crear una virtualización de una máquina, gestinándolo con vagrant)</li>
-</ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">mkdir</span> <span style="color:#a6e22e">vagrant</span><span style="color:#f92672">-</span><span style="color:#a6e22e">proyecto</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cd</span> <span style="color:#a6e22e">vagrant</span><span style="color:#f92672">-</span><span style="color:#a6e22e">proyecto</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-<p>*Inicializa un nuevo entorno de Vagrant con una caja (box) básica:</p>
-<ul>
-<li>Podemos establecer el box o caja o virtualizacion que queremos
-<a href="https://app.vagrantup.com/boxes/search">https://app.vagrantup.com/boxes/search</a></li>
-</ul>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">vagrant</span> <span style="color:#a6e22e">init</span> <span style="color:#a6e22e">ubuntu</span><span style="color:#f92672">/</span><span style="color:#a6e22e">bionic64</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-<ul>
-<li>Esto creará un archivo Vagrantfile con la configuración inicial.</li>
-</ul>
-
-<strong>
-<span class="font-weight-bold text-primary">
-
-    Levantar la máquina virtual:
-
-
-</span>
-</strong>
-
-<ul>
-<li>Para crear y ejecutar la máquina virtual, usa el siguiente comando:
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#a6e22e">vagrant</span> <span style="color:#a6e22e">up</span></span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-
-<strong>
-<span class="font-weight-bold text-primary">
-
-    Acceder a la máquina virtual:
-
-
-</span>
-</strong>
-
-<p>Una vez que la máquina esté levantada, accede a ella mediante SSH:
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">vagrant</span> <span style="color:#a6e22e">ssh</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-
-<strong>
-<span class="font-weight-bold text-primary">
-
-    Detener o destruir la máquina virtual:
-
-
-</span>
-</strong>
-</p>
-<p>Para detener la máquina:</p>
-<p><div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">vagrant</span> <span style="color:#a6e22e">halt</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-
-<strong>
-<span class="font-weight-bold text-primary">
-
-    Para destruir la máquina (eliminarla):
-
-
-</span>
-</strong>
-</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">vagrant</span> <span style="color:#a6e22e">destroy</span></span></span></code></pre></td></tr></table>
-</div>
-</div>
-<h4 id="personalización-del-vagrantfile">Personalización del Vagrantfile</h4>
-<p>En el archivo Vagrantfile, puedes personalizar la configuración de tu entorno.
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">Vagrant</span><span style="color:#f92672">.</span><span style="color:#a6e22e">configure</span>(<span style="color:#e6db74">&#34;2&#34;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span><span style="color:#a6e22e">config</span><span style="color:#f92672">|</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">config</span><span style="color:#f92672">.</span><span style="color:#a6e22e">vm</span><span style="color:#f92672">.</span><span style="color:#a6e22e">box</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ubuntu/bionic64&#34;</span>      <span style="color:#75715e"># Define la caja a usar
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">config</span><span style="color:#f92672">.</span><span style="color:#a6e22e">vm</span><span style="color:#f92672">.</span><span style="color:#a6e22e">network</span> <span style="color:#e6db74">&#34;private_network&#34;</span>, <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dhcp&#34;</span>  <span style="color:#75715e"># Configura la red privada
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">config</span><span style="color:#f92672">.</span><span style="color:#a6e22e">vm</span><span style="color:#f92672">.</span><span style="color:#a6e22e">provider</span> <span style="color:#e6db74">&#34;virtualbox&#34;</span> <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span><span style="color:#a6e22e">vb</span><span style="color:#f92672">|</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">vb</span><span style="color:#f92672">.</span><span style="color:#a6e22e">memory</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1024&#34;</span>                   <span style="color:#75715e"># Asigna memoria RAM
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">vb</span><span style="color:#f92672">.</span><span style="color:#a6e22e">cpus</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>                          <span style="color:#75715e"># Asigna cantidad de CPUs
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">end</span></span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-
-
-<div class="alert alert-success" role="alert">
-<h4 class="alert-heading">Proveedor</h4>
-
-    Aunque en este ejemplo usamos VirtualBox como proveedor, también puedes usar otros como VMware o Hyper-V
-
-</div>
-
-<h2 id="instalación-base">Instalación base</h2>
-<h3 id="partimos-de-una-configuración-base">Partimos de una configuración base</h3>
-<h3 id="ejemplos-personalizados">Ejemplos personalizados</h3>
-<p>Vamos a especificar un 
-<strong>
-<span class="font-weight-bold text-primary">
-
-    Vagrantfile
-
-
-</span>
-</strong>
- que cumple con los requisitos que has mencionado:</p>
-
-<strong>
-<span class="font-weight-bold text-primary">
-
-    Instala Apache y PHP.
-
-
-</span>
-</strong>
-
-<ul>
-<li>Comparte la carpeta local ./app con /var/www/html en la máquina virtual.</li>
-<li>Mapea el puerto 8888 de la máquina anfitriona con el puerto 80 de la máquina virtual.
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span>  <span style="color:#a6e22e">Vagrant</span><span style="color:#f92672">.</span><span style="color:#a6e22e">configure</span>(<span style="color:#e6db74">&#34;2&#34;</span>) <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span><span style="color:#a6e22e">config</span><span style="color:#f92672">|</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">*</span> <span style="color:#75715e"># Usar la imagen base de Ubuntu
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">config</span><span style="color:#f92672">.</span><span style="color:#a6e22e">vm</span><span style="color:#f92672">.</span><span style="color:#a6e22e">box</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;bento/ubuntu-22.04&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Mapeo de puertos: 8888 en la máquina local al 80 en la máquina virtual
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">config</span><span style="color:#f92672">.</span><span style="color:#a6e22e">vm</span><span style="color:#f92672">.</span><span style="color:#a6e22e">network</span> <span style="color:#e6db74">&#34;forwarded_port&#34;</span>, <span style="color:#a6e22e">guest</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">80</span>, <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">8888</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Compartir la carpeta ./app en el host con /var/www/html en la VM
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">config</span><span style="color:#f92672">.</span><span style="color:#a6e22e">vm</span><span style="color:#f92672">.</span><span style="color:#a6e22e">synced_folder</span> <span style="color:#e6db74">&#34;./app&#34;</span>, <span style="color:#e6db74">&#34;/var/www/html&#34;</span>, <span style="color:#a6e22e">owner</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;www-data&#34;</span>, <span style="color:#a6e22e">group</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;www-data&#34;</span>, <span style="color:#a6e22e">mount_options</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;dmode=775&#34;</span>, <span style="color:#e6db74">&#34;fmode=664&#34;</span>]
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Provisionar la máquina virtual para instalar Apache y PHP
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">config</span><span style="color:#f92672">.</span><span style="color:#a6e22e">vm</span><span style="color:#f92672">.</span><span style="color:#a6e22e">provision</span> <span style="color:#e6db74">&#34;shell&#34;</span>, <span style="color:#a6e22e">inline</span><span style="color:#f92672">:</span> <span style="color:#f92672">&lt;&lt;-</span><span style="color:#a6e22e">SHELL</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">apt</span> <span style="color:#a6e22e">update</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">apt</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">y</span> <span style="color:#a6e22e">apache2</span> <span style="color:#a6e22e">php</span> <span style="color:#a6e22e">libapache2</span><span style="color:#f92672">-</span><span style="color:#a6e22e">mod</span><span style="color:#f92672">-</span><span style="color:#a6e22e">php</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">enable</span> <span style="color:#a6e22e">apache2</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">start</span> <span style="color:#a6e22e">apache2</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Asegurarse de que www-data es el propietario del directorio
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">chown</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">R</span> <span style="color:#a6e22e">www</span><span style="color:#f92672">-</span><span style="color:#a6e22e">data</span><span style="color:#f92672">:</span><span style="color:#a6e22e">www</span><span style="color:#f92672">-</span><span style="color:#a6e22e">data</span> <span style="color:#f92672">/</span><span style="color:#66d9ef">var</span><span style="color:#f92672">/</span><span style="color:#a6e22e">www</span><span style="color:#f92672">/</span><span style="color:#a6e22e">html</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">SHELL</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">end</span></span></span></code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-
-</div>
-</div>
-
-
-  
-  
-  
-  
-
-  
-  
-
-  
-    
-    
-	
-    
-
-<div class="td-content" style="page-break-before: always">
-    
-	<h1 id="pg-050e14752b2ab5a489b221c4b6abf567">1 - Comandos</h1>
-    
+	<header class="article-meta">
+		
+</header>
 	<h1 id="repaso-de-comandos-generales-de-linux-y-redes">Repaso de Comandos Generales de Linux y Redes</h1>
 <h2 id="comandos-generales">Comandos Generales</h2>
 <h3 id="1-ls">1. <code>ls</code></h3>
@@ -1012,14 +614,8 @@ Versión imprimible multipagina.
 </div>
 </div></p>
 
-</div>
-
-
-
-    
 	
-  
-
+</div>
 
 
           </main>
