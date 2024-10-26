@@ -1,0 +1,435 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="es" class="no-js">
+  <head><script src="/despliegue/contenido/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=despliegue/contenido/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="http://localhost:1313/despliegue/contenido/docs/03_docker/1_docker/04_ejercicios/1_imagenes/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/despliegue/contenido/docs/03_docker/1_docker/04_ejercicios/1_imagenes/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/despliegue/contenido/favicons/favicon.ico" >
+
+<title>Crea imágenes | Recursos de apoyo al aprendizaje</title>
+<meta name="description" content="Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.">
+<meta property="og:url" content="http://localhost:1313/despliegue/contenido/docs/03_docker/1_docker/04_ejercicios/1_imagenes/">
+  <meta property="og:site_name" content="Recursos de apoyo al aprendizaje">
+  <meta property="og:title" content="Crea imágenes">
+  <meta property="og:description" content="Descargar, ver y borrar imágenes Comandos a usar docker pull docker images docker rmi nombre_imagen docker rmi (docker images) 1. Descarga una imagen llamada ubuntu_latest 2. Descarga una imagen llamada manolo/web:v1 3. Verficia que las has descargado listándolas 4. Borra la imagen llamada manolo/web:v10 5. Verifica que la has borrado 6. Vuelve a cargar una imagen llamada manolo/web:v10 7. Borra todas las imágemes 8. Verifica que no tienes ninguna imagen">
+  <meta property="og:locale" content="es_es">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Crea imágenes">
+  <meta itemprop="description" content="Descargar, ver y borrar imágenes Comandos a usar docker pull docker images docker rmi nombre_imagen docker rmi (docker images) 1. Descarga una imagen llamada ubuntu_latest 2. Descarga una imagen llamada manolo/web:v1 3. Verficia que las has descargado listándolas 4. Borra la imagen llamada manolo/web:v10 5. Verifica que la has borrado 6. Vuelve a cargar una imagen llamada manolo/web:v10 7. Borra todas las imágemes 8. Verifica que no tienes ninguna imagen">
+  <meta itemprop="wordCount" content="70">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Crea imágenes">
+  <meta name="twitter:description" content="Descargar, ver y borrar imágenes Comandos a usar docker pull docker images docker rmi nombre_imagen docker rmi (docker images) 1. Descarga una imagen llamada ubuntu_latest 2. Descarga una imagen llamada manolo/web:v1 3. Verficia que las has descargado listándolas 4. Borra la imagen llamada manolo/web:v10 5. Verifica que la has borrado 6. Vuelve a cargar una imagen llamada manolo/web:v10 7. Borra todas las imágemes 8. Verifica que no tienes ninguna imagen">
+
+
+
+
+
+<link href="/despliegue/contenido/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar js-navbar-scroll "  data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row ">
+  <a class="navbar-brand" href="/despliegue/contenido/"><span class="navbar-brand__logo navbar-logo">
+    <img src="/despliegue/contenido/images/logo.png" alt="Logo" width="150" height="auto" />
+    </span><span class="navbar-brand__name">Recursos de apoyo al aprendizaje</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/despliegue/contenido/docs/02_docker/"><span>Docker</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/despliegue/contenido/docs/03_hugo/"><span>Hugo</span></a>
+      </li>
+      <li class="td-light-dark-menu nav-item dropdown">
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </symbol>
+</svg>
+
+<button class="btn btn-link nav-link dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        data-bs-display="static"
+        aria-label="Toggle theme (auto)">
+  <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+</button>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+Versión imprimible multipagina.
+<a href="#" onclick="print();return false;">Haga click aquí para imprimir</a>.
+</p><p>
+<a href="/despliegue/contenido/docs/03_docker/1_docker/04_ejercicios/1_imagenes/">Volver a la vista normal de esta página</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Crea imágenes</h1>
+
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      <h2 id="__descargar-ver-y-borrar-imágenes__"><strong>Descargar, ver y borrar imágenes</strong></h2>
+<ul>
+<li>Comandos a usar</li>
+</ul>
+<blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker pull
+</span></span><span style="display:flex;"><span>docker images
+</span></span><span style="display:flex;"><span>docker rmi nombre_imagen
+</span></span><span style="display:flex;"><span>docker rmi <span style="color:#f92672">(</span>docker images<span style="color:#f92672">)</span>
+</span></span></code></pre></div></blockquote>
+<h5 id="__1-descarga-una-imagen-llamada--hahahugoshortcode20s0hbhb__"><strong>1. Descarga una imagen llamada  
+<strong>
+<span class="font-weight-bold text-text-success">
+
+    ubuntu_latest
+
+
+</span>
+</strong>
+</strong></h5>
+<blockquote>
+
+
+
+
+<form action="procesar.php" method="POST">
+
+    <textarea id="texto" name="respuesta" rows="4" cols="50">
+    </textarea>
+    <input type='hidden' name='solucion' value= "docker pull ubuntu:latest" />
+    <br>
+    <input type="submit" value="Evaluar" name="ejercicio">
+    
+        
+    
+</form>
+
+
+
+
+</blockquote>
+<h5 id="__2-descarga-una-imagen-llamada--hahahugoshortcode20s2hbhb__"><strong>2. Descarga una imagen llamada  
+<strong>
+<span class="font-weight-bold text-text-success">
+
+    manolo/web:v1
+
+
+</span>
+</strong>
+</strong></h5>
+<blockquote>
+
+
+
+
+<form action="procesar.php" method="POST">
+
+    <textarea id="texto" name="respuesta" rows="4" cols="50">
+    </textarea>
+    <input type='hidden' name='solucion' value= "docker pull manolo/web:v1" />
+    <br>
+    <input type="submit" value="Evaluar" name="ejercicio">
+    
+        
+    
+</form>
+
+
+
+
+</blockquote>
+<h5 id="__3-verficia-que-las-has-descargado-listándolas__"><strong>3. Verficia que las has descargado listándolas</strong></h5>
+<blockquote>
+
+
+
+
+<form action="procesar.php" method="POST">
+
+    <textarea id="texto" name="respuesta" rows="4" cols="50">
+    </textarea>
+    <input type='hidden' name='solucion' value= "docker images" />
+    <br>
+    <input type="submit" value="Evaluar" name="ejercicio">
+    
+        
+    
+</form>
+
+
+
+
+</blockquote>
+<h5 id="__4-borra-la-imagen-llamada-manolowebv10__"><strong>4. Borra la imagen llamada manolo/web:v10</strong></h5>
+<blockquote>
+
+
+
+
+<form action="procesar.php" method="POST">
+
+    <textarea id="texto" name="respuesta" rows="4" cols="50">
+    </textarea>
+    <input type='hidden' name='solucion' value= "docker rmi manolo/web:v10" />
+    <br>
+    <input type="submit" value="Evaluar" name="ejercicio">
+    
+        
+    
+</form>
+
+
+
+
+</blockquote>
+<h5 id="__5-verifica-que-la-has-borrado__"><strong>5. Verifica que la has borrado</strong></h5>
+<blockquote>
+
+
+
+
+<form action="procesar.php" method="POST">
+
+    <textarea id="texto" name="respuesta" rows="4" cols="50">
+    </textarea>
+    <input type='hidden' name='solucion' value= "docker images" />
+    <br>
+    <input type="submit" value="Evaluar" name="ejercicio">
+    
+        
+    
+</form>
+
+
+
+
+</blockquote>
+<h5 id="__6-vuelve-a-cargar-una-imagen-llamada--manolowebv10__"><strong>6. Vuelve a cargar una imagen llamada  manolo/web:v10</strong></h5>
+<blockquote>
+
+
+
+
+<form action="procesar.php" method="POST">
+
+    <textarea id="texto" name="respuesta" rows="4" cols="50">
+    </textarea>
+    <input type='hidden' name='solucion' value= "docker pull manolo/web:v1" />
+    <br>
+    <input type="submit" value="Evaluar" name="ejercicio">
+    
+        
+    
+</form>
+
+
+
+
+</blockquote>
+<h5 id="__7-borra-todas-las-imágemes__"><strong>7. Borra todas las imágemes</strong></h5>
+<blockquote>
+
+
+
+
+<form action="procesar.php" method="POST">
+
+    <textarea id="texto" name="respuesta" rows="4" cols="50">
+    </textarea>
+    <input type='hidden' name='solucion' value= "docker rmi (docker images)" />
+    <br>
+    <input type="submit" value="Evaluar" name="ejercicio">
+    
+        
+    
+</form>
+
+
+
+
+</blockquote>
+<h5 id="__8-verifica-que-no-tienes-ninguna-imagen__"><strong>8. Verifica que no tienes ninguna imagen</strong></h5>
+<blockquote>
+
+
+
+
+<form action="procesar.php" method="POST">
+
+    <textarea id="texto" name="respuesta" rows="4" cols="50">
+    </textarea>
+    <input type='hidden' name='solucion' value= "docker images" />
+    <br>
+    <input type="submit" value="Evaluar" name="ejercicio">
+    
+        
+    
+</form>
+
+
+
+
+</blockquote>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Correo del usuario" aria-label="Correo del usuario">
+    <a target="_blank" rel="noopener" href="https://example.org/mail" aria-label="Correo del usuario">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/MAlejandroR" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">@MRomero</span></span><span class="td-footer__all_rights_reserved">Derechos reservados</span><span class="ms-2"><a href="/politica-de-privacidad" target="_blank" rel="noopener">Política de privacidad</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <style>
+.markmap > svg {
+  width: 100%;
+  height: 300px;
+}
+</style>
+<script>
+window.markmap = {
+  autoLoader: {
+      manual: true,
+      onReady() {
+        const { autoLoader, builtInPlugins } = window.markmap;
+        autoLoader.transformPlugins = builtInPlugins.filter(plugin => plugin.name !== 'prism');
+      },
+  },
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader"></script>
+<script src="/despliegue/contenido/js/main.js"></script>
+<script defer src="/despliegue/contenido/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/despliegue/contenido/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

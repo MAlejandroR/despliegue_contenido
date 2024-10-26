@@ -1,0 +1,683 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="es" class="no-js">
+  <head><script src="/despliegue/contenido/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=despliegue/contenido/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/despliegue/contenido/favicons/favicon.ico" >
+
+<title>Comandos | Recursos de apoyo al aprendizaje</title>
+<meta name="description" content="Repaso de Comandos Generales de Linux y Redes Comandos Generales 1. ls Lista los archivos y directorios en el directorio actual. 1 ls -la -l: lista en formato largo. -a: incluye archivos ocultos. 2. cd Cambia de directorio. 1 cd /ruta/del/directorio 3. cp Copia archivos o directorios. 1 cp archivo_origen archivo_destino -r: para copiar directorios de forma recursiva. 4. mv Mueve o renombra archivos o directorios. 1 mv archivo_origen archivo_destino ">
+<meta property="og:url" content="http://localhost:1313/despliegue/contenido/docs/02_linux/comandos/">
+  <meta property="og:site_name" content="Recursos de apoyo al aprendizaje">
+  <meta property="og:title" content="Comandos">
+  <meta property="og:description" content="Repaso de Comandos Generales de Linux y Redes Comandos Generales 1. ls Lista los archivos y directorios en el directorio actual. 1 ls -la -l: lista en formato largo. -a: incluye archivos ocultos. 2. cd Cambia de directorio. 1 cd /ruta/del/directorio 3. cp Copia archivos o directorios. 1 cp archivo_origen archivo_destino -r: para copiar directorios de forma recursiva. 4. mv Mueve o renombra archivos o directorios. 1 mv archivo_origen archivo_destino">
+  <meta property="og:locale" content="es_es">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="docs">
+
+  <meta itemprop="name" content="Comandos">
+  <meta itemprop="description" content="Repaso de Comandos Generales de Linux y Redes Comandos Generales 1. ls Lista los archivos y directorios en el directorio actual. 1 ls -la -l: lista en formato largo. -a: incluye archivos ocultos. 2. cd Cambia de directorio. 1 cd /ruta/del/directorio 3. cp Copia archivos o directorios. 1 cp archivo_origen archivo_destino -r: para copiar directorios de forma recursiva. 4. mv Mueve o renombra archivos o directorios. 1 mv archivo_origen archivo_destino">
+  <meta itemprop="wordCount" content="482">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Comandos">
+  <meta name="twitter:description" content="Repaso de Comandos Generales de Linux y Redes Comandos Generales 1. ls Lista los archivos y directorios en el directorio actual. 1 ls -la -l: lista en formato largo. -a: incluye archivos ocultos. 2. cd Cambia de directorio. 1 cd /ruta/del/directorio 3. cp Copia archivos o directorios. 1 cp archivo_origen archivo_destino -r: para copiar directorios de forma recursiva. 4. mv Mueve o renombra archivos o directorios. 1 mv archivo_origen archivo_destino">
+
+
+
+
+
+<link href="/despliegue/contenido/scss/main.css" rel="stylesheet">
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-page">
+    <header>
+      <nav class="td-navbar js-navbar-scroll "  data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row ">
+  <a class="navbar-brand" href="/despliegue/contenido/"><span class="navbar-brand__logo navbar-logo">
+    <img src="/despliegue/contenido/images/logo.png" alt="Logo" width="150" height="auto" />
+    </span><span class="navbar-brand__name">Recursos de apoyo al aprendizaje</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/despliegue/contenido/docs/02_docker/"><span>Docker</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/despliegue/contenido/docs/03_hugo/"><span>Hugo</span></a>
+      </li>
+      <li class="td-light-dark-menu nav-item dropdown">
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </symbol>
+</svg>
+
+<button class="btn btn-link nav-link dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        data-bs-display="static"
+        aria-label="Toggle theme (auto)">
+  <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+</button>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            <div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ms-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="td-sidebar-nav collapse foldable-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pe-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-desplieguecontenidodocs-li">
+  <a href="/despliegue/contenido/docs/" class="align-left ps-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-desplieguecontenidodocs"><span class="">Docs</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-desplieguecontenidodocs01_redes-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs01_redes-check"/>
+  <label for="m-desplieguecontenidodocs01_redes-check"><a href="/despliegue/contenido/docs/01_redes/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs01_redes"><i class="fa-solid fa-network-wired"></i><span class="">Redes</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs01_redes00_conceptos_basicos-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs01_redes00_conceptos_basicos-check"/>
+  <label for="m-desplieguecontenidodocs01_redes00_conceptos_basicos-check"><a href="/despliegue/contenido/docs/01_redes/00_conceptos_basicos/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs01_redes00_conceptos_basicos"><i class="fa-solid fa-network-wired"></i><span class="">Conceptos</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs01_redes01_internet-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs01_redes01_internet-check"/>
+  <label for="m-desplieguecontenidodocs01_redes01_internet-check"><a href="/despliegue/contenido/docs/01_redes/01_internet/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs01_redes01_internet"><i class="fas fa-globe"></i><span class="">Internet</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs01_redes02_capas-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs01_redes02_capas-check"/>
+  <label for="m-desplieguecontenidodocs01_redes02_capas-check"><a href="/despliegue/contenido/docs/01_redes/02_capas/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs01_redes02_capas"><i class="fas fa-comments"></i><span class="">Modelo OSI</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs01_redes03_subredes-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs01_redes03_subredes-check"/>
+  <label for="m-desplieguecontenidodocs01_redes03_subredes-check"><a href="/despliegue/contenido/docs/01_redes/03_subredes/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs01_redes03_subredes"><i class="fas fa-project-diagram"></i><span class="">Subredes</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs01_redes05_www-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs01_redes05_www-check"/>
+  <label for="m-desplieguecontenidodocs01_redes05_www-check"><a href="/despliegue/contenido/docs/01_redes/05_www/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs01_redes05_www"><i class="fas fa-exchange-alt"></i><span class="">www</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-desplieguecontenidodocs02_linux-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linux-check" checked/>
+  <label for="m-desplieguecontenidodocs02_linux-check"><a href="/despliegue/contenido/docs/02_linux/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs02_linux"><i class="fab fa-linux"></i><span class="">Linux</span></a></label>
+  
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-desplieguecontenidodocs02_linuxcomandos-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos-check" checked/>
+  <label for="m-desplieguecontenidodocs02_linuxcomandos-check"><a href="/despliegue/contenido/docs/02_linux/comandos/" title="Comandos" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxcomandos"><i class="fab fa-linux"></i><span class="td-sidebar-nav-active-item">comandos</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs02_linuxejercicios-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linuxejercicios-check"/>
+  <label for="m-desplieguecontenidodocs02_linuxejercicios-check"><a href="/despliegue/contenido/docs/02_linux/ejercicios/" title="Ejercicios" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxejercicios"><i class="fas fa-tasks"></i><span class="">Ejercicios para practicar</span></a></label>
+  
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs03_docker-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs03_docker-check"/>
+  <label for="m-desplieguecontenidodocs03_docker-check"><a href="/despliegue/contenido/docs/03_docker/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs03_docker"><i class="fab fa-docker"></i><span class="">Docker</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs04_servicios-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs04_servicios-check"/>
+  <label for="m-desplieguecontenidodocs04_servicios-check"><a href="/despliegue/contenido/docs/04_servicios/" title="Servicios de internet" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs04_servicios"><i class="fas fa-server"></i><span class="">Servicios</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs05_git-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs05_git-check"/>
+  <label for="m-desplieguecontenidodocs05_git-check"><a href="/despliegue/contenido/docs/05_git/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs05_git"><i class="fab fa-git-alt"></i><span class="">Git</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs06_aws-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs06_aws-check"/>
+  <label for="m-desplieguecontenidodocs06_aws-check"><a href="/despliegue/contenido/docs/06_aws/" title="Amazon WS" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs06_aws"><i class="fab fa-aws"></i><span class="">AWS</span></a></label>
+  
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a id="print" href="/despliegue/contenido/docs/02_linux/_print/"><i class="fa-solid fa-print fa-fw"></i> Imprimir sección </a>
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#comandos-generales">Comandos Generales</a>
+      <ul>
+        <li><a href="#1-ls">1. <code>ls</code></a></li>
+        <li><a href="#2-cd">2. <code>cd</code></a></li>
+        <li><a href="#3-cp">3. <code>cp</code></a></li>
+        <li><a href="#4-mv">4. <code>mv</code></a></li>
+        <li><a href="#5-rm">5. <code>rm</code></a></li>
+        <li><a href="#6-cat">6. <code>cat</code></a></li>
+        <li><a href="#7-grep">7. <code>grep</code></a></li>
+        <li><a href="#8-chmod">8. <code>chmod</code></a></li>
+        <li><a href="#9-chown">9. <code>chown</code></a></li>
+        <li><a href="#10-find">10. <code>find</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#comandos-de-redes-y-comunicaciones">Comandos de Redes y Comunicaciones</a>
+      <ul>
+        <li><a href="#1-ifconfig">1. <code>ifconfig</code></a></li>
+        <li><a href="#2-ip">2. <code>ip</code></a></li>
+        <li><a href="#3-ping">3. <code>ping</code></a></li>
+        <li><a href="#4-netstat">4. <code>netstat</code></a></li>
+        <li><a href="#5-ss">5. <code>ss</code></a></li>
+        <li><a href="#6-traceroute">6. <code>traceroute</code></a></li>
+        <li><a href="#7-nslookup">7. <code>nslookup</code></a></li>
+        <li><a href="#8-dig">8. <code>dig</code></a></li>
+        <li><a href="#9-ftp--sftp">9. <code>ftp</code> / <code>sftp</code></a></li>
+        <li><a href="#10-scp">10. <code>scp</code></a></li>
+        <li><a href="#11-curl">11. <code>curl</code></a></li>
+        <li><a href="#12-wget">12. <code>wget</code></a></li>
+        <li><a href="#13-nmap">13. <code>nmap</code></a></li>
+        <li><a href="#14-ssh">14. <code>ssh</code></a></li>
+        <li><a href="#15-iptables">15. <code>iptables</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#comandos-útiles-para-configuración-de-redes">Comandos Útiles para Configuración de Redes</a>
+      <ul>
+        <li><a href="#1-hostname">1. <code>hostname</code></a></li>
+        <li><a href="#2-systemctl">2. <code>systemctl</code></a></li>
+        <li><a href="#3-nmcli">3. <code>nmcli</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#comandos-para-diagnóstico-de-red">Comandos para Diagnóstico de Red</a>
+      <ul>
+        <li><a href="#1-mtr">1. <code>mtr</code></a></li>
+        <li><a href="#2-tcpdump">2. <code>tcpdump</code></a></li>
+        <li><a href="#3-ethtool">3. <code>ethtool</code></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
+            
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/despliegue/contenido/docs/">Docs</a></li>
+  <li class="breadcrumb-item">
+    <a href="/despliegue/contenido/docs/02_linux/">Linux</a></li>
+  <li class="breadcrumb-item active" aria-current="page">
+    comandos</li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Comandos</h1>
+	
+	<header class="article-meta">
+		
+</header>
+	<h1 id="repaso-de-comandos-generales-de-linux-y-redes">Repaso de Comandos Generales de Linux y Redes</h1>
+<h2 id="comandos-generales">Comandos Generales</h2>
+<h3 id="1-ls">1. <code>ls</code></h3>
+<p>Lista los archivos y directorios en el directorio actual.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">ls</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">la</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li><code>-l</code>: lista en formato largo.</li>
+<li><code>-a</code>: incluye archivos ocultos.</li>
+</ul>
+<h3 id="2-cd">2. <code>cd</code></h3>
+<p>Cambia de directorio.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">cd</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">ruta</span><span style="color:#f92672">/</span><span style="color:#a6e22e">del</span><span style="color:#f92672">/</span><span style="color:#a6e22e">directorio</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="3-cp">3. <code>cp</code></h3>
+<p>Copia archivos o directorios.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span> <span style="color:#a6e22e">cp</span> <span style="color:#a6e22e">archivo_origen</span> <span style="color:#a6e22e">archivo_destino</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li><code>-r</code>: para copiar directorios de forma recursiva.</li>
+</ul>
+<h3 id="4-mv">4. <code>mv</code></h3>
+<p>Mueve o renombra archivos o directorios.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">mv</span> <span style="color:#a6e22e">archivo_origen</span> <span style="color:#a6e22e">archivo_destino</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="5-rm">5. <code>rm</code></h3>
+<p>Elimina archivos o directorios.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">rm</span> <span style="color:#a6e22e">archivo</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li><code>-r</code>: elimina directorios de forma recursiva.</li>
+<li><code>-f</code>: fuerza la eliminación sin confirmación.</li>
+</ul>
+<h3 id="6-cat">6. <code>cat</code></h3>
+<p>Muestra el contenido de un archivo.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">cat</span> <span style="color:#a6e22e">archivo</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="7-grep">7. <code>grep</code></h3>
+<p>Busca texto dentro de archivos.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">grep</span> <span style="color:#e6db74">&#39;texto&#39;</span> <span style="color:#a6e22e">archivo</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="8-chmod">8. <code>chmod</code></h3>
+<p>Cambia permisos de archivos o directorios.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">chmod</span> <span style="color:#ae81ff">755</span> <span style="color:#a6e22e">archivo</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="9-chown">9. <code>chown</code></h3>
+<p>Cambia el propietario de archivos o directorios.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">chown</span> <span style="color:#a6e22e">usuario</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="10-find">10. <code>find</code></h3>
+<p>Busca archivos en el sistema.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">find</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">ruta</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">name</span> <span style="color:#e6db74">&#39;archivo*&#39;</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h2 id="comandos-de-redes-y-comunicaciones">Comandos de Redes y Comunicaciones</h2>
+<h3 id="1-ifconfig">1. <code>ifconfig</code></h3>
+<p>Muestra o configura las interfaces de red.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">ifconfig</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="2-ip">2. <code>ip</code></h3>
+<p>Muestra o manipula rutas, dispositivos y políticas de red.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">ip</span> <span style="color:#a6e22e">addr</span> <span style="color:#a6e22e">show</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li><code>ip route</code>: muestra la tabla de rutas.</li>
+<li><code>ip link</code>: muestra o configura dispositivos de red.</li>
+</ul>
+<h3 id="3-ping">3. <code>ping</code></h3>
+<p>Envía paquetes ICMP para verificar la conectividad con una IP o dominio.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">ping</span> <span style="color:#a6e22e">google</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="4-netstat">4. <code>netstat</code></h3>
+<p>Muestra conexiones de red, tablas de enrutamiento y estadísticas.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">netstat</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">tuln</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li><code>-t</code>: muestra conexiones TCP.</li>
+<li><code>-u</code>: muestra conexiones UDP.</li>
+<li><code>-l</code>: muestra servicios en escucha.</li>
+</ul>
+<h3 id="5-ss">5. <code>ss</code></h3>
+<p>Muestra información sobre sockets de red.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">ss</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">tuln</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="6-traceroute">6. <code>traceroute</code></h3>
+<p>Muestra la ruta que siguen los paquetes hasta un host.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">traceroute</span> <span style="color:#a6e22e">google</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="7-nslookup">7. <code>nslookup</code></h3>
+<p>Interroga a servidores DNS para obtener información de dominios o IPs.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">nslookup</span> <span style="color:#a6e22e">google</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="8-dig">8. <code>dig</code></h3>
+<p>Realiza consultas DNS más detalladas.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">dig</span> <span style="color:#a6e22e">google</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="9-ftp--sftp">9. <code>ftp</code> / <code>sftp</code></h3>
+<p>Transfiere archivos entre sistemas mediante los protocolos FTP/SFTP.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">ftp</span> <span style="color:#a6e22e">usuario</span><span style="color:#f92672">@</span><span style="color:#a6e22e">servidor</span> <span style="color:#a6e22e">sftp</span> <span style="color:#a6e22e">usuario</span><span style="color:#f92672">@</span><span style="color:#a6e22e">servidor</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="10-scp">10. <code>scp</code></h3>
+<p>Copia archivos entre sistemas de forma segura.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">scp</span> <span style="color:#a6e22e">archivo</span> <span style="color:#a6e22e">usuario</span><span style="color:#f92672">@</span><span style="color:#a6e22e">servidor</span><span style="color:#f92672">:/</span><span style="color:#a6e22e">ruta</span><span style="color:#f92672">/</span><span style="color:#a6e22e">destino</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="11-curl">11. <code>curl</code></h3>
+<p>Realiza peticiones HTTP desde la terminal.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">curl</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">ejemplo</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="12-wget">12. <code>wget</code></h3>
+<p>Descarga archivos de una URL.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">wget</span> <span style="color:#a6e22e">https</span><span style="color:#f92672">://</span><span style="color:#a6e22e">ejemplo</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span><span style="color:#f92672">/</span><span style="color:#a6e22e">archivo</span><span style="color:#f92672">.</span><span style="color:#a6e22e">tar</span><span style="color:#f92672">.</span><span style="color:#a6e22e">gz</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="13-nmap">13. <code>nmap</code></h3>
+<p>Escanea redes y puertos.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">nmap</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">sP</span> <span style="color:#ae81ff">192.168</span><span style="color:#f92672">.</span><span style="color:#ae81ff">1.0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">24</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="14-ssh">14. <code>ssh</code></h3>
+<p>Conexión remota segura a otro sistema.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">ssh</span> <span style="color:#a6e22e">usuario</span><span style="color:#f92672">@</span><span style="color:#a6e22e">servidor</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="15-iptables">15. <code>iptables</code></h3>
+<p>Configura las reglas del cortafuegos en el sistema.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">iptables</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">L</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="comandos-útiles-para-configuración-de-redes">Comandos Útiles para Configuración de Redes</h2>
+<h3 id="1-hostname">1. <code>hostname</code></h3>
+<p>Muestra o cambia el nombre del host del sistema.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#f92672">****</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="2-systemctl">2. <code>systemctl</code></h3>
+<p>Gestiona servicios en el sistema.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">systemctl</span> <span style="color:#a6e22e">restart</span> <span style="color:#a6e22e">servicio</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li><code>start</code>: inicia un servicio.</li>
+<li><code>stop</code>: detiene un servicio.</li>
+<li><code>status</code>: muestra el estado de un servicio.</li>
+</ul>
+<h3 id="3-nmcli">3. <code>nmcli</code></h3>
+<p>Configura y gestiona la red mediante NetworkManager desde la terminal.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">nmcli</span> <span style="color:#a6e22e">dev</span> <span style="color:#a6e22e">status</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h2 id="comandos-para-diagnóstico-de-red">Comandos para Diagnóstico de Red</h2>
+<h3 id="1-mtr">1. <code>mtr</code></h3>
+<p>Combina <code>ping</code> y <code>traceroute</code> para diagnosticar la red.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">mtr</span> <span style="color:#a6e22e">google</span><span style="color:#f92672">.</span><span style="color:#a6e22e">com</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="2-tcpdump">2. <code>tcpdump</code></h3>
+<p>Captura y muestra tráfico de red.</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">tcpdump</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">i</span> <span style="color:#a6e22e">eth0</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="3-ethtool">3. <code>ethtool</code></h3>
+<p>Muestra o cambia los ajustes de las interfaces de red.
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#3c3d38"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">ethtool</span> <span style="color:#a6e22e">dev</span></span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+
+	
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Correo del usuario" aria-label="Correo del usuario">
+    <a target="_blank" rel="noopener" href="https://example.org/mail" aria-label="Correo del usuario">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/MAlejandroR" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">@MRomero</span></span><span class="td-footer__all_rights_reserved">Derechos reservados</span><span class="ms-2"><a href="/politica-de-privacidad" target="_blank" rel="noopener">Política de privacidad</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <style>
+.markmap > svg {
+  width: 100%;
+  height: 300px;
+}
+</style>
+<script>
+window.markmap = {
+  autoLoader: {
+      manual: true,
+      onReady() {
+        const { autoLoader, builtInPlugins } = window.markmap;
+        autoLoader.transformPlugins = builtInPlugins.filter(plugin => plugin.name !== 'prism');
+      },
+  },
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader"></script>
+<script src="/despliegue/contenido/js/main.js"></script>
+<script defer src="/despliegue/contenido/js/click-to-copy.js" crossorigin="anonymous"></script>
+<script src='/despliegue/contenido/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

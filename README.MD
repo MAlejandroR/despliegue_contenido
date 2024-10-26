@@ -33,7 +33,9 @@ Los apuntes cubren los siguientes temas principales:
 
 ## Estructura del Proyecto
 
-El proyecto está organizado en varias secciones, cada una dedicada a un tema del módulo. Los apuntes están escritos en formato Markdown y se organizan en carpetas dentro del directorio `content` de Hugo.
+El proyecto está organizado en varias secciones, cada una dedicada a un tema del módulo.
+
+Los apuntes están escritos en formato Markdown y se organizan en carpetas dentro del directorio `content` de Hugo.
 
 ```bash
 /

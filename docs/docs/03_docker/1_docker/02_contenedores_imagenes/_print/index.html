@@ -1,0 +1,353 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="es" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" type="text/html" href="http://web.infenlaces.com/despliegue/contenido/docs/03_docker/1_docker/02_contenedores_imagenes/">
+<link rel="alternate" type="application/rss&#43;xml" href="http://web.infenlaces.com/despliegue/contenido/docs/03_docker/1_docker/02_contenedores_imagenes/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/despliegue/contenido/favicons/favicon.ico" >
+
+<title>Contenedores e imágenes | Recursos de apoyo al aprendizaje</title>
+<meta name="description" content="Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.">
+<meta property="og:url" content="http://web.infenlaces.com/despliegue/contenido/docs/03_docker/1_docker/02_contenedores_imagenes/">
+  <meta property="og:site_name" content="Recursos de apoyo al aprendizaje">
+  <meta property="og:title" content="Contenedores e imágenes">
+  <meta property="og:description" content="Contenedores e imágnes La imagen La imagen es un fichero que contiene todo el conjunto de librerías, dependencias y configuraciones necesarias para ejecutar un entorno aislado, con servicios y procesos, junto con su propia IP, y que servirá como base para crear uno o varios contenedores.
+Notas No se emula hardware, sino únicamente servicios y software (como el sistema de archivos, el sistema operativo y los servicios). Por lo tanto, un contenedor no es una máquina virtual, aunque tenga su propia IP. Sin embargo, puede considerarse como un dispositivo o nodo independiente dentro de la red. Notas Para tener una idea general, podríamos compararlo con una ISO de instalación de un sistema operativo. Sin embargo, la imagen Docker no instala un sistema operativo completo, sino que contiene únicamente lo necesario para ejecutar aplicaciones en un entorno aislado.">
+  <meta property="og:locale" content="es_es">
+  <meta property="og:type" content="website">
+
+  <meta itemprop="name" content="Contenedores e imágenes">
+  <meta itemprop="description" content="Contenedores e imágnes La imagen La imagen es un fichero que contiene todo el conjunto de librerías, dependencias y configuraciones necesarias para ejecutar un entorno aislado, con servicios y procesos, junto con su propia IP, y que servirá como base para crear uno o varios contenedores.
+Notas No se emula hardware, sino únicamente servicios y software (como el sistema de archivos, el sistema operativo y los servicios). Por lo tanto, un contenedor no es una máquina virtual, aunque tenga su propia IP. Sin embargo, puede considerarse como un dispositivo o nodo independiente dentro de la red. Notas Para tener una idea general, podríamos compararlo con una ISO de instalación de un sistema operativo. Sin embargo, la imagen Docker no instala un sistema operativo completo, sino que contiene únicamente lo necesario para ejecutar aplicaciones en un entorno aislado.">
+  <meta itemprop="wordCount" content="307">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Contenedores e imágenes">
+  <meta name="twitter:description" content="Contenedores e imágnes La imagen La imagen es un fichero que contiene todo el conjunto de librerías, dependencias y configuraciones necesarias para ejecutar un entorno aislado, con servicios y procesos, junto con su propia IP, y que servirá como base para crear uno o varios contenedores.
+Notas No se emula hardware, sino únicamente servicios y software (como el sistema de archivos, el sistema operativo y los servicios). Por lo tanto, un contenedor no es una máquina virtual, aunque tenga su propia IP. Sin embargo, puede considerarse como un dispositivo o nodo independiente dentro de la red. Notas Para tener una idea general, podríamos compararlo con una ISO de instalación de un sistema operativo. Sin embargo, la imagen Docker no instala un sistema operativo completo, sino que contiene únicamente lo necesario para ejecutar aplicaciones en un entorno aislado.">
+
+
+
+
+<link rel="preload" href="/despliegue/contenido/scss/main.min.966e68cbd7eed6da81c6c482a88d89583bb2d0988353bc6d8617f4656856a072.css" as="style">
+<link href="/despliegue/contenido/scss/main.min.966e68cbd7eed6da81c6c482a88d89583bb2d0988353bc6d8617f4656856a072.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="td-navbar js-navbar-scroll "  data-bs-theme="dark">
+<div class="container-fluid flex-column flex-md-row ">
+  <a class="navbar-brand" href="/despliegue/contenido/"><span class="navbar-brand__logo navbar-logo">
+    <img src="/despliegue/contenido/images/logo.png" alt="Logo" width="150" height="auto" />
+    </span><span class="navbar-brand__name">Recursos de apoyo al aprendizaje</span></a>
+  <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/despliegue/contenido/docs/02_docker/"><span>Docker</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/despliegue/contenido/docs/03_hugo/"><span>Hugo</span></a>
+      </li>
+      <li class="td-light-dark-menu nav-item dropdown">
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="check2" viewBox="0 0 16 16">
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+  </symbol>
+  <symbol id="circle-half" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+  </symbol>
+  <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+  </symbol>
+  <symbol id="sun-fill" viewBox="0 0 16 16">
+    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+  </symbol>
+</svg>
+
+<button class="btn btn-link nav-link dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        data-bs-display="static"
+        aria-label="Toggle theme (auto)">
+  <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+</button>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+      <svg class="bi me-2 opacity-50"><use href="#sun-fill"></use></svg>
+      Light
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+      <svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"></use></svg>
+      Dark
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+  <li>
+    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+      <svg class="bi me-2 opacity-50"><use href="#circle-half"></use></svg>
+      Auto
+      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+    </button>
+  </li>
+</ul>
+
+      </li>
+      </ul>
+  </div>
+  <div class="d-none d-lg-block">
+    
+  </div>
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 ps-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+Versión imprimible multipagina.
+<a href="#" onclick="print();return false;">Haga click aquí para imprimir</a>.
+</p><p>
+<a href="/despliegue/contenido/docs/03_docker/1_docker/02_contenedores_imagenes/">Volver a la vista normal de esta página</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Contenedores e imágenes</h1>
+
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+
+    </ul>
+
+
+<div class="content">
+      <h2 id="contenedores-e-imágnes">Contenedores e imágnes</h2>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 610px">
+<img class="card-img-top" src="/despliegue/contenido/docs/03_docker/1_docker/02_contenedores_imagenes/Contenedor_vs_img_hu14260772193613322638.png" width="600" height="350">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+
+
+
+
+</p>
+</figcaption>
+</figure>
+
+<h3 id="la-imagen">La imagen</h3>
+<blockquote>
+<p><strong>
+<span class="font-weight-bold text-primary">
+
+
+    La imagen
+
+</span>
+ es un fichero que contiene todo el conjunto de librerías, dependencias y configuraciones necesarias para ejecutar un entorno aislado, con servicios y procesos, junto con su propia IP, y que servirá como base para crear uno o varios contenedores.</strong></p>
+</blockquote>
+<hr style="border-color: red; border-width: 3px;"/>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 621px">
+<img class="card-img-top" src="/despliegue/contenido/docs/03_docker/1_docker/02_contenedores_imagenes/Imagen_hu1123848494357708612.png" width="611" height="812">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+
+
+</p>
+</figcaption>
+</figure>
+
+<p>
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Notas</h4>
+
+    No se emula hardware, sino únicamente servicios y software (como el sistema de archivos, el sistema operativo y los servicios). Por lo tanto, un contenedor no es una máquina virtual, aunque tenga su propia IP. Sin embargo, puede considerarse como un dispositivo o nodo independiente dentro de la red.
+
+</div>
+
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Notas</h4>
+
+    Para tener una idea general, podríamos compararlo con una ISO de instalación de un sistema operativo. Sin embargo, la imagen Docker no instala un sistema operativo completo, sino que contiene únicamente lo necesario para ejecutar aplicaciones en un entorno aislado.
+
+</div>
+</p>
+<h3 id="el-contenedor">El contenedor</h3>
+<blockquote>
+<p>El contenedor es una capa de lectura y escritura que se añade a una imagen, permitiendo interactuar con ella y ponerla en ejecución.
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 810px">
+<img class="card-img-top" src="/despliegue/contenido/docs/03_docker/1_docker/02_contenedores_imagenes/container_hu5364377010260540432.jpg" width="800" height="600">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+
+
+Imagen obtenida de https://iesgn.github.io/curso_docker_2021/sesion2/organizacion.html
+
+</p>
+</figcaption>
+</figure>
+
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Notas</h4>
+
+    El contenedor se crea a partir de una imagen y siempre dependerá de ella. Esto significa que no podremos eliminar la imagen mientras exista un contenedor asociado a ella.
+
+</div>
+</p>
+</blockquote>
+
+
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Notas</h4>
+
+    El contenedor almacena los cambios realizados sobre la imagen, funcionando como pequeños incrementos sobre un archivo base. Este enfoque lo convierte en un sistema muy robusto, ágil y ligero.
+
+</div>
+
+<h3 id="contenedor-e-imagen">Contenedor e imagen</h3>
+
+
+<div class="pageinfo pageinfo-primary">
+<h4 id="heading"></h4>
+<p><strong>La unión hace la fuerza</strong></p>
+<p>El funcionamiento de Docker se basa en crear un contenedor a partir de una imagen, por lo que los conceptos de imagen y contenedor están intrínsecamente relacionados (no se pueden usar de manera individual).</p>
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Nota</h4>
+<pre><code>Todo contenedor siempre dependerá de una única imagen.
+</code></pre>
+</div>
+<div class="alert alert-primary" role="alert">
+<h4 class="alert-heading">Nota</h4>
+<pre><code>Una imagen puede ser la base de uno o muchos contenedores.
+</code></pre>
+<p>Cada contenedor es un sistema independiente de los demás, con su propia IP y un entorno completamente aislado.</p>
+</div>
+<figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 810px">
+<img class="card-img-top" src="/despliegue/contenido/docs/03_docker/1_docker/02_contenedores_imagenes/join_img_container_hu17901011678537150505.png" width="800" height="200">
+<figcaption class="card-body px-0 pt-2 pb-0">
+<p class="card-text">
+</p>
+</figcaption>
+</figure>
+
+</div>
+
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      <footer class="td-footer row d-print-none">
+  <div class="container-fluid">
+    <div class="row mx-md-2">
+      <div class="td-footer__left col-6 col-sm-4 order-sm-1">
+        <ul class="td-footer__links-list">
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="Correo del usuario" aria-label="Correo del usuario">
+    <a target="_blank" rel="noopener" href="https://example.org/mail" aria-label="Correo del usuario">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+  <li class="td-footer__links-item" data-bs-toggle="tooltip" title="GitHub" aria-label="GitHub">
+    <a target="_blank" rel="noopener" href="https://github.com/MAlejandroR" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+      </div><div class="td-footer__right col-6 col-sm-4 order-sm-3">
+        
+      </div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2">
+        <span class="td-footer__copyright">&copy;
+    2024
+    <span class="td-footer__authors">@MRomero</span></span><span class="td-footer__all_rights_reserved">Derechos reservados</span><span class="ms-2"><a href="/politica-de-privacidad" target="_blank" rel="noopener">Política de privacidad</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <style>
+.markmap > svg {
+  width: 100%;
+  height: 300px;
+}
+</style>
+<script>
+window.markmap = {
+  autoLoader: {
+      manual: true,
+      onReady() {
+        const { autoLoader, builtInPlugins } = window.markmap;
+        autoLoader.transformPlugins = builtInPlugins.filter(plugin => plugin.name !== 'prism');
+      },
+  },
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader"></script>
+<script src="/despliegue/contenido/js/main.min.bc30ab6006a4720ffd1ed2b27e74718d738b1b4d185bb9c1a7811fa03461ba3c.js" integrity="sha256-vDCrYAakcg/9HtKyfnRxjXOLG00YW7nBp4EfoDRhujw=" crossorigin="anonymous"></script>
+<script defer src="/despliegue/contenido/js/click-to-copy.min.73478a7d4807698aed7e355eb23f9890ca18fea3158604c8471746d046702bad.js" integrity="sha256-c0eKfUgHaYrtfjVesj&#43;YkMoY/qMVhgTIRxdG0EZwK60=" crossorigin="anonymous"></script>
+<script src='/despliegue/contenido/js/tabpane-persist.js'></script>
+
+  </body>
+</html>
