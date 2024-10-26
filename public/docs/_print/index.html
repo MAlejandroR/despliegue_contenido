@@ -49,12 +49,6 @@
     </span><span class="navbar-brand__name">Recursos de apoyo al aprendizaje</span></a>
   <div class="td-navbar-nav-scroll ms-md-auto" id="main_navbar">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/despliegue/contenido/docs/02_docker/"><span>Docker</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/despliegue/contenido/docs/03_hugo/"><span>Hugo</span></a>
-      </li>
       <li class="td-light-dark-menu nav-item dropdown">
         <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
   <symbol id="check2" viewBox="0 0 16 16">
@@ -3069,7 +3063,104 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
     
 	<h1 id="pg-050e14752b2ab5a489b221c4b6abf567">2.1 - Comandos</h1>
     
-	<h1 id="repaso-de-comandos-generales-de-linux-y-redes">Repaso de Comandos Generales de Linux y Redes</h1>
+	
+
+
+<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
+    <div style="background-color:darkgreen; color:white;
+    font-weight:bold; padding:10px; display: flex; align-items: center;">
+        
+        <span style="margin-right: 8px;">
+            <i class="fas  fa-check-circle"></i> 
+        </span>
+        
+        <span >Objetivos</span>
+    </div>
+
+    <h3 style="padding: 5px;font-weight:bold"> Qué veremos aquí</h3>
+
+    <hr style="border-color:seagreen;border-width:3px"/>
+    
+    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
+        <ul>
+        
+        <li>Qué son los comandos linux</li>
+            
+        <li>Clasificación de diferentes tipos de comandos linux</li>
+            
+        
+        
+        </ul>
+
+    </div>
+</div>
+
+<h2 id="introducción-a-los-comandos-de-linux">Introducción a los Comandos de Linux</h2>
+<p>Los comandos en Linux 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    son instrucciones que el usuario ejecuta en la terminal
+
+</span>
+</strong>
+ para interactuar directamente con el sistema operativo.</p>
+<p>Linux, como sistema basado en Unix, ofrece 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    una amplia gama de comandos
+
+</span>
+</strong>
+ que permiten realizar tareas de 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    administración, manipulación de archivos, gestión de procesos y redes
+
+</span>
+</strong>
+, entre otros.</p>
+<p>Estos comandos forman 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    el núcleo de la interacción en Linux
+
+</span>
+</strong>
+, especialmente para usuarios avanzados, desarrolladores y administradores de sistemas.</p>
+<h2 id="núcleo-de-comandos-linux-y-herramientas-gnu">Núcleo de Comandos Linux y Herramientas GNU</h2>
+<p>El sistema operativo Linux incluye un conjunto básico de comandos integrados en el núcleo.</p>
+<p>Estos comandos básicos, como <code>ls</code> (para listar archivos), <code>cd</code> (para cambiar de directorio) y <code>ps</code> (para listar procesos en ejecución), son esenciales y consisten en una colección relativamente pequeña.</p>
+<p>Sin embargo, muchas distribuciones Linux incluyen las <strong>utilidades GNU</strong> (como <code>chmod</code>, <code>grep</code>, <code>awk</code>, y <code>sed</code>), un conjunto extensivo de herramientas que amplían enormemente las capacidades de Linux.</p>
+<p>Las utilidades GNU son fundamentales en casi todas las distribuciones, aportando entre 400 y 600 comandos adicionales que permiten manipular archivos, gestionar usuarios y grupos, editar textos, y mucho más.</p>
+<p>Las herramientas GNU son esenciales en sistemas Linux modernos y forman el corazón de muchas operaciones en la terminal.</p>
+<h2 id="distribuciones-y-variabilidad-de-comandos">Distribuciones y Variabilidad de Comandos</h2>
+<p>La cantidad exacta de comandos disponibles en Linux puede variar significativamente según la distribución y los paquetes instalados.</p>
+<p>Algunas distribuciones como <strong>Ubuntu</strong>, <strong>Debian</strong> y <strong>Red Hat</strong> incluyen sus propias herramientas de administración y gestores de paquetes (<code>apt</code>, <code>yum</code>, o <code>dnf</code>), que agregan comandos específicos.</p>
+<p>Además, herramientas populares como Docker, Git, y Kubernetes, cada una con sus propios subcomandos y opciones, contribuyen al número total de comandos disponibles.</p>
+<h2 id="un-entorno-extensible">Un Entorno Extensible</h2>
+<p>La flexibilidad de Linux permite instalar paquetes y aplicaciones de terceros, lo que significa que el número de comandos disponibles puede extenderse aún más.</p>
+<p>En una instalación básica de Linux, un usuario puede contar con aproximadamente 1,000 comandos, mientras que en una instalación avanzada, el número puede superar los 2,000, o incluso más, dependiendo del software instalado.</p>
+<p>Esta extensibilidad y la modularidad del sistema Linux hacen de sus comandos una herramienta poderosa y adaptable a una gran variedad de necesidades, desde la administración de servidores hasta el desarrollo de aplicaciones y el análisis de datos.</p>
+<p>En este tema, veremos algunos comandos, si bien, es interesante profundizar y según el objetivo del manejo del sistema, podremos seguramente indagar en nuevas funcionalidades.</p>
+<h3 id="qué-son-los-comandos-en-linux">¿Qué Son los Comandos en Linux?</h3>
+<p>Los comandos en Linux permiten controlar el sistema desde la <strong>interfaz de línea de comandos</strong> (CLI) en lugar de usar una interfaz gráfica.</p>
+<p>Son instrucciones escritas en texto que, al ser introducidas en el terminal, indican al sistema exactamente qué hacer.</p>
+<p>Esto proporciona un control preciso y detallado sobre el sistema, algo que es difícil de lograr solo con el ratón en un entorno gráfico.</p>
+<p>Algunas características clave de los comandos en Linux:</p>
+<ul>
+<li><strong>Distinguen entre mayúsculas y minúsculas</strong>: Por ejemplo, <code>ls</code> y <code>LS</code> son diferentes, ya que Linux es un sistema sensible a las mayúsculas.</li>
+<li><strong>Tienen una estructura definida</strong>: Usan la sintaxis de <code>comando -opciones argumentos</code>, donde cada comando puede llevar opciones y argumentos específicos.</li>
+<li><strong>Combinación para tareas avanzadas</strong>: Se pueden combinar para realizar operaciones complejas mediante pipelines (<code>|</code>) y redirecciones (<code>&gt;</code> y <code>&gt;&gt;</code>).</li>
+<li><strong>Automatización y scripting</strong>: Los comandos permiten crear scripts para automatizar tareas y ejecutar procesos en lote, lo que facilita la gestión y operación del sistema.</li>
+<li><strong>Acceso directo a recursos del sistema</strong>: Puedes gestionar el sistema de archivos, la red, la memoria y la CPU directamente desde la línea de comandos.</li>
+<li><strong>Interacción en sistemas de servidor</strong>: La CLI es la base para la administración remota de servidores Linux, permitiendo a los administradores realizar configuraciones, instalaciones y monitoreo de sistemas de forma eficiente.</li>
+</ul>
+<p>Usar comandos en Linux es esencial para usuarios avanzados y administradores de sistemas .</p>
+<h1 id="repaso-de-comandos-generales-de-linux-y-redes">Repaso de Comandos Generales de Linux y Redes</h1>
 <h2 id="comandos-generales">Comandos Generales</h2>
 <h3 id="1-ls">1. <code>ls</code></h3>
 <p>Lista los archivos y directorios en el directorio actual.
@@ -3427,6 +3518,7 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 	<h1 id="pg-7288811c3a4de63eacd126fc4c48fa37">2.2 - Ejercicios</h1>
     
 	<h1 id="ejercicios-de-comandos-básicos-en-linux">Ejercicios de Comandos Básicos en Linux</h1>
+<p>Son muchos<br>
 
 <strong>
 <span class="font-weight-bold text-primary">
@@ -3439,106 +3531,401 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 
 </span>
 </strong>
-
+</p>
 <ul>
 <li>
 <p><strong>1.1. Cambia de directorio</strong><br>
 Usa <code>cd</code> para navegar al directorio <code>/home</code> y luego vuelve al directorio raíz <code>/</code>.
 
-
- 
-
-
-
-<form action="procesar.php" method="POST">
-    <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
-    <input type="hidden" name="solucion" value="cd /home" />
-    <br>
-    <input type="submit" value="Evaluar" name="ejercicio">
-    
-    
-    
-</form>
-
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="cd /home; cd /" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
 </p>
 </li>
 <li>
 <p><strong>1.2. Lista el contenido del directorio</strong><br>
-Usa <code>ls</code> para listar los archivos y carpetas en <code>/home</code>. Prueba también las opciones <code>-l</code> y <code>-a</code> para ver información detallada y archivos ocultos.</p>
+Usa <code>ls</code> para listar los archivos y carpetas en <code>/home</code>. Prueba también las opciones <code>-l</code> y <code>-a</code> para ver información detallada y archivos ocultos.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="ls -l -a /home" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 </ul>
-<h2 id="2-creación-y-eliminación-de-archivosdirectorios">2. Creación y Eliminación de Archivos/Directorios</h2>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    <ol start="2">
+<li>Creación y Eliminación de Archivos/Directorios</li>
+</ol>
+
+
+
+</span>
+</strong>
+
 <ul>
 <li>
 <p><strong>2.1. Crea directorios y archivos</strong><br>
-Crea un directorio llamado <code>proyecto</code> en tu <code>home</code> con <code>mkdir</code> y, dentro de él, crea tres archivos vacíos (<code>index.html</code>, <code>style.css</code>, <code>app.js</code>) usando <code>touch</code>.</p>
+Crea un directorio llamado <code>proyecto</code> en tu <code>home</code> con <code>mkdir</code> y, dentro de él, crea tres archivos vacíos (<code>index.html</code>, <code>style.css</code>, <code>app.js</code>) usando <code>touch</code>.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="mkdir ~/proyecto; touch ~/proyecto/index.html ~/proyecto/style.css ~/proyecto/app.js" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 <li>
 <p><strong>2.2. Elimina un archivo</strong><br>
-Usa <code>rm</code> para borrar <code>style.css</code> y confirma que se eliminó listando los archivos dentro de <code>proyecto</code>.</p>
+Usa <code>rm</code> para borrar <code>style.css</code> y confirma que se eliminó listando los archivos dentro de <code>proyecto</code>.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="rm ~/proyecto/style.css; ls ~/proyecto" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 <li>
 <p><strong>2.3. Elimina un directorio</strong><br>
-Crea un directorio llamado <code>temporal</code> dentro de <code>proyecto</code> y luego elimínalo con <code>rm -r</code>.</p>
+Crea un directorio llamado <code>temporal</code> dentro de <code>proyecto</code> y luego elimínalo con <code>rm -r</code>.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="mkdir ~/proyecto/temporal; rm -r ~/proyecto/temporal" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 </ul>
-<h2 id="3-copia-y-movimiento-de-archivos">3. Copia y Movimiento de Archivos</h2>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    <ol start="3">
+<li>Copia y Movimiento de Archivos</li>
+</ol>
+
+
+
+</span>
+</strong>
+
 <ul>
 <li>
 <p><strong>3.1. Copia un archivo</strong><br>
-Usa <code>cp</code> para copiar <code>index.html</code> y renómbralo como <code>index_backup.html</code> en el mismo directorio <code>proyecto</code>.</p>
+Usa <code>cp</code> para copiar <code>index.html</code> y renómbralo como <code>index_backup.html</code> en el mismo directorio <code>proyecto</code>.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="cp ~/proyecto/index.html ~/proyecto/index_backup.html" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 <li>
 <p><strong>3.2. Mueve un archivo</strong><br>
-Usa <code>mv</code> para mover <code>app.js</code> a tu <code>home</code>. Luego, vuelve a moverlo a <code>proyecto</code>.</p>
+Usa <code>mv</code> para mover <code>app.js</code> a tu <code>home</code>. Luego, vuelve a moverlo a <code>proyecto</code>.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="mv ~/proyecto/app.js ~; mv ~/app.js ~/proyecto" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 <li>
 <p><strong>3.3. Renombra un archivo</strong><br>
-Con <code>mv</code>, cambia el nombre de <code>index_backup.html</code> a <code>index_viejo.html</code>.</p>
+Con <code>mv</code>, cambia el nombre de <code>index_backup.html</code> a <code>index_viejo.html</code>.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="mv ~/proyecto/index_backup.html ~/proyecto/index_viejo.html" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 </ul>
-<h2 id="4-visualización-de-contenido">4. Visualización de Contenido</h2>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    <ol start="4">
+<li>Visualización de Contenido</li>
+</ol>
+
+
+
+</span>
+</strong>
+
 <ul>
 <li>
 <p><strong>4.1. Visualiza el contenido de un archivo</strong><br>
-Usa <code>cat</code> para ver el contenido de <code>index.html</code>. Luego, agrega un poco de texto en el archivo usando <code>echo &quot;Contenido ejemplo&quot; &gt; index.html</code> y vuelve a visualizarlo con <code>cat</code>.</p>
+Usa <code>cat</code> para ver el contenido de <code>index.html</code>. Luego, agrega un poco de texto en el archivo usando <code>echo &quot;Contenido ejemplo&quot; &gt; index.html</code> y vuelve a visualizarlo con <code>cat</code>.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="cat ~/proyecto/index.html; echo &#39;Contenido ejemplo&#39; &gt; ~/proyecto/index.html; cat ~/proyecto/index.html" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 <li>
 <p><strong>4.2. Lee archivos grandes con <code>more</code> y <code>less</code></strong><br>
-Si tienes archivos grandes en el sistema, usa <code>more</code> y <code>less</code> para navegar por el contenido de esos archivos.</p>
+Si tienes archivos grandes en el sistema, usa <code>more</code> y <code>less</code> para navegar por el contenido de esos archivos.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="more [archivo]; less [archivo]" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 </ul>
-<h2 id="5-permisos-y-propiedades-de-archivos">5. Permisos y Propiedades de Archivos</h2>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    <ol start="5">
+<li>Permisos y Propiedades de Archivos</li>
+</ol>
+
+
+
+</span>
+</strong>
+
 <ul>
 <li>
 <p><strong>5.1. Cambia permisos de un archivo</strong><br>
-Usa <code>chmod</code> para hacer que <code>index.html</code> sea solo de lectura (<code>chmod 444</code>) y luego cambia los permisos para que sea ejecutable (<code>chmod +x</code>).</p>
+Usa <code>chmod</code> para hacer que <code>index.html</code> sea solo de lectura (<code>chmod 444</code>) y luego cambia los permisos para que sea ejecutable (<code>chmod +x</code>).
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="chmod 444 ~/proyecto/index.html; chmod &#43;x ~/proyecto/index.html" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 <li>
 <p><strong>5.2. Verifica los permisos</strong><br>
-Usa <code>ls -l</code> para verificar los permisos de <code>index.html</code> y comprueba los cambios realizados.</p>
+Usa <code>ls -l</code> para verificar los permisos de <code>index.html</code> y comprueba los cambios realizados.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="ls -l ~/proyecto/index.html" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 </ul>
-<h2 id="6-comandos-para-información-del-sistema">6. Comandos para Información del Sistema</h2>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    <ol start="6">
+<li>Comandos para Información del Sistema</li>
+</ol>
+
+
+
+</span>
+</strong>
+
 <ul>
 <li>
 <p><strong>6.1. Verifica el espacio en disco</strong><br>
-Usa <code>df -h</code> para ver cuánto espacio libre queda en el disco.</p>
+Usa <code>df -h</code> para ver cuánto espacio libre queda en el disco.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="df -h" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 <li>
 <p><strong>6.2. Muestra la memoria en uso</strong><br>
-Usa <code>free -h</code> para ver la memoria RAM en uso.</p>
+Usa <code>free -h</code> para ver la memoria RAM en uso.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="free -h" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 </ul>
-<h2 id="7-otros-comandos-útiles">7. Otros Comandos Útiles</h2>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    <ol start="7">
+<li>Otros Comandos Útiles</li>
+</ol>
+
+
+
+</span>
+</strong>
+
 <ul>
 <li>
 <p><strong>7.1. Usa <code>history</code> para ver comandos anteriores</strong><br>
-Ejecuta <code>history</code> para ver los últimos comandos que has usado. Repite el comando número 5 en la lista con <code>!5</code>.</p>
+Ejecuta <code>history</code> para ver los últimos comandos que has usado. Repite el comando número 5 en la lista con <code>!5</code>.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="history; !5" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 <li>
 <p><strong>7.2. Limpia la pantalla</strong><br>
-Usa <code>clear</code> para limpiar la pantalla y mantener el terminal organizado.</p>
+Usa <code>clear</code> para limpiar la pantalla y mantener el terminal organizado.
+
+  
+  
+  
+  <form action="procesar.php" method="POST">
+      <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+      <input type="hidden" name="solucion" value="clear" />
+      <br>
+      <input type="submit" value="Evaluar" name="ejercicio">
+      
+      
+      
+  </form>
+  
+</p>
 </li>
 </ul>
 

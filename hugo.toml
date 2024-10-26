@@ -64,18 +64,18 @@ ul_show = 1
 sidebar_menu_foldable = true
 showLightDarkModeMenu = true
 
-[menu]
-  [[menu.main]]
-    identifier = "docker"
-    name = "Docker"
-    url = "/docs/02_docker/"
-    weight = 10
+# [menu]
+#   [[menu.main]]
+#     identifier = "docker"
+#     name = "Docker"
+#     url = "/docs/02_docker/"
+#     weight = 10
 
-  [[menu.main]]
-    identifier = "hugo"
-    name = "Hugo"
-    url = "/docs/03_hugo/"
-    weight = 20
+#   [[menu.main]]
+#     identifier = "hugo"
+#     name = "Hugo"
+#     url = "/docs/03_hugo/"
+#     weight = 20
     
 [params]
 custom_css=['/css/icons.css','custom.css']

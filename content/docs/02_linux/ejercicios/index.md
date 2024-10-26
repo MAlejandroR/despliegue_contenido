@@ -5,7 +5,7 @@ weight: 10
 icon: fas fa-tasks
 ---
 # Ejercicios de Comandos Básicos en Linux
-
+Son muchos  
 {{< color >}} 1. Navegación y Visualización de Archivos {{< /color >}}
 - **1.1. Cambia de directorio**  
   Usa `cd` para navegar al directorio `/home` y luego vuelve al directorio raíz `/`.
