@@ -156,6 +156,14 @@ Versión imprimible multipagina.
 
     
   
+    
+    
+	
+<li>2: <a href="#pg-7288811c3a4de63eacd126fc4c48fa37">Ejercicios</a></li>
+
+
+    
+  
 
     </ul>
 
@@ -1011,6 +1019,141 @@ Versión imprimible multipagina.
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#3c3d38"><span><span style="color:#a6e22e">ethtool</span> <span style="color:#a6e22e">dev</span></span></span></code></pre></td></tr></table>
 </div>
 </div></p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-7288811c3a4de63eacd126fc4c48fa37">2 - Ejercicios</h1>
+    
+	<h1 id="ejercicios-de-comandos-básicos-en-linux">Ejercicios de Comandos Básicos en Linux</h1>
+
+<strong>
+<span class="font-weight-bold text-primary">
+
+    <ol>
+<li>Navegación y Visualización de Archivos</li>
+</ol>
+
+
+
+</span>
+</strong>
+
+<ul>
+<li>
+<p><strong>1.1. Cambia de directorio</strong><br>
+Usa <code>cd</code> para navegar al directorio <code>/home</code> y luego vuelve al directorio raíz <code>/</code>.
+
+ 
+
+
+
+<form action="procesar.php" method="POST">
+
+    <textarea id="texto" name="respuesta" rows="4" cols="50">
+    </textarea>
+    <input type='hidden' name='solucion' value= "cd /home" />
+    <br>
+    <input type="submit" value="Evaluar" name="ejercicio">
+    
+        
+    
+</form>
+
+
+
+</p>
+</li>
+<li>
+<p><strong>1.2. Lista el contenido del directorio</strong><br>
+Usa <code>ls</code> para listar los archivos y carpetas en <code>/home</code>. Prueba también las opciones <code>-l</code> y <code>-a</code> para ver información detallada y archivos ocultos.</p>
+</li>
+</ul>
+<h2 id="2-creación-y-eliminación-de-archivosdirectorios">2. Creación y Eliminación de Archivos/Directorios</h2>
+<ul>
+<li>
+<p><strong>2.1. Crea directorios y archivos</strong><br>
+Crea un directorio llamado <code>proyecto</code> en tu <code>home</code> con <code>mkdir</code> y, dentro de él, crea tres archivos vacíos (<code>index.html</code>, <code>style.css</code>, <code>app.js</code>) usando <code>touch</code>.</p>
+</li>
+<li>
+<p><strong>2.2. Elimina un archivo</strong><br>
+Usa <code>rm</code> para borrar <code>style.css</code> y confirma que se eliminó listando los archivos dentro de <code>proyecto</code>.</p>
+</li>
+<li>
+<p><strong>2.3. Elimina un directorio</strong><br>
+Crea un directorio llamado <code>temporal</code> dentro de <code>proyecto</code> y luego elimínalo con <code>rm -r</code>.</p>
+</li>
+</ul>
+<h2 id="3-copia-y-movimiento-de-archivos">3. Copia y Movimiento de Archivos</h2>
+<ul>
+<li>
+<p><strong>3.1. Copia un archivo</strong><br>
+Usa <code>cp</code> para copiar <code>index.html</code> y renómbralo como <code>index_backup.html</code> en el mismo directorio <code>proyecto</code>.</p>
+</li>
+<li>
+<p><strong>3.2. Mueve un archivo</strong><br>
+Usa <code>mv</code> para mover <code>app.js</code> a tu <code>home</code>. Luego, vuelve a moverlo a <code>proyecto</code>.</p>
+</li>
+<li>
+<p><strong>3.3. Renombra un archivo</strong><br>
+Con <code>mv</code>, cambia el nombre de <code>index_backup.html</code> a <code>index_viejo.html</code>.</p>
+</li>
+</ul>
+<h2 id="4-visualización-de-contenido">4. Visualización de Contenido</h2>
+<ul>
+<li>
+<p><strong>4.1. Visualiza el contenido de un archivo</strong><br>
+Usa <code>cat</code> para ver el contenido de <code>index.html</code>. Luego, agrega un poco de texto en el archivo usando <code>echo &quot;Contenido ejemplo&quot; &gt; index.html</code> y vuelve a visualizarlo con <code>cat</code>.</p>
+</li>
+<li>
+<p><strong>4.2. Lee archivos grandes con <code>more</code> y <code>less</code></strong><br>
+Si tienes archivos grandes en el sistema, usa <code>more</code> y <code>less</code> para navegar por el contenido de esos archivos.</p>
+</li>
+</ul>
+<h2 id="5-permisos-y-propiedades-de-archivos">5. Permisos y Propiedades de Archivos</h2>
+<ul>
+<li>
+<p><strong>5.1. Cambia permisos de un archivo</strong><br>
+Usa <code>chmod</code> para hacer que <code>index.html</code> sea solo de lectura (<code>chmod 444</code>) y luego cambia los permisos para que sea ejecutable (<code>chmod +x</code>).</p>
+</li>
+<li>
+<p><strong>5.2. Verifica los permisos</strong><br>
+Usa <code>ls -l</code> para verificar los permisos de <code>index.html</code> y comprueba los cambios realizados.</p>
+</li>
+</ul>
+<h2 id="6-comandos-para-información-del-sistema">6. Comandos para Información del Sistema</h2>
+<ul>
+<li>
+<p><strong>6.1. Verifica el espacio en disco</strong><br>
+Usa <code>df -h</code> para ver cuánto espacio libre queda en el disco.</p>
+</li>
+<li>
+<p><strong>6.2. Muestra la memoria en uso</strong><br>
+Usa <code>free -h</code> para ver la memoria RAM en uso.</p>
+</li>
+</ul>
+<h2 id="7-otros-comandos-útiles">7. Otros Comandos Útiles</h2>
+<ul>
+<li>
+<p><strong>7.1. Usa <code>history</code> para ver comandos anteriores</strong><br>
+Ejecuta <code>history</code> para ver los últimos comandos que has usado. Repite el comando número 5 en la lista con <code>!5</code>.</p>
+</li>
+<li>
+<p><strong>7.2. Limpia la pantalla</strong><br>
+Usa <code>clear</code> para limpiar la pantalla y mantener el terminal organizado.</p>
+</li>
+</ul>
 
 </div>
 

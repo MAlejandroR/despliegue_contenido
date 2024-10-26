@@ -311,19 +311,16 @@ La idea es tener un contenedor según nuestra necesidad, y con él, crear una im
 
 
 
-<form action="procesar.php" method="POST">
 
-    <textarea id="texto" name="respuesta" rows="4" cols="50">
-    </textarea>
-    <input type='hidden' name='solucion' value= "docker stop web docker commit web web:v1" />
+<form action="procesar.php" method="POST">
+    <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+    <input type="hidden" name="solucion" value="docker stop web docker commit web web:v1" />
     <br>
     <input type="submit" value="Evaluar" name="ejercicio">
     
-        
+    
     
 </form>
-
-
 
 </p>
 </blockquote>
@@ -333,19 +330,16 @@ La idea es tener un contenedor según nuestra necesidad, y con él, crear una im
 
 
 
-<form action="procesar.php" method="POST">
 
-    <textarea id="texto" name="respuesta" rows="4" cols="50">
-    </textarea>
-    <input type='hidden' name='solucion' value= "docker images" />
+<form action="procesar.php" method="POST">
+    <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+    <input type="hidden" name="solucion" value="docker images" />
     <br>
     <input type="submit" value="Evaluar" name="ejercicio">
     
-        
+    
     
 </form>
-
-
 
 
 </blockquote>
@@ -371,19 +365,16 @@ La idea es tener un contenedor según nuestra necesidad, y con él, crear una im
 
 
 
-<form action="procesar.php" method="POST">
 
-    <textarea id="texto" name="respuesta" rows="4" cols="50">
-    </textarea>
-    <input type='hidden' name='solucion' value= "docker run -t -i -v .\app:/var/www/html web:v1 bash" />
+<form action="procesar.php" method="POST">
+    <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+    <input type="hidden" name="solucion" value="docker run -t -i -v .\app:/var/www/html web:v1 bash" />
     <br>
     <input type="submit" value="Evaluar" name="ejercicio">
     
-        
+    
     
 </form>
-
-
 
 
 </blockquote>
@@ -407,19 +398,16 @@ Lo que se almacena  en el <strong>fichero tar</strong> es <strong>la imagen del 
 
 
 
-<form action="procesar.php" method="POST">
 
-    <textarea id="texto" name="respuesta" rows="4" cols="50">
-    </textarea>
-    <input type='hidden' name='solucion' value= "docker stop web docker export -o web.tar web" />
+<form action="procesar.php" method="POST">
+    <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+    <input type="hidden" name="solucion" value="docker stop web docker export -o web.tar web" />
     <br>
     <input type="submit" value="Evaluar" name="ejercicio">
     
-        
+    
     
 </form>
-
-
 
 
 </blockquote>
@@ -447,41 +435,35 @@ Lo que se almacena  en el <strong>fichero tar</strong> es <strong>la imagen del 
 
 
 
-<form action="procesar.php" method="POST">
 
-    <textarea id="texto" name="respuesta" rows="4" cols="50">
-    </textarea>
-    <input type='hidden' name='solucion' value= "docker import web.tar web:v2" />
+<form action="procesar.php" method="POST">
+    <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+    <input type="hidden" name="solucion" value="docker import web.tar web:v2" />
     <br>
     <input type="submit" value="Evaluar" name="ejercicio">
     
-        
+    
     
 </form>
-
-
 
 
 </blockquote>
 <h4 id="__6-confirma-que-lo-has-creado__"><strong>6. Confirma que lo has creado</strong></h4>
 <blockquote>
 
+
  
 
 
 <form action="procesar.php" method="POST">
-
-    <textarea id="texto" name="respuesta" rows="4" cols="50">
-    </textarea>
-    <input type='hidden' name='solucion' value= "docker images" />
+    <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+    <input type="hidden" name="solucion" value="docker images" />
     <br>
     <input type="submit" value="Evaluar" name="ejercicio">
     
-        
+    
     
 </form>
-
-
 
 
 </blockquote>
@@ -501,22 +483,19 @@ Lo que se almacena  en el <strong>fichero tar</strong> es <strong>la imagen del 
 
 <blockquote>
 
+
  
 
 
 <form action="procesar.php" method="POST">
-
-    <textarea id="texto" name="respuesta" rows="4" cols="50">
-    </textarea>
-    <input type='hidden' name='solucion' value= "docker run -t -i -p 8002:80 -v .\app:/var/www/html web:v2 bash" />
+    <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+    <input type="hidden" name="solucion" value="docker run -t -i -p 8002:80 -v .\app:/var/www/html web:v2 bash" />
     <br>
     <input type="submit" value="Evaluar" name="ejercicio">
     
-        
+    
     
 </form>
-
-
 
 
 </blockquote>
@@ -550,19 +529,16 @@ Lo que se almacena  en el <strong>fichero tar</strong> es <strong>la imagen del 
 
 
 
-<form action="procesar.php" method="POST">
 
-    <textarea id="texto" name="respuesta" rows="4" cols="50">
-    </textarea>
-    <input type='hidden' name='solucion' value= "docker login" />
+<form action="procesar.php" method="POST">
+    <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+    <input type="hidden" name="solucion" value="docker login" />
     <br>
     <input type="submit" value="Evaluar" name="ejercicio">
     
-        
+    
     
 </form>
-
-
 
 
 </blockquote>
@@ -581,19 +557,16 @@ Lo que se almacena  en el <strong>fichero tar</strong> es <strong>la imagen del 
 
 
 
-<form action="procesar.php" method="POST">
 
-    <textarea id="texto" name="respuesta" rows="4" cols="50">
-    </textarea>
-    <input type='hidden' name='solucion' value= "docker push manolo/web:v1" />
+<form action="procesar.php" method="POST">
+    <textarea id="texto" name="respuesta" rows="4" cols="50"></textarea>
+    <input type="hidden" name="solucion" value="docker push manolo/web:v1" />
     <br>
     <input type="submit" value="Evaluar" name="ejercicio">
     
-        
+    
     
 </form>
-
-
 
 
 </blockquote>

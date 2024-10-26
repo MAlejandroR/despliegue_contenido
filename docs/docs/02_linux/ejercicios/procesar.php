@@ -1,3 +1,4 @@
+
 <?php
 ini_set("display_errors", true);
 error_reporting(E_ALL);
@@ -8,10 +9,10 @@ error_reporting(E_ALL);
  */
 function contains(string|null $respuesta, string|null $solucion): bool
 {
-  $respuesta = explode(" ", $respuesta);
-  $solucion = explode(" ", $solucion);
-  $rtdo = array_diff($solucion, $respuesta);
-  return (!(bool)count($rtdo));
+    $respuesta = explode(" ", $respuesta);
+    $solucion = explode(" ", $solucion);
+    $rtdo = array_diff($solucion, $respuesta);
+    return (!(bool)count($rtdo));
 }
 
 $respuesta = htmlspecialchars(filter_input(INPUT_POST, "respuesta"));
@@ -78,6 +79,7 @@ header("Refresh: 5; url=$paginaDeReferencia");
             crossorigin="anonymous"></script>
 
 </head>
+<body class="td-section">
 <header>
     <header>
         <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
@@ -121,8 +123,7 @@ header("Refresh: 5; url=$paginaDeReferencia");
         </nav>
     </header>
     <html>
-
-    <body class="td-section">
+    <body>
 
     <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
         <div class="text-center p-4" style="border: 2px solid #ccc; background-color: #f9f9f9;">
