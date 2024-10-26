@@ -17,13 +17,8 @@ title = 'Recursos de apoyo al aprendizaje'
 # Para poder cargar emogin https://www.webfx.com/tools/emoji-cheat-sheet/
 enableEmoji = true
 
-# Con print sale el botón de imprimir la página.
-[outputs]
-section = [ "HTML", "RSS", "print" ]
-
-
-
-# Enable syntax highlighting and copy buttons on code blocks with Prism
+# Enable syntax highlighting and copy buttons
+# on code blocks with Prism
 prism_syntax_highlighting = true
 #
 ## Highlighting config
@@ -35,6 +30,13 @@ prism_syntax_highlighting = true
 ## See https://help.farbox.com/pygments.html
 ShowCodeCopyButtons = true
 pygmentsStyle = "perldoc"
+
+# Con print sale el botón de imprimir la página.
+[outputs]
+section = [ "HTML", "RSS", "print" ]
+
+
+
 
 
 

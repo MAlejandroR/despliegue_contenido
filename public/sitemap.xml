@@ -10,6 +10,8 @@
   </url><url>
     <loc>http://localhost:1313/despliegue/contenido/docs/02_linux/ejercicios/</loc>
   </url><url>
+    <loc>http://localhost:1313/despliegue/contenido/docs/02_linux/comandos/01_comandos-ficheros/</loc>
+  </url><url>
     <loc>http://localhost:1313/despliegue/contenido/docs/03_docker/1_docker/04_ejercicios/1_imagenes/</loc>
   </url><url>
     <loc>http://localhost:1313/despliegue/contenido/docs/01_redes/01_internet/</loc>
@@ -23,6 +25,8 @@
     <loc>http://localhost:1313/despliegue/contenido/docs/02_linux/</loc>
   </url><url>
     <loc>http://localhost:1313/despliegue/contenido/docs/01_redes/02_capas/</loc>
+  </url><url>
+    <loc>http://localhost:1313/despliegue/contenido/docs/02_linux/comandos/02_redirecionamiento/</loc>
   </url><url>
     <loc>http://localhost:1313/despliegue/contenido/docs/03_docker/1_docker/04_ejercicios/3_contenedores_imagenes/</loc>
   </url><url>
@@ -43,6 +47,8 @@
     <loc>http://localhost:1313/despliegue/contenido/docs/03_docker/1_docker/05_resumen_instrucciones_docker_file/</loc>
   </url><url>
     <loc>http://localhost:1313/despliegue/contenido/docs/06_aws/</loc>
+  </url><url>
+    <loc>http://localhost:1313/despliegue/contenido/docs/02_linux/comandos/09_comandos-administraci%C3%B3n/</loc>
   </url><url>
     <loc>http://localhost:1313/despliegue/contenido/docs/03_docker/1_docker/04_ejercicios/5_dockercompose/3_web_1/app/</loc>
   </url><url>

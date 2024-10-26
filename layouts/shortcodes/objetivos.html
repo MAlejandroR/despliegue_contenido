@@ -1,4 +1,4 @@
-{{ $title := .Get 0 | default "Objetivos" }}
+{{ $title := .Get "title" | default "Objetivos" }}
 {{ $sub_title := .Get "sub_title" | default "Qué veremos aquí" }}
 
 <div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">

@@ -154,10 +154,25 @@
   <label for="m-desplieguecontenidodocs02_linux-check"><a href="/despliegue/contenido/docs/02_linux/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs02_linux"><i class="fab fa-linux"></i><span class="">Linux</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs02_linuxcomandos-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-desplieguecontenidodocs02_linuxcomandos-li">
   <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos-check"/>
-  <label for="m-desplieguecontenidodocs02_linuxcomandos-check"><a href="/despliegue/contenido/docs/02_linux/comandos/" title="Comandos" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxcomandos"><i class="fab fa-linux"></i><span class="">comandos</span></a></label>
+  <label for="m-desplieguecontenidodocs02_linuxcomandos-check"><a href="/despliegue/contenido/docs/02_linux/comandos/" title="Comandos" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs02_linuxcomandos"><i class="fas fa-keyboard"></i><span class="">comandos</span></a></label>
   
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs02_linuxcomandos01_comandos-ficheros-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos01_comandos-ficheros-check"/>
+  <label for="m-desplieguecontenidodocs02_linuxcomandos01_comandos-ficheros-check"><a href="/despliegue/contenido/docs/02_linux/comandos/01_comandos-ficheros/" title="Ficheros" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxcomandos01_comandos-ficheros"><i class="fas fa-file"></i><span class="">Gestión de ficheros</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs02_linuxcomandos02_redirecionamiento-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos02_redirecionamiento-check"/>
+  <label for="m-desplieguecontenidodocs02_linuxcomandos02_redirecionamiento-check"><a href="/despliegue/contenido/docs/02_linux/comandos/02_redirecionamiento/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxcomandos02_redirecionamiento"><i class="fas fa-file-export"></i><span class="">Redireccionamiento</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs02_linuxcomandos09_comandos-administracic3b3n-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos09_comandos-administracic3b3n-check"/>
+  <label for="m-desplieguecontenidodocs02_linuxcomandos09_comandos-administracic3b3n-check"><a href="/despliegue/contenido/docs/02_linux/comandos/09_comandos-administraci%C3%B3n/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxcomandos09_comandos-administracic3b3n"><i class="fas fa-server"></i><span class="">Administración</span></a></label>
+  
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs02_linuxejercicios-li">
   <input type="checkbox" id="m-desplieguecontenidodocs02_linuxejercicios-check"/>
   <label for="m-desplieguecontenidodocs02_linuxejercicios-check"><a href="/despliegue/contenido/docs/02_linux/ejercicios/" title="Ejercicios" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxejercicios"><i class="fas fa-tasks"></i><span class="">Ejercicios para practicar</span></a></label>
@@ -239,12 +254,12 @@
 <li>Comandos a usar</li>
 </ul>
 <blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker pull
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker pull
 </span></span><span style="display:flex;"><span>docker images
 </span></span><span style="display:flex;"><span>docker rmi nombre_imagen
-</span></span><span style="display:flex;"><span>docker rmi <span style="color:#f92672">(</span>docker images<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>docker rmi (docker images)
 </span></span></code></pre></div></blockquote>
-<h5 id="__1-descarga-una-imagen-llamada--hahahugoshortcode83s0hbhb__"><strong>1. Descarga una imagen llamada  
+<h5 id="__1-descarga-una-imagen-llamada--hahahugoshortcode23s0hbhb__"><strong>1. Descarga una imagen llamada  
 <strong>
 <span class="font-weight-bold text-text-success">
 
@@ -272,7 +287,7 @@
 
 
 </blockquote>
-<h5 id="__2-descarga-una-imagen-llamada--hahahugoshortcode83s2hbhb__"><strong>2. Descarga una imagen llamada  
+<h5 id="__2-descarga-una-imagen-llamada--hahahugoshortcode23s2hbhb__"><strong>2. Descarga una imagen llamada  
 <strong>
 <span class="font-weight-bold text-text-success">
 

@@ -1,8 +1,8 @@
 ---
 title: "Ficheros"
-linkTitle: "comandos de la gestión de ficheros"
+linkTitle: "Gestión de ficheros"
 weight: 10
-icon: fab fa-linux
+icon: fas fa-file
 ---
 
 {{< objetivos  >}}
@@ -227,68 +227,182 @@ Comandos concretos clasficados en el sistema
 
 
 ## 4. Análisis y Procesamiento de Archivos
+{{< objetivos title="Comandos más complejos" sub_title="Practica y verifica sus opciones" >}}
+Estas opciones son más complejas
+En muchas ocasiones son parte de otros comandos
+O pueden ser utilizados como programación (ver awk)
+{{< /objetivos >}}
+{{% line width="6px" color="green"%}}
+<br />  
 
-- {{< color >}} grep {{< /color >}}: Busca texto usando patrones (*global regular expression print*).
+* {{< color >}} grep {{< /color >}}: Busca texto usando patrones (***g**lobal **r**egular **e**xpression **p**rint*).
   {{< highlight php "linenos=table, hl_lines=1" >}}
   grep [opciones] pattern [archivos]
   {{< / highlight >}}
-    - Ejemplo:
-      {{< highlight php "linenos=table, hl_lines=1" >}}
+    - Opciones útiles:
+        - `-i`: Ignora mayúsculas y minúsculas en el patrón de búsqueda.
+        - `-r` o `-R`: Busca de forma recursiva en todos los archivos de un directorio.
+        - `-c`: Muestra solo el número de líneas que coinciden en cada archivo.
+        - `-l`: Lista solo los nombres de archivos que contienen coincidencias.
+        - `-n`: Muestra los números de línea donde se encuentran las coincidencias.
+        - `-v`: Invierte la búsqueda, mostrando solo las líneas que **no** coinciden con el patrón.
+        - `-w`: Coincide solo palabras completas, en lugar de cadenas parciales.
+        - `-A [número]`: Muestra `n` líneas **después** de una coincidencia.
+        - `-B [número]`: Muestra `n` líneas **antes** de una coincidencia.
+        - `-C [número]`: Muestra `n` líneas de contexto **antes y después** de una coincidencia.
+
+    - Ejemplos:
+      {{< highlight php "linenos=table, hl_lines=1-8" >}}
       grep -i "error" /var/log/syslog #: Busca "error" en syslog ignorando mayúsculas.
+      grep -r "TODO" ~/proyecto/ #: Busca "TODO" en todos los archivos de la carpeta "proyecto".
+      grep -c "warning" logs.txt #: Muestra el número de líneas que contienen "warning" en logs.txt.
+      grep -l "success" *.log #: Lista solo los archivos .log que contienen "success".
+      grep -n "error" server.log #: Muestra el número de línea donde aparece "error" en server.log.
+      grep -v "DEBUG" app.log #: Muestra las líneas de app.log que no contienen "DEBUG".
+      grep -w "user" usuarios.txt #: Busca la palabra completa "user" en usuarios.txt.
+      grep -A 3 "ERROR" server.log #: Muestra las 3 líneas siguientes a cada "ERROR" en server.log.
       {{< / highlight >}}
 
-- {{< color >}} awk {{< /color >}}: Procesamiento de texto basado en patrones y acciones (*Aho, Weinberger, Kernighan*).
-  {{< highlight php "linenos=table, hl_lines=1" >}}
-  awk 'pattern { acción }' input-file
+
+* {{< color >}} awk {{< /color >}}: Procesamiento de texto basado en patrones y acciones (***A**ho, **W**einberger, **K**ernighan*).
+
+{{< alert title="Datos curiosos" color="success" >}}
+{{< color >}} Alfred Aho {{< /color >}}
+* Es un influyente científico informático y académico, principalmente reconocido por su trabajo en lenguajes de programación y algoritmos. Con Jeffrey Ullman, desarrolló **Compiladores: Principios, Técnicas y Herramientas**, conocido como **el libro del dragón** por su portada. Esta obra es una referencia esencial en la teoría y práctica de la construcción de compiladores. Aho también hizo contribuciones en los algoritmos de búsqueda y emparejamiento de patrones que son la base de herramientas de Unix.
+
+{{< color >}} Peter Weinberger {{< /color >}}
+ 
+* Weinberger, también un destacado científico informático, fue fundamental en la creación de herramientas de procesamiento de datos en Unix. Su trabajo en los laboratorios Bell ayudó a optimizar el rendimiento en sistemas de datos, y sus aportes son cruciales para las bases del procesamiento eficiente en sistemas Unix.
+ 
+* Weinberger también fue responsable del famoso "W" en `awk` y contribuyó al desarrollo de herramientas y utilidades para Unix, orientadas a la administración de sistemas y manipulación de datos.
+
+{{< color >}} Brian Kernighan{{< /color >}}
+* Kernighan es conocido por su participación en la creación del lenguaje **C** junto a Dennis Ritchie, un hito en la programación moderna. Coautor del libro **“The C Programming Language”**, que es considerado el texto clásico para el aprendizaje de C, Kernighan también ha desarrollado herramientas de software y es coautor de varios otros libros de referencia sobre Unix y sus sistemas. 
+ 
+* Su visión y trabajo en la programación estructurada y la eficiencia en código son claves en la evolución del desarrollo de software.
+{{< /alert >}}
+
+{{< highlight php "linenos=table, hl_lines=1" >}}
+awk 'pattern { acción }' input-file
+{{< / highlight >}}
+
+- Opciones comunes:
+    - **`-F`**: Especifica el delimitador de campo.
+    - **`-v`**: Define variables externas para usarlas dentro de `awk`.
+
+- Ejemplos:
+  {{< highlight php "linenos=table, hl_lines=1-4" >}}
+  awk '/error/ {print $1}' /var/log/syslog #: Imprime el primer campo de cada línea que contenga "error".
+  awk -F":" '{print $1}' /etc/passwd #: Imprime el primer campo (nombre de usuario) de cada línea de /etc/passwd.
+  awk '$3 > 1000 {print $1}' datos.txt #: Imprime el primer campo de líneas donde el tercer campo es mayor que 1000.
+  awk -v ORS=", " '{print $1}' items.txt #: Imprime el primer campo de cada línea, separado por comas.
   {{< / highlight >}}
-    - Ejemplo:
-      {{< highlight php "linenos=table, hl_lines=1" >}}
-      awk '/error/ {print $1}' /var/log/syslog #: Imprime el primer campo de cada línea que contenga "error".
-      {{< / highlight >}}
 
-- {{< color >}} sed {{< /color >}}: Editor de secuencias para filtrado y transformación de texto (*stream editor*).
-  {{< highlight php "linenos=table, hl_lines=1" >}}
-  sed [opciones] 'commands' input-file
+* {{< color >}} sed {{< /color >}}: Editor de secuencias para filtrado y transformación de texto (*stream editor*).
+
+{{< alert title="Datos curiosos" color="success" >}}
+- **Origen**: `sed` fue desarrollado en 1973 por **Lee E. McMahon** en los laboratorios Bell. Es una de las primeras herramientas de procesamiento de texto de Unix y se considera revolucionaria por su capacidad para realizar transformaciones de texto sin abrir un editor de archivos, aplicando cambios "en flujo" directamente sobre la salida.
+
+- **Funcionalidad**: A diferencia de los editores de texto interactivos, `sed` se usa en la línea de comandos para realizar modificaciones masivas de texto mediante expresiones regulares y comandos específicos. Esta capacidad lo convierte en una herramienta ideal para automatizar tareas de procesamiento de texto, como reemplazos masivos o eliminación de líneas en scripts.
+
+- **Ventajas**: `sed` es eficiente y rápido, ya que lee las líneas del archivo una a una y aplica los cambios en flujo. Su diseño "streaming" le permite manejar grandes volúmenes de texto con un bajo uso de recursos, siendo especialmente útil en procesos de scripting y administración de sistemas.
+
+{{< /alert >}}
+
+{{< highlight php "linenos=table, hl_lines=1" >}}
+sed [opciones] 'commands' input-file
+{{< / highlight >}}
+
+- Opciones comunes:
+    - **`-e`**: Permite ejecutar múltiples comandos de edición en una sola línea.
+    - **`-i`**: Modifica el archivo en el lugar, haciendo los cambios permanentes.
+    - **`-n`**: Suprime la salida automática; útil para imprimir solo líneas seleccionadas.
+
+- Ejemplos:
+  {{< highlight php "linenos=table, hl_lines=1-5" >}}
+  sed 's/foo/bar/' file.txt #: Reemplaza la primera aparición de "foo" con "bar" en cada línea de "file.txt".
+  sed 's/foo/bar/g' file.txt #: Reemplaza todas las apariciones de "foo" con "bar" en cada línea.
+  sed -n '/error/p' log.txt #: Imprime solo las líneas que contienen "error".
+  sed '2,5d' file.txt #: Elimina las líneas de la 2 a la 5 en "file.txt".
+  sed -i 's/http/https/g' urls.txt #: Reemplaza "http" con "https" directamente en "urls.txt".
   {{< / highlight >}}
-    - Ejemplo:
-      {{< highlight php "linenos=table, hl_lines=1" >}}
-      sed 's/foo/bar/' file.txt #: Reemplaza "foo" con "bar" en "file.txt".
-      {{< / highlight >}}
 
-- {{< color >}} sort {{< /color >}}: Ordena líneas de archivos de texto (*sort*).
+
+* {{< color >}} sort {{< /color >}}: Ordena líneas de archivos de texto (*sort*).
+
   {{< highlight php "linenos=table, hl_lines=1" >}}
   sort [opciones] [archivo]
   {{< / highlight >}}
-    - Ejemplo:
-      {{< highlight php "linenos=table, hl_lines=1" >}}
+
+    - Opciones comunes:
+        - **`-n`**: Ordena numéricamente, en lugar de alfabéticamente.
+        - **`-r`**: Invierte el orden de la clasificación (de mayor a menor).
+        - **`-k [columna]`**: Ordena por una columna específica (útil para archivos con datos en columnas).
+        - **`-u`**: Omite líneas duplicadas en la salida (solo muestra líneas únicas).
+        - **`-t [delimitador]`**: Define un delimitador específico para dividir las columnas (por defecto es el espacio o tabulación).
+        - **`-M`**: Ordena por nombre de mes (por ejemplo, de enero a diciembre).
+
+    - Ejemplos:
+      {{< highlight php "linenos=table, hl_lines=1-5" >}}
       sort -n datos.txt #: Ordena numéricamente el archivo "datos.txt".
+      sort -r nombres.txt #: Ordena alfabéticamente en orden inverso.
+      sort -k 3 empleados.txt #: Ordena el archivo "empleados.txt" por la tercera columna.
+      sort -u lista.txt #: Muestra líneas únicas de "lista.txt".
+      sort -t, -k 2 precios.csv #: Ordena "precios.csv" por la segunda columna usando coma como delimitador.
       {{< / highlight >}}
 
 - {{< color >}} uniq {{< /color >}}: Filtra líneas repetidas adyacentes (*unique*).
+
   {{< highlight php "linenos=table, hl_lines=1" >}}
   uniq [opciones] [entrada]
   {{< / highlight >}}
-    - Ejemplo:
-      {{< highlight php "linenos=table, hl_lines=1" >}}
+
+    - Opciones comunes:
+        - **`-c`**: Muestra un recuento de ocurrencias para cada línea única.
+        - **`-d`**: Muestra solo las líneas que están duplicadas.
+        - **`-u`**: Muestra solo las líneas únicas (sin duplicados).
+
+    - Ejemplos:
+      {{< highlight php "linenos=table, hl_lines=1-3" >}}
       sort datos.txt | uniq #: Elimina líneas duplicadas en "datos.txt" después de ordenar.
+      sort datos.txt | uniq -c #: Muestra cada línea única con el número de veces que aparece.
+      sort datos.txt | uniq -d #: Muestra solo las líneas duplicadas.
       {{< / highlight >}}
 
 - {{< color >}} diff {{< /color >}}: Compara archivos línea por línea (*difference*).
+
   {{< highlight php "linenos=table, hl_lines=1" >}}
   diff [opciones] archivo1 archivo2
   {{< / highlight >}}
-    - Ejemplo:
-      {{< highlight php "linenos=table, hl_lines=1" >}}
+
+    - Opciones comunes:
+        - **`-u`**: Muestra las diferencias con contexto, incluyendo unas líneas anteriores y posteriores a la diferencia.
+        - **`-y`**: Muestra las diferencias en formato de dos columnas (lado a lado).
+        - **`-i`**: Ignora las diferencias en mayúsculas y minúsculas.
+
+    - Ejemplos:
+      {{< highlight php "linenos=table, hl_lines=1-3" >}}
       diff original.txt actualizado.txt #: Muestra diferencias entre "original.txt" y "actualizado.txt".
+      diff -u original.txt actualizado.txt #: Muestra las diferencias con contexto.
+      diff -y archivo1.txt archivo2.txt #: Muestra las diferencias en dos columnas.
       {{< / highlight >}}
 
 - {{< color >}} wc {{< /color >}}: Imprime recuento de líneas, palabras y bytes (*word count*).
+
   {{< highlight php "linenos=table, hl_lines=1" >}}
   wc [opciones] [archivo]
   {{< / highlight >}}
-    - Ejemplo:
-      {{< highlight php "linenos=table, hl_lines=1" >}}
+
+    - Opciones comunes:
+        - **`-l`**: Cuenta solo el número de líneas.
+        - **`-w`**: Cuenta solo el número de palabras.
+        - **`-c`**: Cuenta solo el número de bytes.
+
+    - Ejemplos:
+      {{< highlight php "linenos=table, hl_lines=1-3" >}}
       wc reporte.txt #: Muestra el número de líneas, palabras y bytes de "reporte.txt".
+      wc -l reporte.txt #: Muestra solo el número de líneas de "reporte.txt".
+      wc -w archivo.txt #: Muestra solo el número de palabras en "archivo.txt".
       {{< / highlight >}}
 
 
@@ -355,15 +469,6 @@ Comandos concretos clasficados en el sistema
       ncdu /home/user #: Muestra el uso de espacio en "/home/user" de forma interactiva.
       {{< / highlight >}}
 
-- {{< color >}} btrfs {{< /color >}}: Comando específico para sistemas de archivos Btrfs (*B-Tree file system*).
-  {{< highlight php "linenos=table, hl_lines=1" >}}
-  btrfs filesystem df [punto de montaje]
-  {{< / highlight >}}
-    - Ejemplo:
-      {{< highlight php "linenos=table, hl_lines=1" >}}
-      btrfs filesystem df /mnt #: Muestra el uso de espacio en un sistema Btrfs montado en "/mnt".
-      {{< / highlight >}}
-
 - {{< color >}} lsof {{< /color >}}: Lista archivos abiertos y ayuda a identificar qué archivos están en uso y consumiendo espacio (*list open files*).
   {{< highlight php "linenos=table, hl_lines=1" >}}
   lsof +D [directorio]
@@ -373,44 +478,6 @@ Comandos concretos clasficados en el sistema
       lsof +D /var/log #: Muestra archivos abiertos en "/var/log".
       {{< / highlight >}}
 
-
-
-# Agrupación de Comandos de Linux por Funcionalidad
-
-### Administración de Archivos y Directorios**  
-   Comandos para la manipulación básica de archivos y directorios.
-
- - `ls`, `cd`, `cp`, `mv`, `mkdir`, `rm`
-
-2. **Redirección y Manipulación de Flujo**  
-   Operadores y comandos que permiten redirigir o canalizar la entrada y salida.
- - `>`, `>>`, `<`, `|`, `tee`, `xargs`
-
-3. **Comandos de Archivado y Compresión**  
-   Comandos para comprimir y empaquetar archivos.
- - `tar`, `gzip`, `gunzip`, `zip`, `unzip`
-
-4. **Transferencia de Archivos y Redes**  
-   Comandos para la transferencia de datos de forma segura y eficiente.
- - `scp`, `ftp`, `wget`, `curl`
-
-5. **Permisos y Propiedades de Archivos**  
-   Administración de permisos y propietarios, importante en sistemas multiusuario.
- - `chmod`, `chown`, `chgrp`
-
-6. **Gestión de Procesos**  
-   Comandos para monitorear y gestionar procesos.
- - `ps`, `top`, `htop`, `kill`, `nice`, `renice`
-
-7. **Administración de Usuarios**  
-   Comandos para gestionar usuarios y grupos en el sistema.
- - `useradd`, `usermod`, `passwd`, `groupadd`
-
-8. **Comandos de Red**  
-   Comandos para configuraciones y diagnósticos de red.
- - `ping`, `ifconfig`/`ip`, `netstat`, `nslookup`, `traceroute`
-
-Para más detalles y ejemplos, puedes revisar la guía completa en [DreamHost](https://www.dreamhost.com).
 
 
 ## Comandos Generales

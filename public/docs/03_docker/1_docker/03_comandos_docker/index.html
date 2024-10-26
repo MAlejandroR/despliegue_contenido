@@ -175,10 +175,25 @@ docker search ubuntu:1 Crear un contenedor docker create &lt;p&gt;Hay varios com
   <label for="m-desplieguecontenidodocs02_linux-check"><a href="/despliegue/contenido/docs/02_linux/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs02_linux"><i class="fab fa-linux"></i><span class="">Linux</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs02_linuxcomandos-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-desplieguecontenidodocs02_linuxcomandos-li">
   <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos-check"/>
-  <label for="m-desplieguecontenidodocs02_linuxcomandos-check"><a href="/despliegue/contenido/docs/02_linux/comandos/" title="Comandos" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxcomandos"><i class="fab fa-linux"></i><span class="">comandos</span></a></label>
+  <label for="m-desplieguecontenidodocs02_linuxcomandos-check"><a href="/despliegue/contenido/docs/02_linux/comandos/" title="Comandos" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs02_linuxcomandos"><i class="fas fa-keyboard"></i><span class="">comandos</span></a></label>
   
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs02_linuxcomandos01_comandos-ficheros-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos01_comandos-ficheros-check"/>
+  <label for="m-desplieguecontenidodocs02_linuxcomandos01_comandos-ficheros-check"><a href="/despliegue/contenido/docs/02_linux/comandos/01_comandos-ficheros/" title="Ficheros" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxcomandos01_comandos-ficheros"><i class="fas fa-file"></i><span class="">Gestión de ficheros</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs02_linuxcomandos02_redirecionamiento-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos02_redirecionamiento-check"/>
+  <label for="m-desplieguecontenidodocs02_linuxcomandos02_redirecionamiento-check"><a href="/despliegue/contenido/docs/02_linux/comandos/02_redirecionamiento/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxcomandos02_redirecionamiento"><i class="fas fa-file-export"></i><span class="">Redireccionamiento</span></a></label>
+  
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs02_linuxcomandos09_comandos-administracic3b3n-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos09_comandos-administracic3b3n-check"/>
+  <label for="m-desplieguecontenidodocs02_linuxcomandos09_comandos-administracic3b3n-check"><a href="/despliegue/contenido/docs/02_linux/comandos/09_comandos-administraci%C3%B3n/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxcomandos09_comandos-administracic3b3n"><i class="fas fa-server"></i><span class="">Administración</span></a></label>
+  
+</li>
+  </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs02_linuxejercicios-li">
   <input type="checkbox" id="m-desplieguecontenidodocs02_linuxejercicios-check"/>
   <label for="m-desplieguecontenidodocs02_linuxejercicios-check"><a href="/despliegue/contenido/docs/02_linux/ejercicios/" title="Ejercicios" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxejercicios"><i class="fas fa-tasks"></i><span class="">Ejercicios para practicar</span></a></label>
@@ -260,7 +275,7 @@ docker search ubuntu:1 Crear un contenedor docker create &lt;p&gt;Hay varios com
 <p>Obtener en local una imagen llamada <strong>ubuntu:latest</strong>::</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    docker pull ubunut:latest
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    docker pull ubunut:latest
 </span></span></code></pre></div>
 </div>
 
@@ -274,7 +289,7 @@ docker search ubuntu:1 Crear un contenedor docker create &lt;p&gt;Hay varios com
 <p>Listar todas las imágenes del sistema</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker images
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker images
 </span></span></code></pre></div>
 </div>
 
@@ -288,7 +303,7 @@ docker search ubuntu:1 Crear un contenedor docker create &lt;p&gt;Hay varios com
 <p>Buscar todas las imágenes que contengan ubuntu cuya distribución empiece por 1</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker search ubuntu:1
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker search ubuntu:1
 </span></span></code></pre></div>
 </div>
 
@@ -309,7 +324,7 @@ docker search ubuntu:1 Crear un contenedor docker create &lt;p&gt;Hay varios com
 <p>Crea un contenedor basado en la imagen <strong>ubuntu:latest</strong></p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker create ubuntu:latest
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker create ubuntu:latest
 </span></span></code></pre></div><hr>
 <h5 id="crearlo-vinculándolo-al-terminal">Crearlo vinculándolo al terminal</h5>
 <blockquote>
@@ -318,7 +333,7 @@ docker search ubuntu:1 Crear un contenedor docker create &lt;p&gt;Hay varios com
 <p>Crea un contenedor que quede vinculado a un terminal <strong>tty</strong></p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    docker create -t ubuntu:latest
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    docker create -t ubuntu:latest
 </span></span></code></pre></div><hr>
 <h5 id="nombrar-el-contenedor">Nombrar el contenedor</h5>
 <blockquote>
@@ -327,7 +342,7 @@ docker search ubuntu:1 Crear un contenedor docker create &lt;p&gt;Hay varios com
 <p>Crear un contenedor llamado <strong>web</strong> a partir de la imagen ubuntu:latest y vincúlalo al terminal</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    docker create --name web -t ubuntu:latest
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    docker create --name web -t ubuntu:latest
 </span></span></code></pre></div><h4 id="creando-comandos-para-interactuar-en-un-terminal">Creando comandos para interactuar en un terminal</h4>
 <blockquote>
 <p><strong>docker create -t -i</strong></p>
@@ -335,10 +350,10 @@ docker search ubuntu:1 Crear un contenedor docker create &lt;p&gt;Hay varios com
 <p>Crear un contenedor llamada web para interactuar y luego ejecuta un bash <em>(Este comando ejecuta un intérprete de comandos de un sistema operativo)</em></p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker rm web
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker rm web
 </span></span><span style="display:flex;"><span> docker create --name web -t -i ubuntu:latest
 </span></span><span style="display:flex;"><span> docker start web
-</span></span><span style="display:flex;"><span> docker exec -ti bash
+</span></span><span style="display:flex;"><span> docker <span style="color:#658b00">exec</span> -ti bash
 </span></span></code></pre></div><div class="alert alert-warning" role="alert">
 <h4 class="alert-heading">Revisa</h4>
 <pre><code>Antes de crear el contenedor lo borramos  &lt;br&gt;
@@ -365,7 +380,7 @@ En este caso el comando start lo deja en estado up, ya que el contenedor fue cor
 Es un comando que tiene muchas opciones, puedes verlas con el comando help</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker help run
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker <span style="color:#658b00">help</span> run
 </span></span></code></pre></div><p>Nosotros lo vamos a usar comos se muestra a continuación</p>
 <figure class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 1010px">
 <img class="card-img-top" src="/despliegue/contenido/docs/03_docker/1_docker/03_comandos_docker/run_hu15092407158152754042.png" width="1000" height="300">
@@ -387,7 +402,7 @@ Es un comando que tiene muchas opciones, puedes verlas con el comando help</p>
 <p>Lista todos los contenedores que tenemos en el sistema</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps -a
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps -a
 </span></span></code></pre></div><h4 id="listar-los-contenesores-arrancados">Listar los contenesores arrancados</h4>
 <blockquote>
 <p>__docker ps __</p>
@@ -395,7 +410,7 @@ Es un comando que tiene muchas opciones, puedes verlas con el comando help</p>
 <p>Lista todos los contenedores en estado Up</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps 
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker ps 
 </span></span></code></pre></div>
 </div>
 
@@ -423,7 +438,7 @@ Es un comando que tiene muchas opciones, puedes verlas con el comando help</p>
 <p>Para un contenedor (previamente creado)</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker start web
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker start web
 </span></span></code></pre></div>
 </div>
 </p>
@@ -459,7 +474,7 @@ Es un comando que tiene muchas opciones, puedes verlas con el comando help</p>
 <p>Arranca un contenedor (previamente creado)</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker start web
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker start web
 </span></span></code></pre></div>
 </div>
 
@@ -474,7 +489,7 @@ Es un comando que tiene muchas opciones, puedes verlas con el comando help</p>
 <p>Ejecuta en un contenedor previamente creado llamado <strong>web</strong> el comando ls <em>(Este comando muestra un listado de ficheros del contenedor)</em></p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    docker exec -ti  web ls
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    docker <span style="color:#658b00">exec</span> -ti  web ls
 </span></span></code></pre></div>
 </div>
 
@@ -494,7 +509,7 @@ Es un comando que tiene muchas opciones, puedes verlas con el comando help</p>
 <blockquote>
 <p><strong>docker run</strong></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker run  ubuntu:latest ls
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker run  ubuntu:latest ls
 </span></span></code></pre></div><h4 id="crear-un-contenedor-dejarlo-arrancado--ejecuta-una-instrucción-bash">Crear un contenedor, dejarlo arrancado  ejecuta una instrucción: bash</h4>
 <ul>
 <li>El contenedor queremos que deje abierta un terminal para interactuar con el  bash</li>
@@ -502,7 +517,7 @@ Es un comando que tiene muchas opciones, puedes verlas con el comando help</p>
 <blockquote>
 <p><strong>docker run</strong></p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker run  -ti ubuntu:latest bash
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker run  -ti ubuntu:latest bash
 </span></span></code></pre></div>
 </div>
 
@@ -528,7 +543,7 @@ Es un comando que tiene muchas opciones, puedes verlas con el comando help</p>
 <p>Crea un contenedor llamado web y deja abierto un bash</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    docker rm web 
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    docker rm web 
 </span></span><span style="display:flex;"><span>    docker run -ti --name web ubuntu:latest bash    
 </span></span></code></pre></div>
 </div>
@@ -565,7 +580,7 @@ En este
 <p>Crea un contenedor llamado web, abriendo un terminal y mapea el puerto 8000 del anfitrión al 80 del contenedor</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker rm web 
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker rm web 
 </span></span><span style="display:flex;"><span> docker run -ti --name web  -p 8000:80 ubuntu:latest bash
 </span></span></code></pre></div>
 </div>
@@ -587,8 +602,8 @@ En este
 <p>Crea un contenedor llamado <strong>web</strong>, abriendo un terminal y comparte la carpeta del directorio actual llamada <strong>app</strong> con la carpeta del docker ubicada en <strong>/var/www/html</strong>. Mapea los puertos anteriores</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker rm web 
-</span></span><span style="display:flex;"><span> docker run -ti --name web -p 8000:80  -v .<span style="color:#ae81ff">\a</span>pp:/var/www/html ubuntu:latest  bash
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker rm web 
+</span></span><span style="display:flex;"><span> docker run -ti --name web -p 8000:80  -v .<span style="color:#cd5555">\a</span>pp:/var/www/html ubuntu:latest  bash
 </span></span></code></pre></div>
 </div>
 
@@ -630,7 +645,7 @@ En este
 </ul>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker commit nombre_contenedor nombre_imagen:tag 
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> docker commit nombre_contenedor nombre_imagen:tag 
 </span></span></code></pre></div>
 </div>
 </p>
@@ -646,7 +661,7 @@ Se utiliza para subir, descargar o gestionar imágenes desde la cuenta de Docker
 Solicita las credenciales de acceso (usuario y contraseña).</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker login
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker login
 </span></span></code></pre></div><div class="alert alert-warning" role="alert">
 <h4 class="alert-heading">Nota</h4>
 <pre><code>&lt;blockquote&gt;
@@ -670,9 +685,9 @@ Debes estar autenticado en Docker Hub (previamente con docker login).
 La imagen debe estar correctamente etiquetada con el formato <usuario>/&lt;nombre_imagen&gt;:<tag>.</p>
 </blockquote>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker push usuario/nombre_imagen:tag
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker push usuario/nombre_imagen:tag
 </span></span></code></pre></div><h5 id="ejemplos">Ejemplos:</h5>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker push miusuario/miapp:v1.0
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker push miusuario/miapp:v1.0
 </span></span><span style="display:flex;"><span>docker push miusuario/miapp:latest
 </span></span></code></pre></div><div class="alert alert-warning" role="alert">
 <h4 class="alert-heading">Nota</h4>
