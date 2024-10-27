@@ -4,15 +4,13 @@
   <url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/02_linux/comandos/</loc>
   </url><url>
-    <loc>http://web.infenlaces.com/despliegue/contenido/docs/02_linux/comandos/comandos-administraci%C3%B3n/</loc>
-  </url><url>
-    <loc>http://web.infenlaces.com/despliegue/contenido/docs/02_linux/comandos/01_comandos-ficheros/</loc>
-  </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/01_redes/00_conceptos_basicos/</loc>
   </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/03_docker/1_docker/01_conceptos/</loc>
   </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/02_linux/ejercicios/</loc>
+  </url><url>
+    <loc>http://web.infenlaces.com/despliegue/contenido/docs/02_linux/comandos/01_comandos-ficheros/</loc>
   </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/03_docker/1_docker/04_ejercicios/1_imagenes/</loc>
   </url><url>
@@ -28,6 +26,10 @@
   </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/01_redes/02_capas/</loc>
   </url><url>
+    <loc>http://web.infenlaces.com/despliegue/contenido/docs/02_linux/comandos/02_redirecionamiento/</loc>
+  </url><url>
+    <loc>http://web.infenlaces.com/despliegue/contenido/docs/02_linux/comandos/03_archivado_compresi%C3%B3n/</loc>
+  </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/03_docker/1_docker/04_ejercicios/3_contenedores_imagenes/</loc>
   </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/03_docker/</loc>
@@ -38,15 +40,25 @@
   </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/01_redes/05_www/</loc>
   </url><url>
+    <loc>http://web.infenlaces.com/despliegue/contenido/docs/02_linux/comandos/04_transerferencia_archivos/</loc>
+  </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/04_servicios/</loc>
   </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/03_docker/1_docker/04_ejercicios/</loc>
   </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/05_git/</loc>
   </url><url>
+    <loc>http://web.infenlaces.com/despliegue/contenido/docs/02_linux/comandos/05_permisos/</loc>
+  </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/03_docker/1_docker/05_resumen_instrucciones_docker_file/</loc>
   </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/06_aws/</loc>
+  </url><url>
+    <loc>http://web.infenlaces.com/despliegue/contenido/docs/02_linux/comandos/06_procesos/</loc>
+  </url><url>
+    <loc>http://web.infenlaces.com/despliegue/contenido/docs/02_linux/comandos/07_usuarios/</loc>
+  </url><url>
+    <loc>http://web.infenlaces.com/despliegue/contenido/docs/02_linux/comandos/09_comandos-redes/</loc>
   </url><url>
     <loc>http://web.infenlaces.com/despliegue/contenido/docs/03_docker/1_docker/04_ejercicios/5_dockercompose/3_web_1/app/</loc>
   </url><url>

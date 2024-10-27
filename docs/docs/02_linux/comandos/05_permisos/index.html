@@ -8,22 +8,22 @@
 
 <link rel="shortcut icon" href="/despliegue/contenido/favicons/favicon.ico" >
 
-<title>Recursos de apoyo al aprendizaje</title>
-<meta name="description" content="&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt; Apache2 Ubuntu Default Page: It works Apache2 Default Page It works! This is the default welcome page used to test the correct operation of the Apache2 server after installation on Ubuntu systems. It is based on the equivalent page on Debian, from which the Ubuntu Apache packaging is derived. If you can read this page, it means that the Apache HTTP server installed at this site is working properly. You should replace this file (located at /var/www/html/index.html) before continuing to operate your HTTP server. ">
-<meta property="og:url" content="http://web.infenlaces.com/despliegue/contenido/docs/03_docker/1_docker/04_ejercicios/5_dockercompose/docker_proyectos/">
+<title>Permisos y Propietarios | Recursos de apoyo al aprendizaje</title>
+<meta name="description" content=" Objetivos Qué veremos aquí Permisos Propietarios El comando sudo Permisos y Propiedades de Archivos chmod : Cambia los permisos de un archivo o directorio (change mode). 1 sudo chmod [opciones] modo archivo Opciones útiles: -R: Aplica los cambios de forma recursiva a todos los archivos y subdirectorios. Ejemplos: 1 2 sudo chmod 755 script.sh #: Otorga permisos de lectura y ejecución para todos, escritura solo al propietario. sudo chmod -R 700 carpeta/ #: Cambia permisos de todos los archivos y carpetas dentro de &#34;carpeta&#34; a solo propietario. chown : Cambia el propietario y grupo de un archivo o directorio (change owner). 1 sudo chown [opciones] propietario[:grupo] archivo ">
+<meta property="og:url" content="http://web.infenlaces.com/despliegue/contenido/docs/02_linux/comandos/05_permisos/">
   <meta property="og:site_name" content="Recursos de apoyo al aprendizaje">
-  <meta property="og:title" content="Recursos de apoyo al aprendizaje">
-  <meta property="og:description" content="&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt; Apache2 Ubuntu Default Page: It works Apache2 Default Page It works! This is the default welcome page used to test the correct operation of the Apache2 server after installation on Ubuntu systems. It is based on the equivalent page on Debian, from which the Ubuntu Apache packaging is derived. If you can read this page, it means that the Apache HTTP server installed at this site is working properly. You should replace this file (located at /var/www/html/index.html) before continuing to operate your HTTP server.">
+  <meta property="og:title" content="Permisos y Propietarios">
+  <meta property="og:description" content="Objetivos Qué veremos aquí Permisos Propietarios El comando sudo Permisos y Propiedades de Archivos chmod : Cambia los permisos de un archivo o directorio (change mode). 1 sudo chmod [opciones] modo archivo Opciones útiles: -R: Aplica los cambios de forma recursiva a todos los archivos y subdirectorios. Ejemplos: 1 2 sudo chmod 755 script.sh #: Otorga permisos de lectura y ejecución para todos, escritura solo al propietario. sudo chmod -R 700 carpeta/ #: Cambia permisos de todos los archivos y carpetas dentro de &#34;carpeta&#34; a solo propietario. chown : Cambia el propietario y grupo de un archivo o directorio (change owner). 1 sudo chown [opciones] propietario[:grupo] archivo">
   <meta property="og:locale" content="es_es">
   <meta property="og:type" content="article">
     <meta property="article:section" content="docs">
 
-  <meta itemprop="name" content="Recursos de apoyo al aprendizaje">
-  <meta itemprop="description" content="&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt; Apache2 Ubuntu Default Page: It works Apache2 Default Page It works! This is the default welcome page used to test the correct operation of the Apache2 server after installation on Ubuntu systems. It is based on the equivalent page on Debian, from which the Ubuntu Apache packaging is derived. If you can read this page, it means that the Apache HTTP server installed at this site is working properly. You should replace this file (located at /var/www/html/index.html) before continuing to operate your HTTP server.">
-  <meta itemprop="wordCount" content="519">
+  <meta itemprop="name" content="Permisos y Propietarios">
+  <meta itemprop="description" content="Objetivos Qué veremos aquí Permisos Propietarios El comando sudo Permisos y Propiedades de Archivos chmod : Cambia los permisos de un archivo o directorio (change mode). 1 sudo chmod [opciones] modo archivo Opciones útiles: -R: Aplica los cambios de forma recursiva a todos los archivos y subdirectorios. Ejemplos: 1 2 sudo chmod 755 script.sh #: Otorga permisos de lectura y ejecución para todos, escritura solo al propietario. sudo chmod -R 700 carpeta/ #: Cambia permisos de todos los archivos y carpetas dentro de &#34;carpeta&#34; a solo propietario. chown : Cambia el propietario y grupo de un archivo o directorio (change owner). 1 sudo chown [opciones] propietario[:grupo] archivo">
+  <meta itemprop="wordCount" content="271">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Recursos de apoyo al aprendizaje">
-  <meta name="twitter:description" content="&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Transitional//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&#34;&gt; Apache2 Ubuntu Default Page: It works Apache2 Default Page It works! This is the default welcome page used to test the correct operation of the Apache2 server after installation on Ubuntu systems. It is based on the equivalent page on Debian, from which the Ubuntu Apache packaging is derived. If you can read this page, it means that the Apache HTTP server installed at this site is working properly. You should replace this file (located at /var/www/html/index.html) before continuing to operate your HTTP server.">
+  <meta name="twitter:title" content="Permisos y Propietarios">
+  <meta name="twitter:description" content="Objetivos Qué veremos aquí Permisos Propietarios El comando sudo Permisos y Propiedades de Archivos chmod : Cambia los permisos de un archivo o directorio (change mode). 1 sudo chmod [opciones] modo archivo Opciones útiles: -R: Aplica los cambios de forma recursiva a todos los archivos y subdirectorios. Ejemplos: 1 2 sudo chmod 755 script.sh #: Otorga permisos de lectura y ejecución para todos, escritura solo al propietario. sudo chmod -R 700 carpeta/ #: Cambia permisos de todos los archivos y carpetas dentro de &#34;carpeta&#34; a solo propietario. chown : Cambia el propietario y grupo de un archivo o directorio (change owner). 1 sudo chown [opciones] propietario[:grupo] archivo">
 
 
 
@@ -148,13 +148,13 @@
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-desplieguecontenidodocs02_linux-li">
-  <input type="checkbox" id="m-desplieguecontenidodocs02_linux-check"/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-desplieguecontenidodocs02_linux-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linux-check" checked/>
   <label for="m-desplieguecontenidodocs02_linux-check"><a href="/despliegue/contenido/docs/02_linux/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs02_linux"><i class="fab fa-linux"></i><span class="">Linux</span></a></label>
   
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-desplieguecontenidodocs02_linuxcomandos-li">
-  <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos-check"/>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-desplieguecontenidodocs02_linuxcomandos-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos-check" checked/>
   <label for="m-desplieguecontenidodocs02_linuxcomandos-check"><a href="/despliegue/contenido/docs/02_linux/comandos/" title="Comandos" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs02_linuxcomandos"><i class="fas fa-keyboard"></i><span class="">comandos</span></a></label>
   
   <ul class="ul-3 foldable">
@@ -174,9 +174,9 @@
   <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos04_transerferencia_archivos-check"/>
   <label for="m-desplieguecontenidodocs02_linuxcomandos04_transerferencia_archivos-check"><a href="/despliegue/contenido/docs/02_linux/comandos/04_transerferencia_archivos/" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxcomandos04_transerferencia_archivos"><i class="fas fa-folder-open"></i><span class="">Archivado y compresión</span></a></label>
   
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs02_linuxcomandos05_permisos-li">
-  <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos05_permisos-check"/>
-  <label for="m-desplieguecontenidodocs02_linuxcomandos05_permisos-check"><a href="/despliegue/contenido/docs/02_linux/comandos/05_permisos/" title="Permisos y Propietarios" class="align-left ps-0  td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxcomandos05_permisos"><i class="fas fa-shield-alt"></i><span class="">permisos y propietarios</span></a></label>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-desplieguecontenidodocs02_linuxcomandos05_permisos-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos05_permisos-check" checked/>
+  <label for="m-desplieguecontenidodocs02_linuxcomandos05_permisos-check"><a href="/despliegue/contenido/docs/02_linux/comandos/05_permisos/" title="Permisos y Propietarios" class="align-left ps-0  active td-sidebar-link td-sidebar-link__page" id="m-desplieguecontenidodocs02_linuxcomandos05_permisos"><i class="fas fa-shield-alt"></i><span class="td-sidebar-nav-active-item">permisos y propietarios</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs02_linuxcomandos06_procesos-li">
   <input type="checkbox" id="m-desplieguecontenidodocs02_linuxcomandos06_procesos-check"/>
@@ -198,8 +198,8 @@
   
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-desplieguecontenidodocs03_docker-li">
-  <input type="checkbox" id="m-desplieguecontenidodocs03_docker-check" checked/>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs03_docker-li">
+  <input type="checkbox" id="m-desplieguecontenidodocs03_docker-check"/>
   <label for="m-desplieguecontenidodocs03_docker-check"><a href="/despliegue/contenido/docs/03_docker/" class="align-left ps-0  td-sidebar-link td-sidebar-link__section" id="m-desplieguecontenidodocs03_docker"><i class="fab fa-docker"></i><span class="">Docker</span></a></label>
   
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-desplieguecontenidodocs04_servicios-li">
@@ -224,6 +224,7 @@
           </aside>
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             <div class="td-page-meta ms-2 pb-1 pt-2 mb-0">
+<a id="print" href="/despliegue/contenido/docs/02_linux/comandos/_print/"><i class="fa-solid fa-print fa-fw"></i> Imprimir sección </a>
 
 </div>
 
@@ -240,387 +241,210 @@
   <li class="breadcrumb-item">
     <a href="/despliegue/contenido/docs/">Docs</a></li>
   <li class="breadcrumb-item">
-    <a href="/despliegue/contenido/docs/03_docker/">Docker</a></li>
+    <a href="/despliegue/contenido/docs/02_linux/">Linux</a></li>
   <li class="breadcrumb-item">
-    <a href="">Docker</a></li>
-  <li class="breadcrumb-item">
-    <a href="/despliegue/contenido/docs/03_docker/1_docker/04_ejercicios/">Ejercicios</a></li>
-  <li class="breadcrumb-item">
-    <a href=""> Docker compose</a></li>
+    <a href="/despliegue/contenido/docs/02_linux/comandos/">comandos</a></li>
   <li class="breadcrumb-item active" aria-current="page">
-    </li>
+    permisos y propietarios</li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1></h1>
+	<h1>Permisos y Propietarios</h1>
 	
 	<header class="article-meta">
 		
 </header>
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <!--
-    Modified from the Debian original for Ubuntu
-    Last updated: 2022-03-22
-    See: https://launchpad.net/bugs/1966004
-  -->
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Apache2 Ubuntu Default Page: It works</title>
-    <style type="text/css" media="screen">
-  * {
-    margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-  }
+	
 
-  body, html {
-    padding: 3px 3px 3px 3px;
 
-    background-color: #D8DBE2;
-
-    font-family: Ubuntu, Verdana, sans-serif;
-    font-size: 11pt;
-    text-align: center;
-  }
-
-  div.main_page {
-    position: relative;
-    display: table;
-
-    width: 800px;
-
-    margin-bottom: 3px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px 0px 0px 0px;
-
-    border-width: 2px;
-    border-color: #212738;
-    border-style: solid;
-
-    background-color: #FFFFFF;
-
-    text-align: center;
-  }
-
-  div.page_header {
-    height: 180px;
-    width: 100%;
-
-    background-color: #F5F6F7;
-  }
-
-  div.page_header span {
-    margin: 15px 0px 0px 50px;
-
-    font-size: 180%;
-    font-weight: bold;
-  }
-
-  div.page_header img {
-    margin: 3px 0px 0px 40px;
-
-    border: 0px 0px 0px;
-  }
-
-  div.banner {
-    padding: 9px 6px 9px 6px;
-    background-color: #E9510E;
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 112%;
-    text-align: center;
-    position: absolute;
-    left: 40%;
-    bottom: 30px;
-    width: 20%;
-  }
-
-  div.table_of_contents {
-    clear: left;
-
-    min-width: 200px;
-
-    margin: 3px 3px 3px 3px;
-
-    background-color: #FFFFFF;
-
-    text-align: left;
-  }
-
-  div.table_of_contents_item {
-    clear: left;
-
-    width: 100%;
-
-    margin: 4px 0px 0px 0px;
-
-    background-color: #FFFFFF;
-
-    color: #000000;
-    text-align: left;
-  }
-
-  div.table_of_contents_item a {
-    margin: 6px 0px 0px 6px;
-  }
-
-  div.content_section {
-    margin: 3px 3px 3px 3px;
-
-    background-color: #FFFFFF;
-
-    text-align: left;
-  }
-
-  div.content_section_text {
-    padding: 4px 8px 4px 8px;
-
-    color: #000000;
-    font-size: 100%;
-  }
-
-  div.content_section_text pre {
-    margin: 8px 0px 8px 0px;
-    padding: 8px 8px 8px 8px;
-
-    border-width: 1px;
-    border-style: dotted;
-    border-color: #000000;
-
-    background-color: #F5F6F7;
-
-    font-style: italic;
-  }
-
-  div.content_section_text p {
-    margin-bottom: 6px;
-  }
-
-  div.content_section_text ul, div.content_section_text li {
-    padding: 4px 8px 4px 16px;
-  }
-
-  div.section_header {
-    padding: 3px 6px 3px 6px;
-
-    background-color: #8E9CB2;
-
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 112%;
-    text-align: center;
-  }
-
-  div.section_header_grey {
-    background-color: #9F9386;
-  }
-
-  .floating_element {
-    position: relative;
-    float: left;
-  }
-
-  div.table_of_contents_item a,
-  div.content_section_text a {
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  div.table_of_contents_item a:link,
-  div.table_of_contents_item a:visited,
-  div.table_of_contents_item a:active {
-    color: #000000;
-  }
-
-  div.table_of_contents_item a:hover {
-    background-color: #000000;
-
-    color: #FFFFFF;
-  }
-
-  div.content_section_text a:link,
-  div.content_section_text a:visited,
-   div.content_section_text a:active {
-    background-color: #DCDFE6;
-
-    color: #000000;
-  }
-
-  div.content_section_text a:hover {
-    background-color: #000000;
-
-    color: #DCDFE6;
-  }
-
-  div.validator {
-  }
-    </style>
-  </head>
-  <body>
-    <div class="main_page">
-      <div class="page_header floating_element">
-        <img src="icons/ubuntu-logo.png" alt="Ubuntu Logo"
-             style="width:184px;height:146px;" class="floating_element" />
-        <div>
-          <span style="margin-top: 1.5em;" class="floating_element">
-            Apache2 Default Page
-          </span>
-        </div>
-        <div class="banner">
-          <div id="about"></div>
-          It works!
-        </div>
-
-      </div>
-      <div class="content_section floating_element">
-        <div class="content_section_text">
-          <p>
-                This is the default welcome page used to test the correct 
-                operation of the Apache2 server after installation on Ubuntu systems.
-                It is based on the equivalent page on Debian, from which the Ubuntu Apache
-                packaging is derived.
-                If you can read this page, it means that the Apache HTTP server installed at
-                this site is working properly. You should <b>replace this file</b> (located at
-                <tt>/var/www/html/index.html</tt>) before continuing to operate your HTTP server.
-          </p>
-
-          <p>
-                If you are a normal user of this web site and don't know what this page is
-                about, this probably means that the site is currently unavailable due to
-                maintenance.
-                If the problem persists, please contact the site's administrator.
-          </p>
-
-        </div>
-        <div class="section_header">
-          <div id="changes"></div>
-                Configuration Overview
-        </div>
-        <div class="content_section_text">
-          <p>
-                Ubuntu's Apache2 default configuration is different from the
-                upstream default configuration, and split into several files optimized for
-                interaction with Ubuntu tools. The configuration system is
-                <b>fully documented in
-                /usr/share/doc/apache2/README.Debian.gz</b>. Refer to this for the full
-                documentation. Documentation for the web server itself can be
-                found by accessing the <a href="/manual">manual</a> if the <tt>apache2-doc</tt>
-                package was installed on this server.
-          </p>
-          <p>
-                The configuration layout for an Apache2 web server installation on Ubuntu systems is as follows:
-          </p>
-          <pre>
-/etc/apache2/
-|-- apache2.conf
-|       `--  ports.conf
-|-- mods-enabled
-|       |-- *.load
-|       `-- *.conf
-|-- conf-enabled
-|       `-- *.conf
-|-- sites-enabled
-|       `-- *.conf
-          </pre>
-          <ul>
-                        <li>
-                           <tt>apache2.conf</tt> is the main configuration
-                           file. It puts the pieces together by including all remaining configuration
-                           files when starting up the web server.
-                        </li>
-
-                        <li>
-                           <tt>ports.conf</tt> is always included from the
-                           main configuration file. It is used to determine the listening ports for
-                           incoming connections, and this file can be customized anytime.
-                        </li>
-
-                        <li>
-                           Configuration files in the <tt>mods-enabled/</tt>,
-                           <tt>conf-enabled/</tt> and <tt>sites-enabled/</tt> directories contain
-                           particular configuration snippets which manage modules, global configuration
-                           fragments, or virtual host configurations, respectively.
-                        </li>
-
-                        <li>
-                           They are activated by symlinking available
-                           configuration files from their respective
-                           *-available/ counterparts. These should be managed
-                           by using our helpers
-                           <tt>
-                                a2enmod,
-                                a2dismod,
-                           </tt>
-                           <tt>
-                                a2ensite,
-                                a2dissite,
-                            </tt>
-                                and
-                           <tt>
-                                a2enconf,
-                                a2disconf
-                           </tt>. See their respective man pages for detailed information.
-                        </li>
-
-                        <li>
-                           The binary is called apache2 and is managed using systemd, so to
-                           start/stop the service use <tt>systemctl start apache2</tt> and
-                           <tt>systemctl stop apache2</tt>, and use <tt>systemctl status apache2</tt>
-                           and <tt>journalctl -u apache2</tt> to check status.  <tt>system</tt>
-                           and <tt>apache2ctl</tt> can also be used for service management if
-                           desired.
-                           <b>Calling <tt>/usr/bin/apache2</tt> directly will not work</b> with the
-                           default configuration.
-                        </li>
-          </ul>
-        </div>
-
-        <div class="section_header">
-            <div id="docroot"></div>
-                Document Roots
-        </div>
-
-        <div class="content_section_text">
-            <p>
-                By default, Ubuntu does not allow access through the web browser to
-                <em>any</em> file outside of those located in <tt>/var/www</tt>,
-                <a href="http://httpd.apache.org/docs/2.4/mod/mod_userdir.html" rel="nofollow">public_html</a>
-                directories (when enabled) and <tt>/usr/share</tt> (for web
-                applications). If your site is using a web document root
-                located elsewhere (such as in <tt>/srv</tt>) you may need to whitelist your
-                document root directory in <tt>/etc/apache2/apache2.conf</tt>.
-            </p>
-            <p>
-                The default Ubuntu document root is <tt>/var/www/html</tt>. You
-                can make your own virtual hosts under /var/www.
-            </p>
-        </div>
-
-        <div class="section_header">
-          <div id="bugs"></div>
-                Reporting Problems
-        </div>
-        <div class="content_section_text">
-          <p>
-                Please use the <tt>ubuntu-bug</tt> tool to report bugs in the
-                Apache2 package with Ubuntu. However, check <a
-                href="https://bugs.launchpad.net/ubuntu/+source/apache2"
-                rel="nofollow">existing bug reports</a> before reporting a new bug.
-          </p>
-          <p>
-                Please report bugs specific to modules (such as PHP and others)
-                to their respective packages, not to the web server itself.
-          </p>
-        </div>
-
-      </div>
+<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
+    <div style="background-color:darkgreen; color:white;
+    font-weight:bold; padding:10px; display: flex; align-items: center;">
+        
+        <span style="margin-right: 8px;">
+            <i class="fas  fa-check-circle"></i> 
+        </span>
+        
+        <span >Objetivos</span>
     </div>
-    <div class="validator">
+
+    <h3 style="padding: 5px;font-weight:bold"> Qué veremos aquí</h3>
+
+    <hr style="border-color:seagreen;border-width:3px"/>
+    
+    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
+        <ul>
+        
+        <li>Permisos</li>
+            
+        <li>Propietarios</li>
+            
+        <li>El comando sudo</li>
+            
+        
+        
+        </ul>
+
     </div>
-  </body>
-</html>
+</div>
+
+<h1 id="permisos-y-propiedades-de-archivos">Permisos y Propiedades de Archivos</h1>
+<ul>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    chmod
+
+
+</span>
+</strong>
+: Cambia los permisos de un archivo o directorio (<em>change mode</em>).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chmod [opciones] modo archivo</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-R</code></strong>: Aplica los cambios de forma recursiva a todos los archivos y subdirectorios.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chmod <span style="color:#b452cd">755</span> script.sh <span style="color:#228b22">#: Otorga permisos de lectura y ejecución para todos, escritura solo al propietario.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>sudo chmod -R <span style="color:#b452cd">700</span> carpeta/ <span style="color:#228b22">#: Cambia permisos de todos los archivos y carpetas dentro de &#34;carpeta&#34; a solo propietario.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    chown
+
+
+</span>
+</strong>
+: Cambia el propietario y grupo de un archivo o directorio (<em>change owner</em>).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chown [opciones] propietario[:grupo] archivo</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-R</code></strong>: Cambia el propietario y grupo de forma recursiva.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chown usuario archivo.txt <span style="color:#228b22">#: Cambia el propietario de &#34;archivo.txt&#34; a &#34;usuario&#34;.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>sudo chown usuario:grupo archivo.txt <span style="color:#228b22">#: Cambia propietario y grupo a &#34;usuario&#34; y &#34;grupo&#34;.
+</span></span></span><span style="display:flex;"><span><span style="color:#228b22"></span>sudo chown -R usuario carpeta/ <span style="color:#228b22">#: Cambia propietario de todos los archivos dentro de &#34;carpeta&#34; a &#34;usuario&#34;.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    chgrp
+
+
+</span>
+</strong>
+: Cambia el grupo de un archivo o directorio (<em>change group</em>).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chgrp [opciones] grupo archivo</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-R</code></strong>: Aplica los cambios de grupo de forma recursiva.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chgrp grupo archivo.txt <span style="color:#228b22">#: Cambia el grupo de &#34;archivo.txt&#34; a &#34;grupo&#34;.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>sudo chgrp -R grupo carpeta/ <span style="color:#228b22">#: Cambia el grupo de todos los archivos dentro de &#34;carpeta&#34; a &#34;grupo&#34;.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    sudo
+
+
+</span>
+</strong>
+: Ejecuta un comando con permisos de superusuario o usuario administrador (<em>superuser do</em>).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo comando</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chmod <span style="color:#b452cd">755</span> archivo.txt <span style="color:#228b22">#: Cambia permisos de &#34;archivo.txt&#34; con privilegios de superusuario.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>sudo chown usuario archivo.txt <span style="color:#228b22">#: Cambia el propietario de &#34;archivo.txt&#34; a &#34;usuario&#34;.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
 
 	
 </div>
