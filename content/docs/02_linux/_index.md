@@ -197,5 +197,102 @@ end
 
 {{< / highlight >}}
 
+markdown
+Copiar código
+# Configuración de Red en Vagrant
 
+Vagrant ofrece varias opciones de configuración de red para gestionar la conectividad de las máquinas virtuales (VMs) y su acceso tanto al host como a redes externas.
 
+## Configuración de Red NAT por Defecto
+
+La configuración de red de Vagrant, por defecto, utiliza una red **NAT (Network Address Translation)**. En este modo:
+- La VM puede **acceder a Internet** a través de la interfaz de red del host.
+- **No permite la comunicación directa** con la red local del host.
+
+Si necesitas que la VM se comunique directamente con el host o con otros dispositivos en la red local, puedes añadir configuraciones de red adicionales en el archivo `Vagrantfile`.
+
+## Opciones de Red en Vagrant
+
+### 1. Red Privada (Private Network)
+La red privada permite que la VM tenga una **dirección IP fija**, accesible solo desde el host y otras VMs en el mismo `Vagrantfile`. Esto facilita la comunicación directa entre el host y la VM sin exponer la VM a la red local completa.
+
+En el archivo `Vagrantfile`, puedes añadir una red privada así:
+
+```ruby
+config.vm.network "private_network", ip: "192.168.56.10"
+```
+#### Detalles:
+- **Ventaja**: Permite una conexión directa entre host y VM.
+- **Desventaja**: No permite salida directa a Internet sin una interfaz NAT adicional.
+
+Después de añadir esta configuración:
+- Usa la IP `192.168.56.10` para comunicarte con la VM desde el host.
+- La VM también podrá hacer ping a la IP local del host (como `192.168.1.144`), siempre que ambos dispositivos estén en el mismo rango de red.
+
+### 2. Red en Modo Puente (Bridged Network)
+En el modo puente, la VM obtiene una dirección IP de la misma red que el host, como si estuviera conectada directamente a la red física (por ejemplo, al router o switch).
+
+En el `Vagrantfile`, añade:
+
+```ruby
+config.vm.network "public_network"
+```
+#### Detalles:
+- **Ventaja**: La VM puede comunicarse con otros dispositivos en la red local y tener acceso a Internet (si la red lo permite).
+- **Desventaja**: Expone la VM a toda la red local, lo que puede representar riesgos de seguridad si no se configura adecuadamente.
+
+Ahora, la VM debería poder hacer ping a la IP del host (`192.168.1.144`) y viceversa.
+
+### 3. Red Solo para Host (Host-Only Network)
+En el modo solo para host, la VM está conectada exclusivamente al host sin salida a Internet ni conexión con otras redes. Esto es ideal para entornos de desarrollo donde la VM no necesita conectividad externa.
+
+Para configurar una red solo para host:
+
+```ruby
+config.vm.network "private_network", type: "dhcp"
+```
+#### Detalles:
+- **Ventaja**: Mantiene la VM completamente aislada de la red externa, mejorando la seguridad.
+- **Desventaja**: La VM no tiene salida a Internet y solo puede comunicarse con el host.
+
+### Combinaciones Comunes de Redes en Vagrant
+Vagrant permite combinar la red NAT con otras redes (privada o en modo puente) para obtener beneficios de ambas configuraciones. Algunas combinaciones prácticas son:
+
+- **NAT + Red Privada**: La interfaz NAT proporciona salida a Internet, mientras que la red privada permite la comunicación directa entre host y VM.
+- **NAT + Red en Modo Puente**: La interfaz NAT permite el acceso a Internet, y la red en modo puente proporciona acceso directo a la red local.
+
+Estas combinaciones permiten que la VM esté accesible tanto desde el host como desde la red local, sin perder la conexión a Internet.
+
+### Ejemplo Completo del `Vagrantfile` con Múltiples Redes
+Aquí tienes un ejemplo de un `Vagrantfile` que configura una red NAT y una red en modo puente:
+
+```ruby
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64"
+  
+  # Mantiene la interfaz NAT por defecto para el acceso a Internet.
+  config.vm.network "private_network", ip: "192.168.56.10"  # Red privada para conexión host-VM
+  # O bien:
+  # config.vm.network "public_network"  # Modo puente para obtener IP en red local
+end
+```
+### Verificación de Conectividad
+Para comprobar el acceso a Internet desde la VM, ejecuta:
+
+```bash
+ping google.com
+```
+Si funciona, entonces la interfaz NAT sigue operativa para la salida a Internet.
+
+Para aplicar cambios de red en el archivo `Vagrantfile`, reinicia la VM con:
+
+```bash
+vagrant reload
+```
+Una vez reiniciada, puedes verificar la IP asignada a cada interfaz en la VM usando:
+
+```bash
+ifconfig
+# o bien
+ip addr
+```

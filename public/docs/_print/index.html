@@ -307,7 +307,47 @@ Versión imprimible multipagina.
     
     
 	
-<li>2.1.3: <a href="#pg-8e2d27a4433c16ce8f783d43b1867717">Administración</a></li>
+<li>2.1.3: <a href="#pg-9d2ef2de63684a5527c248db33cbf63a">Archivado y compresión</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.1.4: <a href="#pg-832188b90e18a893792e101f4df93abe">Archivado y compresión</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.1.5: <a href="#pg-52fcbc57d0be6cffc852a495089bcb56">Permisos y Propietarios</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.1.6: <a href="#pg-64e74d3791fbf3b798524dc8300dd205">Gestión de procesos</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.1.7: <a href="#pg-d0f79a3cb7e5714b537bec2a280482d0">Administración de usuarios</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2.1.8: <a href="#pg-faddf2bbcf212e2684fca0662a05e766">Redes</a></li>
 
 
     
@@ -2691,7 +2731,7 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 
 </span>
 </strong>
- la instalación de software, lo que permite que todos los miembros del equipo de desarrollo trabajen en un entorno idéntico, evitando problemas de &ldquo;funciona en mi máquina&rdquo;.</li>
+ la instalación de software, lo que permite que todos los miembros del equipo de desarrollo trabajen en un entorno idéntico, evitando problemas de &ldquo;funciona en mi máquina&rdquo;, ideal para que independientemente de las máquinas que tenemos, todos podamos funcionar de la misma manera.</li>
 </ul>
 
 
@@ -2727,10 +2767,10 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 .</p>
 </li>
 <li>
-<p>Lo primero será lo descargamos y posteriormente procedemos a la instalación</p>
+<p>Debemos descargar el programa de instalación para proceder posteriormente a la misma.</p>
 </li>
 <li>
-<p>Seleccionaremos en función del sistema operativo.</p>
+<p>Una vez en la web de descargas, seleccionaremos en función del sistema operativo.</p>
 </li>
 <li>
 <p>
@@ -2776,7 +2816,7 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 
 </span>
 </strong>
-, que es el proveedor de virtualización más común que Vagrant utiliza.</p>
+, que es el proveedor de virtualización más común que Vagrant utiliza, y el que vamos a utilizar nosotros.</p>
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -2785,11 +2825,11 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo apt install virtualbox -y</span></span></code></pre></td></tr></table>
 </div>
 </div>
-<p>Ahora vamos 
+<p>A continuación  
 <strong>
 <span class="font-weight-bold text-primary">
 
-    a descargar e instalar Vagrant
+    descargamos  e instalamos Vagrant
 
 
 </span>
@@ -2804,7 +2844,16 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 
 </span>
 </strong>
- para proceder a la instalación</p>
+ para proceder a la instalación, o bien añadimos el respositorio de 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    HashiCorp
+
+
+</span>
+</strong>
+, donde se encuentra este paquete de instalación.</p>
 
 <strong>
 <span class="font-weight-bold text-primary">
@@ -2825,7 +2874,7 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
-<li>Añadir el repositorio de HashiCorp a tu lista de fuentes
+<li>Añadir el repositorio de HashiCorp a la lista de fuentes
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -2833,9 +2882,8 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo apt-add-repository <span style="color:#cd5555">&#34;deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main&#34;</span></span></span></code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-<p>Con el repositorio añadido, instalamos Vagrant :
+</div>
+Con el repositorio añadido, instalamos Vagrant:
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -2846,8 +2894,9 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 </span></span><span style="display:flex;"><span>sudo apt install vagrant 
 </span></span></code></pre></td></tr></table>
 </div>
-</div></p>
-<p>Para asegurarte de que Vagrant se ha instalado correctamente, miramos su versión
+</div></li>
+</ul>
+<p>Ahora, una vez instalado, si todo ha ido bien podemos mirar su versión
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -2857,7 +2906,7 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 </div>
 </div></p>
 <h3 id="configuración-y-uso-de-vagrant">Configuración y uso de vagrant</h3>
-<p>Una vez instalado, da lo mismo que tengamos windows o linux, funcionaremos de la misma forma.</p>
+<p>Independientemente que lo hayamnos instalado bajo  windows o linux, funcionaremos de la misma forma.</p>
 <ul>
 <li>Abrimos un terminal (en windows mucho mejor un power shell)</li>
 <li>Crea un directorio para nuestro proyecto de vagrant (es una forma de hablar, vamos a crear una virtualización de una máquina, gestinándolo con vagrant)</li>
@@ -2872,10 +2921,14 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 </span></span><span style="display:flex;"><span>cd vagrant-proyecto</span></span></code></pre></td></tr></table>
 </div>
 </div>
-<p>*Inicializa un nuevo entorno de Vagrant con una caja (box) básica:</p>
 <ul>
-<li>Podemos establecer el box o caja o virtualizacion que queremos
-<a href="https://app.vagrantup.com/boxes/search">https://app.vagrantup.com/boxes/search</a></li>
+<li>
+<p>Inicializa un nuevo entorno de Vagrant con una caja (box) básica:</p>
+</li>
+<li>
+<p>Podemos establecer el box o caja o virtualizacion que queremos
+<a href="https://app.vagrantup.com/boxes/search">https://app.vagrantup.com/boxes/search</a></p>
+</li>
 </ul>
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -2966,7 +3019,7 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 </div>
 </div>
 <h4 id="personalización-del-vagrantfile">Personalización del Vagrantfile</h4>
-<p>En el archivo Vagrantfile, puedes personalizar la configuración de tu entorno.
+<p>En el archivo Vagrantfile, se  personaliza la configuración del entorno que vamos a crear.
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -2992,7 +3045,7 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 <div class="alert alert-success" role="alert">
 <h4 class="alert-heading">Proveedor</h4>
 
-    Aunque en este ejemplo usamos VirtualBox como proveedor, también puedes usar otros como VMware o Hyper-V
+    Aunque en este ejemplo usamos VirtualBox como proveedor, también se pueden usar otros, como VMware o Hyper-V
 
 </div>
 
@@ -3008,20 +3061,22 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 
 </span>
 </strong>
- que cumple con los requisitos que has mencionado:</p>
-
+ con los siguientes requisitos:</p>
+<ul>
+<li>que tenga instalados los siguientes paquetes (para trabajar con php y apache):
+<ul>
+<li>apache2, php y libapache2-mod-php</li>
+<li>Compartkir la carpeta local ./app (o .\app), es decir una carpeta en el directorio actual llamada 
 <strong>
 <span class="font-weight-bold text-primary">
 
-    Instala Apache y PHP.
+    app
 
 
 </span>
 </strong>
-
-<ul>
-<li>Comparte la carpeta local ./app con /var/www/html en la máquina virtual.</li>
-<li>Mapea el puerto 8888 de la máquina anfitriona con el puerto 80 de la máquina virtual.
+ con /var/www/html en la máquina virtual.</li>
+<li>Mapea el puerto 8888 de la máquina anfitriona con el puerto 80 de la máquina virtual, para poder acceder al apache de nuestra virtualización
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -3073,7 +3128,81 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 </div>
 </div></li>
 </ul>
-
+</li>
+</ul>
+<p>markdown
+Copiar código</p>
+<h1 id="configuración-de-red-en-vagrant">Configuración de Red en Vagrant</h1>
+<p>Vagrant ofrece varias opciones de configuración de red para gestionar la conectividad de las máquinas virtuales (VMs) y su acceso tanto al host como a redes externas.</p>
+<h2 id="configuración-de-red-nat-por-defecto">Configuración de Red NAT por Defecto</h2>
+<p>La configuración de red de Vagrant, por defecto, utiliza una red <strong>NAT (Network Address Translation)</strong>. En este modo:</p>
+<ul>
+<li>La VM puede <strong>acceder a Internet</strong> a través de la interfaz de red del host.</li>
+<li><strong>No permite la comunicación directa</strong> con la red local del host (por ejemplo, la dirección <code>192.168.1.144</code> del host en este caso).</li>
+</ul>
+<p>Si necesitas que la VM se comunique directamente con el host o con otros dispositivos en la red local, puedes añadir configuraciones de red adicionales en el archivo <code>Vagrantfile</code>.</p>
+<h2 id="opciones-de-red-en-vagrant">Opciones de Red en Vagrant</h2>
+<h3 id="1-red-privada-private-network">1. Red Privada (Private Network)</h3>
+<p>La red privada permite que la VM tenga una <strong>dirección IP fija</strong>, accesible solo desde el host y otras VMs en el mismo <code>Vagrantfile</code>. Esto facilita la comunicación directa entre el host y la VM sin exponer la VM a la red local completa.</p>
+<p>En el archivo <code>Vagrantfile</code>, puedes añadir una red privada así:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>config.vm.network <span style="color:#cd5555">&#34;private_network&#34;</span>, <span style="color:#cd5555">ip</span>: <span style="color:#cd5555">&#34;192.168.56.10&#34;</span>
+</span></span></code></pre></div><h4 id="detalles">Detalles:</h4>
+<ul>
+<li><strong>Ventaja</strong>: Permite una conexión directa entre host y VM.</li>
+<li><strong>Desventaja</strong>: No permite salida directa a Internet sin una interfaz NAT adicional.</li>
+</ul>
+<p>Después de añadir esta configuración:</p>
+<ul>
+<li>Usa la IP <code>192.168.56.10</code> para comunicarte con la VM desde el host.</li>
+<li>La VM también podrá hacer ping a la IP local del host (como <code>192.168.1.144</code>), siempre que ambos dispositivos estén en el mismo rango de red.</li>
+</ul>
+<h3 id="2-red-en-modo-puente-bridged-network">2. Red en Modo Puente (Bridged Network)</h3>
+<p>En el modo puente, la VM obtiene una dirección IP de la misma red que el host, como si estuviera conectada directamente a la red física (por ejemplo, al router o switch).</p>
+<p>En el <code>Vagrantfile</code>, añade:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>config.vm.network <span style="color:#cd5555">&#34;public_network&#34;</span>
+</span></span></code></pre></div><h4 id="detalles-1">Detalles:</h4>
+<ul>
+<li><strong>Ventaja</strong>: La VM puede comunicarse con otros dispositivos en la red local y tener acceso a Internet (si la red lo permite).</li>
+<li><strong>Desventaja</strong>: Expone la VM a toda la red local, lo que puede representar riesgos de seguridad si no se configura adecuadamente.</li>
+</ul>
+<p>Ahora, la VM debería poder hacer ping a la IP del host (<code>192.168.1.144</code>) y viceversa.</p>
+<h3 id="3-red-solo-para-host-host-only-network">3. Red Solo para Host (Host-Only Network)</h3>
+<p>En el modo solo para host, la VM está conectada exclusivamente al host sin salida a Internet ni conexión con otras redes. Esto es ideal para entornos de desarrollo donde la VM no necesita conectividad externa.</p>
+<p>Para configurar una red solo para host:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>config.vm.network <span style="color:#cd5555">&#34;private_network&#34;</span>, <span style="color:#cd5555">type</span>: <span style="color:#cd5555">&#34;dhcp&#34;</span>
+</span></span></code></pre></div><h4 id="detalles-2">Detalles:</h4>
+<ul>
+<li><strong>Ventaja</strong>: Mantiene la VM completamente aislada de la red externa, mejorando la seguridad.</li>
+<li><strong>Desventaja</strong>: La VM no tiene salida a Internet y solo puede comunicarse con el host.</li>
+</ul>
+<h3 id="combinaciones-comunes-de-redes-en-vagrant">Combinaciones Comunes de Redes en Vagrant</h3>
+<p>Vagrant permite combinar la red NAT con otras redes (privada o en modo puente) para obtener beneficios de ambas configuraciones. Algunas combinaciones prácticas son:</p>
+<ul>
+<li><strong>NAT + Red Privada</strong>: La interfaz NAT proporciona salida a Internet, mientras que la red privada permite la comunicación directa entre host y VM.</li>
+<li><strong>NAT + Red en Modo Puente</strong>: La interfaz NAT permite el acceso a Internet, y la red en modo puente proporciona acceso directo a la red local.</li>
+</ul>
+<p>Estas combinaciones permiten que la VM esté accesible tanto desde el host como desde la red local, sin perder la conexión a Internet.</p>
+<h3 id="ejemplo-completo-del-vagrantfile-con-múltiples-redes">Ejemplo Completo del <code>Vagrantfile</code> con Múltiples Redes</h3>
+<p>Aquí tienes un ejemplo de un <code>Vagrantfile</code> que configura una red NAT y una red en modo puente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#00688b">Vagrant</span>.configure(<span style="color:#cd5555">&#34;2&#34;</span>) <span style="color:#8b008b;font-weight:bold">do</span> |config|
+</span></span><span style="display:flex;"><span>  config.vm.box = <span style="color:#cd5555">&#34;ubuntu/bionic64&#34;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#228b22"># Mantiene la interfaz NAT por defecto para el acceso a Internet.</span>
+</span></span><span style="display:flex;"><span>  config.vm.network <span style="color:#cd5555">&#34;private_network&#34;</span>, <span style="color:#cd5555">ip</span>: <span style="color:#cd5555">&#34;192.168.56.10&#34;</span>  <span style="color:#228b22"># Red privada para conexión host-VM</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#228b22"># O bien:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#228b22"># config.vm.network &#34;public_network&#34;  # Modo puente para obtener IP en red local</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b008b;font-weight:bold">end</span>
+</span></span></code></pre></div><h3 id="verificación-de-conectividad">Verificación de Conectividad</h3>
+<p>Para comprobar el acceso a Internet desde la VM, ejecuta:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ping google.com
+</span></span></code></pre></div><p>Si funciona, entonces la interfaz NAT sigue operativa para la salida a Internet.</p>
+<p>Para aplicar cambios de red en el archivo <code>Vagrantfile</code>, reinicia la VM con:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vagrant reload
+</span></span></code></pre></div><p>Una vez reiniciada, puedes verificar la IP asignada a cada interfaz en la VM usando:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ifconfig
+</span></span><span style="display:flex;"><span><span style="color:#228b22"># o bien</span>
+</span></span><span style="display:flex;"><span>ip addr
+</span></span></code></pre></div>
 </div>
 
 
@@ -3196,401 +3325,137 @@ También incluye información sobre el crecimiento de Cloudflare y OpenResty, as
 </ul>
 <p>Usar comandos en Linux es esencial para usuarios avanzados y administradores de sistemas .</p>
 <h2 id="agrupación-de-comandos-de-linux-por-funcionalidad">Agrupación de Comandos de Linux por Funcionalidad</h2>
-<h3 id="administración-de-archivos-y-directorios">Administración de Archivos y Directorios**</h3>
+<ol>
+<li>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Administración de Archivos y Directorios
+
+
+</span>
+</strong>
+</li>
+</ol>
 <p>Comandos para la manipulación básica de archivos y directorios.</p>
 <ul>
 <li><code>ls</code>, <code>cd</code>, <code>cp</code>, <code>mv</code>, <code>mkdir</code>, <code>rm</code>, &hellip;</li>
 </ul>
 <ol start="2">
-<li><strong>Redirección y Manipulación de Flujo</strong><br>
-Operadores y comandos que permiten redirigir o canalizar la entrada y salida.</li>
-</ol>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Redirección y Manipulación de Flujo
+
+
+</span>
+</strong>
+<br>
+Operadores y comandos que permiten redirigir o canalizar la entrada y salida.</p>
 <ul>
 <li><code>&gt;</code>, <code>&gt;&gt;</code>, <code>&lt;</code>, <code>|</code>, <code>tee</code>, <code>xargs</code></li>
 </ul>
-<ol start="3">
-<li><strong>Comandos de Archivado y Compresión</strong><br>
-Comandos para comprimir y empaquetar archivos.</li>
-</ol>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Comandos de Archivado y Compresión
+
+
+</span>
+</strong>
+<br>
+Comandos para comprimir y empaquetar archivos.</p>
 <ul>
 <li><code>tar</code>, <code>gzip</code>, <code>gunzip</code>, <code>zip</code>, <code>unzip</code></li>
 </ul>
-<ol start="4">
-<li><strong>Transferencia de Archivos y Redes</strong><br>
-Comandos para la transferencia de datos de forma segura y eficiente.</li>
-</ol>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Transferencia de Archivos y Redes
+
+
+</span>
+</strong>
+<br>
+Comandos para la transferencia de datos de forma segura y eficiente.</p>
 <ul>
 <li><code>scp</code>, <code>ftp</code>, <code>wget</code>, <code>curl</code></li>
 </ul>
-<ol start="5">
-<li><strong>Permisos y Propiedades de Archivos</strong><br>
-Administración de permisos y propietarios, importante en sistemas multiusuario.</li>
-</ol>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Permisos y Propiedades de Archivos
+
+
+</span>
+</strong>
+<br>
+Administración de permisos y propietarios, importante en sistemas multiusuario.</p>
 <ul>
 <li><code>chmod</code>, <code>chown</code>, <code>chgrp</code></li>
 </ul>
-<ol start="6">
-<li><strong>Gestión de Procesos</strong><br>
-Comandos para monitorear y gestionar procesos.</li>
-</ol>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Gestión de Procesos
+
+
+</span>
+</strong>
+<br>
+Comandos para monitorear y gestionar procesos.</p>
 <ul>
 <li><code>ps</code>, <code>top</code>, <code>htop</code>, <code>kill</code>, <code>nice</code>, <code>renice</code></li>
 </ul>
-<ol start="7">
-<li><strong>Administración de Usuarios</strong><br>
-Comandos para gestionar usuarios y grupos en el sistema.</li>
-</ol>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Administración de Usuarios
+
+
+</span>
+</strong>
+<br>
+Comandos para gestionar usuarios y grupos en el sistema.</p>
 <ul>
 <li><code>useradd</code>, <code>usermod</code>, <code>passwd</code>, <code>groupadd</code></li>
 </ul>
-<ol start="8">
-<li><strong>Comandos de Red</strong><br>
-Comandos para configuraciones y diagnósticos de red.</li>
-</ol>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    Comandos de Red
+
+
+</span>
+</strong>
+<br>
+Comandos para configuraciones y diagnósticos de red.</p>
 <ul>
 <li><code>ping</code>, <code>ifconfig</code>/<code>ip</code>, <code>netstat</code>, <code>nslookup</code>, <code>traceroute</code></li>
 </ul>
-<p>Para más detalles y ejemplos, puedes revisar la guía completa en <a href="https://www.dreamhost.com">DreamHost</a>.</p>
-<h1 id="repaso-de-comandos-generales-de-linux-y-redes">Repaso de Comandos Generales de Linux y Redes</h1>
-<h2 id="comandos-generales">Comandos Generales</h2>
-<h3 id="1-ls">1. <code>ls</code></h3>
-<p>Lista los archivos y directorios en el directorio actual.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ls -la</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<ul>
-<li><code>-l</code>: lista en formato largo.</li>
-<li><code>-a</code>: incluye archivos ocultos.</li>
-</ul>
-<h3 id="2-cd">2. <code>cd</code></h3>
-<p>Cambia de directorio.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>cd /ruta/del/directorio</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="3-cp">3. <code>cp</code></h3>
-<p>Copia archivos o directorios.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span> cp archivo_origen archivo_destino</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<ul>
-<li><code>-r</code>: para copiar directorios de forma recursiva.</li>
-</ul>
-<h3 id="4-mv">4. <code>mv</code></h3>
-<p>Mueve o renombra archivos o directorios.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>mv archivo_origen archivo_destino</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="5-rm">5. <code>rm</code></h3>
-<p>Elimina archivos o directorios.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>rm archivo</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<ul>
-<li><code>-r</code>: elimina directorios de forma recursiva.</li>
-<li><code>-f</code>: fuerza la eliminación sin confirmación.</li>
-</ul>
-<h3 id="6-cat">6. <code>cat</code></h3>
-<p>Muestra el contenido de un archivo.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>cat archivo</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="7-grep">7. <code>grep</code></h3>
-<p>Busca texto dentro de archivos.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>grep <span style="color:#cd5555">&#39;texto&#39;</span> archivo</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="8-chmod">8. <code>chmod</code></h3>
-<p>Cambia permisos de archivos o directorios.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>chmod <span style="color:#b452cd">755</span> archivo</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="9-chown">9. <code>chown</code></h3>
-<p>Cambia el propietario de archivos o directorios.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>chown usuario</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="10-find">10. <code>find</code></h3>
-<p>Busca archivos en el sistema.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>find /ruta -name <span style="color:#cd5555">&#39;archivo*&#39;</span></span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h2 id="comandos-de-redes-y-comunicaciones">Comandos de Redes y Comunicaciones</h2>
-<h3 id="1-ifconfig">1. <code>ifconfig</code></h3>
-<p>Muestra o configura las interfaces de red.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ifconfig</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="2-ip">2. <code>ip</code></h3>
-<p>Muestra o manipula rutas, dispositivos y políticas de red.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ip addr show</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<ul>
-<li><code>ip route</code>: muestra la tabla de rutas.</li>
-<li><code>ip link</code>: muestra o configura dispositivos de red.</li>
-</ul>
-<h3 id="3-ping">3. <code>ping</code></h3>
-<p>Envía paquetes ICMP para verificar la conectividad con una IP o dominio.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ping google.com</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="4-netstat">4. <code>netstat</code></h3>
-<p>Muestra conexiones de red, tablas de enrutamiento y estadísticas.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>netstat -tuln</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<ul>
-<li><code>-t</code>: muestra conexiones TCP.</li>
-<li><code>-u</code>: muestra conexiones UDP.</li>
-<li><code>-l</code>: muestra servicios en escucha.</li>
-</ul>
-<h3 id="5-ss">5. <code>ss</code></h3>
-<p>Muestra información sobre sockets de red.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ss -tuln</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="6-traceroute">6. <code>traceroute</code></h3>
-<p>Muestra la ruta que siguen los paquetes hasta un host.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>traceroute google.com</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="7-nslookup">7. <code>nslookup</code></h3>
-<p>Interroga a servidores DNS para obtener información de dominios o IPs.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>nslookup google.com</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="8-dig">8. <code>dig</code></h3>
-<p>Realiza consultas DNS más detalladas.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>dig google.com</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="9-ftp--sftp">9. <code>ftp</code> / <code>sftp</code></h3>
-<p>Transfiere archivos entre sistemas mediante los protocolos FTP/SFTP.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ftp usuario@servidor sftp usuario@servidor</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="10-scp">10. <code>scp</code></h3>
-<p>Copia archivos entre sistemas de forma segura.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>scp archivo usuario@servidor:/ruta/destino</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="11-curl">11. <code>curl</code></h3>
-<p>Realiza peticiones HTTP desde la terminal.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>curl https://ejemplo.com</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="12-wget">12. <code>wget</code></h3>
-<p>Descarga archivos de una URL.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>wget https://ejemplo.com/archivo.tar.gz</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="13-nmap">13. <code>nmap</code></h3>
-<p>Escanea redes y puertos.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>nmap -sP <span style="color:#b452cd">192.168</span>.<span style="color:#b452cd">1.0</span>/<span style="color:#b452cd">24</span></span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="14-ssh">14. <code>ssh</code></h3>
-<p>Conexión remota segura a otro sistema.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ssh usuario@servidor</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="15-iptables">15. <code>iptables</code></h3>
-<p>Configura las reglas del cortafuegos en el sistema.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>iptables -L</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="comandos-útiles-para-configuración-de-redes">Comandos Útiles para Configuración de Redes</h2>
-<h3 id="1-hostname">1. <code>hostname</code></h3>
-<p>Muestra o cambia el nombre del host del sistema.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>****</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="2-systemctl">2. <code>systemctl</code></h3>
-<p>Gestiona servicios en el sistema.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>systemctl restart servicio</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<ul>
-<li><code>start</code>: inicia un servicio.</li>
-<li><code>stop</code>: detiene un servicio.</li>
-<li><code>status</code>: muestra el estado de un servicio.</li>
-</ul>
-<h3 id="3-nmcli">3. <code>nmcli</code></h3>
-<p>Configura y gestiona la red mediante NetworkManager desde la terminal.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>nmcli dev status</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h2 id="comandos-para-diagnóstico-de-red">Comandos para Diagnóstico de Red</h2>
-<h3 id="1-mtr">1. <code>mtr</code></h3>
-<p>Combina <code>ping</code> y <code>traceroute</code> para diagnosticar la red.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>mtr google.com</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="2-tcpdump">2. <code>tcpdump</code></h3>
-<p>Captura y muestra tráfico de red.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>tcpdump -i eth0</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="3-ethtool">3. <code>ethtool</code></h3>
-<p>Muestra o cambia los ajustes de las interfaces de red.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ethtool dev</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
+</li>
+</ol>
+<p>Referencia web: Para más detalles y ejemplos, puedes revisar la guía completa en <a href="https://www.dreamhost.com">DreamHost</a>.</p>
 
 </div>
 
@@ -5366,9 +5231,7 @@ Comandos para configuraciones y diagnósticos de red.</li>
 <strong>
 <span class="font-weight-bold text-primary">
 
-    <blockquote>
-</blockquote>
-
+    &gt;
 
 
 </span>
@@ -5402,11 +5265,7 @@ Comandos para configuraciones y diagnósticos de red.</li>
 <strong>
 <span class="font-weight-bold text-primary">
 
-    <blockquote>
-<blockquote>
-</blockquote>
-</blockquote>
-
+    &gt;&gt;
 
 
 </span>
@@ -5565,6 +5424,87 @@ Comandos para configuraciones y diagnósticos de red.</li>
 </div></li>
 </ul>
 </li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    tee
+
+
+</span>
+</strong>
+: Divide la salida para guardarla en un archivo y enviarla también como entrada de otro comando.
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>comando | tee [opciones] archivo</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-a</code></strong>: Añade la salida al final del archivo en lugar de sobrescribirlo.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>lsblk | tee salida.txt <span style="color:#228b22">#: Guarda la salida de `lsblk` en &#34;salida.txt&#34; y la muestra en pantalla.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>lsblk | tee -a salida.txt <span style="color:#228b22">#: Añade la salida de `lsblk` al final de &#34;salida.txt&#34; sin sobrescribir.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    xargs
+
+
+</span>
+</strong>
+: Ejecuta comandos utilizando la salida de otro comando como argumentos.
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>comando | xargs [opciones] otro_comando</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-I {}</code></strong>: Usa <code>{}</code> como marcador de posición, reemplazado por cada entrada en la salida del primer comando.</li>
+<li><strong><code>-n</code></strong>: Especifica cuántos argumentos tomar por ejecución del comando.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>find . -name <span style="color:#cd5555">&#34;*.txt&#34;</span> | xargs rm <span style="color:#228b22">#: Encuentra y elimina todos los archivos &#34;.txt&#34; en el directorio actual.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>find . -name <span style="color:#cd5555">&#34;*.log&#34;</span> | xargs -I {} mv {} /backup <span style="color:#228b22">#: Mueve cada archivo &#34;.log&#34; encontrado a la carpeta &#34;/backup&#34;.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span><span style="color:#8b008b;font-weight:bold">echo</span> <span style="color:#cd5555">&#34;archivo1 archivo2 archivo3&#34;</span> | xargs -n <span style="color:#b452cd">1</span> touch <span style="color:#228b22">#: Crea cada archivo individualmente.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -5581,7 +5521,1037 @@ Comandos para configuraciones y diagnósticos de red.</li>
 
 <div class="td-content" style="page-break-before: always">
     
-	<h1 id="pg-8e2d27a4433c16ce8f783d43b1867717">2.1.3 - Administración</h1>
+	<h1 id="pg-9d2ef2de63684a5527c248db33cbf63a">2.1.3 - Archivado y compresión</h1>
+    
+	
+
+
+<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
+    <div style="background-color:darkgreen; color:white;
+    font-weight:bold; padding:10px; display: flex; align-items: center;">
+        
+        <span style="margin-right: 8px;">
+            <i class="fas  fa-check-circle"></i> 
+        </span>
+        
+        <span >Objetivos</span>
+    </div>
+
+    <h3 style="padding: 5px;font-weight:bold"> Qué veremos aquí</h3>
+
+    <hr style="border-color:seagreen;border-width:3px"/>
+    
+    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
+        <ul>
+        
+        <li>Archivando ficheros</li>
+            
+        <li>Copias de seguridad</li>
+            
+        <li>Comprimiendo y descomprimiendo</li>
+            
+        
+        
+        </ul>
+
+    </div>
+</div>
+
+<h1 id="comandos-de-archivado-y-compresión">Comandos de Archivado y Compresión</h1>
+<ul>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    tar
+
+
+</span>
+</strong>
+: Crea, extrae y manipula archivos comprimidos en formato <code>.tar</code> (tape archive).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>tar [opciones] archivo.tar [archivos o directorio]</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-c</code></strong>: Crea un nuevo archivo tar.</li>
+<li><strong><code>-x</code></strong>: Extrae el contenido de un archivo tar.</li>
+<li><strong><code>-v</code></strong>: Muestra detalles durante la creación o extracción.</li>
+<li><strong><code>-f</code></strong>: Especifica el nombre del archivo tar.</li>
+<li><strong><code>-z</code></strong>: Comprime o descomprime con <code>gzip</code>.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>tar -cvf archivos.tar directorio/ <span style="color:#228b22">#: Crea &#34;archivos.tar&#34; con el contenido de &#34;directorio&#34;.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>tar -xvf archivos.tar <span style="color:#228b22">#: Extrae el contenido de &#34;archivos.tar&#34;.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>tar -czvf archivos.tar.gz directorio/ <span style="color:#228b22">#: Crea y comprime en &#34;archivos.tar.gz&#34; usando gzip.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    gzip
+
+
+</span>
+</strong>
+: Comprime archivos en el formato <code>.gz</code> (GNU zip).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>gzip [archivo]</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-k</code></strong>: Conserva el archivo original sin eliminarlo.</li>
+<li><strong><code>-r</code></strong>: Comprime archivos dentro de un directorio de forma recursiva.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>gzip archivo.txt <span style="color:#228b22">#: Comprime &#34;archivo.txt&#34; en &#34;archivo.txt.gz&#34;.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>gzip -k archivo.txt <span style="color:#228b22">#: Comprime &#34;archivo.txt&#34; pero conserva el original.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    gunzip
+
+
+</span>
+</strong>
+: Descomprime archivos <code>.gz</code> (gzip).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>gunzip [archivo.gz]</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Ejemplo:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>gunzip archivo.txt.gz <span style="color:#228b22">#: Descomprime &#34;archivo.txt.gz&#34; a &#34;archivo.txt&#34;.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    zip
+
+
+</span>
+</strong>
+: Comprime archivos y directorios en formato <code>.zip</code>.
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>zip [opciones] archivo.zip [archivos o directorios]</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-r</code></strong>: Comprime directorios de forma recursiva.</li>
+<li><strong><code>-e</code></strong>: Protege el archivo zip con contraseña.</li>
+<li><strong><code>-q</code></strong>: Silencia la salida de la terminal.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>zip archivos.zip archivo1 archivo2 <span style="color:#228b22">#: Crea &#34;archivos.zip&#34; con archivo1 y archivo2.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>zip -r proyecto.zip directorio/ <span style="color:#228b22">#: Comprime el directorio completo en &#34;proyecto.zip&#34;.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    unzip
+
+
+</span>
+</strong>
+: Extrae archivos comprimidos en formato <code>.zip</code>.
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>unzip [archivo.zip]</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-d [directorio]</code></strong>: Especifica el directorio de destino para los archivos extraídos.</li>
+<li><strong><code>-l</code></strong>: Lista el contenido del archivo zip sin extraerlo.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>unzip archivos.zip <span style="color:#228b22">#: Extrae el contenido de &#34;archivos.zip&#34; en el directorio actual.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>unzip -d /destino archivos.zip <span style="color:#228b22">#: Extrae &#34;archivos.zip&#34; en el directorio &#34;/destino&#34;.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-832188b90e18a893792e101f4df93abe">2.1.4 - Archivado y compresión</h1>
+    
+	
+
+
+<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
+    <div style="background-color:darkgreen; color:white;
+    font-weight:bold; padding:10px; display: flex; align-items: center;">
+        
+        <span style="margin-right: 8px;">
+            <i class="fas  fa-check-circle"></i> 
+        </span>
+        
+        <span >Objetivos</span>
+    </div>
+
+    <h3 style="padding: 5px;font-weight:bold"> Qué veremos aquí</h3>
+
+    <hr style="border-color:seagreen;border-width:3px"/>
+    
+    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
+        <ul>
+        
+        <li>Transferencia de archivos</li>
+            
+        <li>Redes</li>
+            
+        
+        
+        </ul>
+
+    </div>
+</div>
+
+<h1 id="transferencia-de-archivos-y-redes">Transferencia de Archivos y Redes</h1>
+<ul>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    scp
+
+
+</span>
+</strong>
+: Copia archivos de forma segura entre sistemas mediante <strong>SSH</strong> (<em>secure copy</em>).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>scp [opciones] origen destino</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-r</code></strong>: Copia directorios de forma recursiva.</li>
+<li><strong><code>-P [puerto]</code></strong>: Especifica un puerto SSH distinto al predeterminado (22).</li>
+<li><strong><code>-i [archivo_clave]</code></strong>: Usa una clave SSH específica para la autenticación.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>scp archivo.txt usuario@servidor:/ruta/remota/ <span style="color:#228b22">#: Copia &#34;archivo.txt&#34; al servidor remoto.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>scp -r carpeta/ usuario@servidor:/ruta/remota/ <span style="color:#228b22">#: Copia una carpeta de forma recursiva.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>scp -P <span style="color:#b452cd">2222</span> archivo.txt usuario@servidor:/ruta/remota/ <span style="color:#228b22">#: Usa el puerto 2222 para la transferencia.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    ftp
+
+
+</span>
+</strong>
+: Conecta y transfiere archivos entre sistemas mediante el protocolo <strong>FTP</strong> (<em>file transfer protocol</em>).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ftp [servidor]</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Comandos útiles en la sesión FTP:
+<ul>
+<li><strong><code>put [archivo]</code></strong>: Sube un archivo al servidor FTP.</li>
+<li><strong><code>get [archivo]</code></strong>: Descarga un archivo del servidor FTP.</li>
+<li><strong><code>mput / mget</code></strong>: Sube o descarga múltiples archivos.</li>
+</ul>
+</li>
+<li>Ejemplo:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ftp servidor.com <span style="color:#228b22">#: Conecta al servidor FTP.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>ftp&gt; put archivo.txt <span style="color:#228b22">#: Sube &#34;archivo.txt&#34; al servidor.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    wget
+
+
+</span>
+</strong>
+: Descarga archivos desde internet mediante HTTP, HTTPS o FTP.
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>wget [opciones] URL</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-c</code></strong>: Continúa una descarga interrumpida.</li>
+<li><strong><code>-r</code></strong>: Descarga de forma recursiva (útil para sitios web).</li>
+<li><strong><code>-P [directorio]</code></strong>: Especifica el directorio de destino para la descarga.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>wget http://ejemplo.com/archivo.zip <span style="color:#228b22">#: Descarga &#34;archivo.zip&#34; desde la URL.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>wget -c http://ejemplo.com/grande.zip <span style="color:#228b22">#: Continúa la descarga de &#34;grande.zip&#34; si fue interrumpida.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>wget -r http://ejemplo.com/sitio <span style="color:#228b22">#: Descarga todo el sitio web de forma recursiva.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    curl
+
+
+</span>
+</strong>
+: Transfiere datos desde o hacia un servidor mediante varios protocolos (HTTP, HTTPS, FTP, SFTP).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>curl [opciones] URL</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-O</code></strong>: Guarda el archivo con su nombre original.</li>
+<li><strong><code>-L</code></strong>: Sigue redirecciones (útil para URL que redirigen).</li>
+<li><strong><code>-u usuario:contraseña</code></strong>: Especifica las credenciales para autenticación básica.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>curl -O http://ejemplo.com/archivo.zip <span style="color:#228b22">#: Descarga y guarda &#34;archivo.zip&#34;.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>curl -L http://ejemplo.com/redireccionado <span style="color:#228b22">#: Sigue redirecciones para acceder al destino final.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>curl -u usuario:clave ftp://servidor.com/archivo.zip <span style="color:#228b22">#: Descarga con autenticación.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-52fcbc57d0be6cffc852a495089bcb56">2.1.5 - Permisos y Propietarios</h1>
+    
+	
+
+
+<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
+    <div style="background-color:darkgreen; color:white;
+    font-weight:bold; padding:10px; display: flex; align-items: center;">
+        
+        <span style="margin-right: 8px;">
+            <i class="fas  fa-check-circle"></i> 
+        </span>
+        
+        <span >Objetivos</span>
+    </div>
+
+    <h3 style="padding: 5px;font-weight:bold"> Qué veremos aquí</h3>
+
+    <hr style="border-color:seagreen;border-width:3px"/>
+    
+    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
+        <ul>
+        
+        <li>Permisos</li>
+            
+        <li>Propietarios</li>
+            
+        <li>El comando sudo</li>
+            
+        
+        
+        </ul>
+
+    </div>
+</div>
+
+<h1 id="permisos-y-propiedades-de-archivos">Permisos y Propiedades de Archivos</h1>
+<ul>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    chmod
+
+
+</span>
+</strong>
+: Cambia los permisos de un archivo o directorio (<em>change mode</em>).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chmod [opciones] modo archivo</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-R</code></strong>: Aplica los cambios de forma recursiva a todos los archivos y subdirectorios.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chmod <span style="color:#b452cd">755</span> script.sh <span style="color:#228b22">#: Otorga permisos de lectura y ejecución para todos, escritura solo al propietario.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>sudo chmod -R <span style="color:#b452cd">700</span> carpeta/ <span style="color:#228b22">#: Cambia permisos de todos los archivos y carpetas dentro de &#34;carpeta&#34; a solo propietario.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    chown
+
+
+</span>
+</strong>
+: Cambia el propietario y grupo de un archivo o directorio (<em>change owner</em>).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chown [opciones] propietario[:grupo] archivo</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-R</code></strong>: Cambia el propietario y grupo de forma recursiva.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chown usuario archivo.txt <span style="color:#228b22">#: Cambia el propietario de &#34;archivo.txt&#34; a &#34;usuario&#34;.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>sudo chown usuario:grupo archivo.txt <span style="color:#228b22">#: Cambia propietario y grupo a &#34;usuario&#34; y &#34;grupo&#34;.
+</span></span></span><span style="display:flex;"><span><span style="color:#228b22"></span>sudo chown -R usuario carpeta/ <span style="color:#228b22">#: Cambia propietario de todos los archivos dentro de &#34;carpeta&#34; a &#34;usuario&#34;.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    chgrp
+
+
+</span>
+</strong>
+: Cambia el grupo de un archivo o directorio (<em>change group</em>).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chgrp [opciones] grupo archivo</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Opciones útiles:
+<ul>
+<li><strong><code>-R</code></strong>: Aplica los cambios de grupo de forma recursiva.</li>
+</ul>
+</li>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chgrp grupo archivo.txt <span style="color:#228b22">#: Cambia el grupo de &#34;archivo.txt&#34; a &#34;grupo&#34;.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>sudo chgrp -R grupo carpeta/ <span style="color:#228b22">#: Cambia el grupo de todos los archivos dentro de &#34;carpeta&#34; a &#34;grupo&#34;.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    sudo
+
+
+</span>
+</strong>
+: Ejecuta un comando con permisos de superusuario o usuario administrador (<em>superuser do</em>).
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo comando</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<ul>
+<li>Ejemplos:
+<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo chmod <span style="color:#b452cd">755</span> archivo.txt <span style="color:#228b22">#: Cambia permisos de &#34;archivo.txt&#34; con privilegios de superusuario.
+</span></span></span><span style="display:flex; background-color:#d6d6c6"><span><span style="color:#228b22"></span>sudo chown usuario archivo.txt <span style="color:#228b22">#: Cambia el propietario de &#34;archivo.txt&#34; a &#34;usuario&#34;.
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-64e74d3791fbf3b798524dc8300dd205">2.1.6 - Gestión de procesos</h1>
+    
+	
+
+
+<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
+    <div style="background-color:darkgreen; color:white;
+    font-weight:bold; padding:10px; display: flex; align-items: center;">
+        
+        <span style="margin-right: 8px;">
+            <i class="fas  fa-check-circle"></i> 
+        </span>
+        
+        <span >Objetivos</span>
+    </div>
+
+    <h3 style="padding: 5px;font-weight:bold"> Qué veremos aquí</h3>
+
+    <hr style="border-color:seagreen;border-width:3px"/>
+    
+    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
+        <ul>
+        
+        <li>Procesos</li>
+            
+        <li>Control y gestión </li>
+            
+        <li>Prioridades</li>
+            
+        
+        
+        </ul>
+
+    </div>
+</div>
+
+<h1 id="gestión-de-procesos">Gestión de Procesos</h1>
+<ul>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    ps
+
+
+</span>
+</strong>
+: Muestra una lista de procesos en ejecución.</p>
+<ul>
+<li><strong>Descripción</strong>: <code>ps</code> (process status) se utiliza para ver detalles de los procesos en ejecución en el sistema. La salida incluye el ID de proceso (PID), el usuario que ejecuta el proceso, y el uso de CPU y memoria.</li>
+<li><strong>Opciones útiles</strong>:
+<ul>
+<li><strong><code>aux</code></strong>: Muestra todos los procesos en el sistema con información detallada.</li>
+<li><strong><code>-ef</code></strong>: Otra forma de listar todos los procesos con sus detalles.</li>
+</ul>
+</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ps aux  <span style="color:#228b22"># Muestra todos los procesos con información detallada</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    top
+
+
+</span>
+</strong>
+: Muestra información en tiempo real sobre los procesos y el uso del sistema.</p>
+<ul>
+<li><strong>Descripción</strong>: <code>top</code> muestra una lista dinámica de procesos que se actualiza constantemente, mostrando el uso de CPU, memoria y tiempo de ejecución. Es útil para monitorear el rendimiento del sistema en tiempo real.</li>
+<li><strong>Opciones útiles</strong>:
+<ul>
+<li><strong><code>-u [usuario]</code></strong>: Muestra solo los procesos de un usuario específico.</li>
+<li><strong><code>-d [segundos]</code></strong>: Establece la frecuencia de actualización en segundos.</li>
+</ul>
+</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>top  <span style="color:#228b22"># Inicia la monitorización en tiempo real</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    htop
+
+
+</span>
+</strong>
+: Versión mejorada de <code>top</code> con una interfaz más amigable.</p>
+<ul>
+<li><strong>Descripción</strong>: <code>htop</code> es similar a <code>top</code>, pero ofrece una interfaz más visual y fácil de usar para monitorear procesos y recursos del sistema. Permite navegar y terminar procesos directamente.</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>htop  <span style="color:#228b22"># Inicia el monitor de procesos con una interfaz gráfica en terminal</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    kill
+
+
+</span>
+</strong>
+: Finaliza un proceso mediante su ID (PID).</p>
+<ul>
+<li><strong>Descripción</strong>: <code>kill</code> envía una señal a un proceso, generalmente para finalizarlo. Puedes usar el PID (ID de proceso) obtenido con <code>ps</code> o <code>top</code> para detener un proceso específico.</li>
+<li><strong>Opciones útiles</strong>:
+<ul>
+<li><strong><code>-9</code></strong>: Envía una señal SIGKILL, forzando la finalización inmediata del proceso.</li>
+<li><strong><code>-15</code></strong>: Envía una señal SIGTERM, solicitando la finalización (esta es la señal por defecto).</li>
+</ul>
+</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#658b00">kill</span> -9 <span style="color:#b452cd">1234</span>  <span style="color:#228b22"># Fuerza la terminación del proceso con PID 1234</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    xkill
+
+
+</span>
+</strong>
+: Herramienta gráfica para finalizar aplicaciones congeladas.</p>
+<ul>
+<li><strong>Descripción</strong>: <code>xkill</code> permite seleccionar una ventana gráfica para forzar su cierre. Es útil para detener aplicaciones que no responden en entornos de escritorio.</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>xkill  <span style="color:#228b22"># Tras ejecutar, haz clic en la ventana que deseas cerrar</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    nice
+
+
+</span>
+</strong>
+: Inicia un proceso con una prioridad ajustada.</p>
+<ul>
+<li><strong>Descripción</strong>: <code>nice</code> permite iniciar un proceso con una prioridad específica, controlando cuántos recursos consume en comparación con otros procesos. Los valores de &ldquo;nice&rdquo; van de -20 (mayor prioridad) a 19 (menor prioridad).</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nice -n <span style="color:#b452cd">10</span> comando  <span style="color:#228b22"># Inicia &#34;comando&#34; con una prioridad menor (10)</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    renice
+
+
+</span>
+</strong>
+: Cambia la prioridad de un proceso en ejecución.</p>
+<ul>
+<li><strong>Descripción</strong>: <code>renice</code> permite ajustar la prioridad de un proceso ya en ejecución, aumentando o disminuyendo su prioridad en el uso de CPU. Como <code>nice</code>, los valores pueden variar entre -20 y 19.</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>renice <span style="color:#b452cd">5</span> -p <span style="color:#b452cd">1234</span>  <span style="color:#228b22"># Cambia la prioridad del proceso con PID 1234 a 5</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-d0f79a3cb7e5714b537bec2a280482d0">2.1.7 - Administración de usuarios</h1>
+    
+	
+
+
+<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
+    <div style="background-color:darkgreen; color:white;
+    font-weight:bold; padding:10px; display: flex; align-items: center;">
+        
+        <span style="margin-right: 8px;">
+            <i class="fas  fa-check-circle"></i> 
+        </span>
+        
+        <span >Objetivos</span>
+    </div>
+
+    <h3 style="padding: 5px;font-weight:bold"> Qué veremos aquí</h3>
+
+    <hr style="border-color:seagreen;border-width:3px"/>
+    
+    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
+        <ul>
+        
+        <li>Administración de usuarios</li>
+            
+        <li>Grupos</li>
+            
+        
+        
+        </ul>
+
+    </div>
+</div>
+
+<h1 id="administración-de-usuarios">Administración de Usuarios</h1>
+<ul>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    useradd
+
+
+</span>
+</strong>
+: Crea un nuevo usuario en el sistema.</p>
+<ul>
+<li><strong>Descripción</strong>: <code>useradd</code> se utiliza para crear cuentas de usuario. Puede configurarse con varias opciones, como el directorio de inicio, el grupo, el shell predeterminado, y más.</li>
+<li><strong>Opciones útiles</strong>:
+<ul>
+<li><strong><code>-m</code></strong>: Crea automáticamente un directorio de inicio para el usuario.</li>
+<li><strong><code>-G [grupo]</code></strong>: Añade el usuario a uno o más grupos secundarios.</li>
+<li><strong><code>-s [shell]</code></strong>: Define el shell predeterminado del usuario (por ejemplo, <code>/bin/bash</code>).</li>
+</ul>
+</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo useradd -m -s /bin/bash usuario_nuevo  <span style="color:#228b22"># Crea un usuario con directorio de inicio y shell Bash</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    usermod
+
+
+</span>
+</strong>
+: Modifica la información de una cuenta de usuario existente.</p>
+<ul>
+<li><strong>Descripción</strong>: <code>usermod</code> permite modificar detalles de una cuenta de usuario, como el nombre de usuario, los grupos, el shell, el directorio de inicio, y más.</li>
+<li><strong>Opciones útiles</strong>:
+<ul>
+<li><strong><code>-l [nuevo_nombre]</code></strong>: Cambia el nombre del usuario.</li>
+<li><strong><code>-G [grupo]</code></strong>: Añade el usuario a grupos adicionales.</li>
+<li><strong><code>-s [shell]</code></strong>: Cambia el shell predeterminado.</li>
+<li><strong><code>-d [directorio]</code></strong>: Cambia el directorio de inicio del usuario.</li>
+</ul>
+</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo usermod -l nuevo_usuario usuario_actual  <span style="color:#228b22"># Cambia el nombre de &#34;usuario_actual&#34; a &#34;nuevo_usuario&#34;</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    passwd
+
+
+</span>
+</strong>
+: Cambia o asigna la contraseña de un usuario.</p>
+<ul>
+<li><strong>Descripción</strong>: <code>passwd</code> permite establecer o modificar la contraseña de un usuario. También se puede utilizar para establecer políticas de caducidad de la contraseña.</li>
+<li><strong>Opciones útiles</strong>:
+<ul>
+<li><strong><code>-e</code></strong>: Fuerza el cambio de contraseña en el próximo inicio de sesión.</li>
+<li><strong><code>-l</code></strong>: Bloquea la cuenta de usuario.</li>
+<li><strong><code>-u</code></strong>: Desbloquea la cuenta de usuario.</li>
+</ul>
+</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo passwd usuario_nuevo  <span style="color:#228b22"># Asigna una contraseña a &#34;usuario_nuevo&#34;</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    groupadd
+
+
+</span>
+</strong>
+: Crea un nuevo grupo en el sistema.</p>
+<ul>
+<li><strong>Descripción</strong>: <code>groupadd</code> se utiliza para crear un grupo nuevo en el sistema, al cual pueden asignarse usuarios para administrar permisos y accesos en conjunto.</li>
+<li><strong>Opciones útiles</strong>:
+<ul>
+<li><strong><code>-g [GID]</code></strong>: Especifica un ID de grupo personalizado.</li>
+</ul>
+</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo groupadd desarrolladores  <span style="color:#228b22"># Crea un nuevo grupo llamado &#34;desarrolladores&#34;</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-faddf2bbcf212e2684fca0662a05e766">2.1.8 - Redes</h1>
     
 	
 
@@ -5613,402 +6583,149 @@ Comandos para configuraciones y diagnósticos de red.</li>
     </div>
 </div>
 
-<h2 id="repaso-de-comandos-generales-de-linux-y-redes">Repaso de Comandos Generales de Linux y Redes</h2>
-<h1 id="agrupación-de-comandos-de-linux-por-funcionalidad">Agrupación de Comandos de Linux por Funcionalidad</h1>
-<h3 id="administración-de-archivos-y-directorios">Administración de Archivos y Directorios**</h3>
-<p>Comandos para la manipulación básica de archivos y directorios.</p>
+<h1 id="comandos-de-red">Comandos de Red</h1>
 <ul>
-<li><code>ls</code>, <code>cd</code>, <code>cp</code>, <code>mv</code>, <code>mkdir</code>, <code>rm</code></li>
-</ul>
-<ol start="2">
-<li><strong>Redirección y Manipulación de Flujo</strong><br>
-Operadores y comandos que permiten redirigir o canalizar la entrada y salida.</li>
-</ol>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    ping
+
+
+</span>
+</strong>
+: Verifica la conectividad de red con otro host.</p>
 <ul>
-<li><code>&gt;</code>, <code>&gt;&gt;</code>, <code>&lt;</code>, <code>|</code>, <code>tee</code>, <code>xargs</code></li>
-</ul>
-<ol start="3">
-<li><strong>Comandos de Archivado y Compresión</strong><br>
-Comandos para comprimir y empaquetar archivos.</li>
-</ol>
+<li><strong>Descripción</strong>: <code>ping</code> envía paquetes ICMP a una dirección IP o dominio para comprobar si está accesible. Es útil para diagnosticar problemas de conectividad.</li>
+<li><strong>Opciones útiles</strong>:
 <ul>
-<li><code>tar</code>, <code>gzip</code>, <code>gunzip</code>, <code>zip</code>, <code>unzip</code></li>
+<li><strong><code>-c [número]</code></strong>: Especifica el número de paquetes que se enviarán.</li>
+<li><strong><code>-i [segundos]</code></strong>: Establece el intervalo entre envíos.</li>
 </ul>
-<ol start="4">
-<li><strong>Transferencia de Archivos y Redes</strong><br>
-Comandos para la transferencia de datos de forma segura y eficiente.</li>
-</ol>
+</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ping -c <span style="color:#b452cd">4</span> google.com  <span style="color:#228b22"># Envía 4 paquetes para comprobar la conectividad con google.com</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    ifconfig
+
+
+</span>
+</strong>
+ / 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    ip
+
+
+</span>
+</strong>
+: Muestra o configura interfaces de red.</p>
 <ul>
-<li><code>scp</code>, <code>ftp</code>, <code>wget</code>, <code>curl</code></li>
-</ul>
-<ol start="5">
-<li><strong>Permisos y Propiedades de Archivos</strong><br>
-Administración de permisos y propietarios, importante en sistemas multiusuario.</li>
-</ol>
+<li><strong>Descripción</strong>: <code>ifconfig</code> (deprecated) y <code>ip</code> son comandos para ver y configurar interfaces de red. <code>ip</code> es la versión moderna recomendada para la gestión de conexiones y rutas.</li>
+<li><strong>Instalación</strong>:
 <ul>
-<li><code>chmod</code>, <code>chown</code>, <code>chgrp</code></li>
+<li><code>ifconfig</code> requiere el paquete <strong><code>net-tools</code></strong> en distribuciones recientes de Ubuntu.
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install net-tools
+</span></span></code></pre></div></li>
 </ul>
-<ol start="6">
-<li><strong>Gestión de Procesos</strong><br>
-Comandos para monitorear y gestionar procesos.</li>
-</ol>
+</li>
+<li><strong>Opciones útiles para <code>ip</code></strong>:
 <ul>
-<li><code>ps</code>, <code>top</code>, <code>htop</code>, <code>kill</code>, <code>nice</code>, <code>renice</code></li>
+<li><strong><code>addr</code></strong>: Muestra la configuración de direcciones IP en cada interfaz.</li>
+<li><strong><code>link</code></strong>: Muestra información sobre las interfaces físicas.</li>
 </ul>
-<ol start="7">
-<li><strong>Administración de Usuarios</strong><br>
-Comandos para gestionar usuarios y grupos en el sistema.</li>
-</ol>
+</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ip addr show  <span style="color:#228b22"># Muestra la configuración IP de todas las interfaces</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    netstat
+
+
+</span>
+</strong>
+: Muestra conexiones de red, tablas de enrutamiento y estadísticas.</p>
 <ul>
-<li><code>useradd</code>, <code>usermod</code>, <code>passwd</code>, <code>groupadd</code></li>
-</ul>
-<ol start="8">
-<li><strong>Comandos de Red</strong><br>
-Comandos para configuraciones y diagnósticos de red.</li>
-</ol>
+<li><strong>Descripción</strong>: <code>netstat</code> es útil para ver conexiones activas, puertos abiertos, estadísticas de red y la tabla de enrutamiento. Es comúnmente utilizado en diagnóstico de redes y seguridad.</li>
+<li><strong>Instalación</strong>: <code>netstat</code> también requiere <strong><code>net-tools</code></strong> en distribuciones modernas de Ubuntu.</li>
+<li><strong>Opciones útiles</strong>:
 <ul>
-<li><code>ping</code>, <code>ifconfig</code>/<code>ip</code>, <code>netstat</code>, <code>nslookup</code>, <code>traceroute</code></li>
+<li><strong><code>-tuln</code></strong>: Muestra puertos TCP y UDP que están escuchando en el sistema.</li>
+<li><strong><code>-r</code></strong>: Muestra la tabla de enrutamiento.</li>
 </ul>
-<p>Para más detalles y ejemplos, puedes revisar la guía completa en <a href="https://www.dreamhost.com">DreamHost</a>.</p>
-<h2 id="comandos-generales">Comandos Generales</h2>
-<h3 id="1-ls">1. <code>ls</code></h3>
-<p>Lista los archivos y directorios en el directorio actual.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ls -la</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
+</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>netstat -tuln  <span style="color:#228b22"># Lista puertos TCP/UDP en escucha</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    nslookup
+
+
+</span>
+</strong>
+: Consulta información de DNS sobre un dominio o IP.</p>
 <ul>
-<li><code>-l</code>: lista en formato largo.</li>
-<li><code>-a</code>: incluye archivos ocultos.</li>
+<li><strong>Descripción</strong>: <code>nslookup</code> permite realizar consultas DNS, obteniendo la IP asociada a un dominio o el dominio asociado a una IP. Es útil para resolver problemas de nombres de dominio.</li>
+<li><strong>Instalación</strong>: <code>nslookup</code> forma parte del paquete <strong><code>dnsutils</code></strong>.
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install dnsutils
+</span></span></code></pre></div></li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nslookup google.com  <span style="color:#228b22"># Obtiene la dirección IP de google.com</span>
+</span></span></code></pre></div></li>
 </ul>
-<h3 id="2-cd">2. <code>cd</code></h3>
-<p>Cambia de directorio.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>cd /ruta/del/directorio</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="3-cp">3. <code>cp</code></h3>
-<p>Copia archivos o directorios.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span> cp archivo_origen archivo_destino</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
+</li>
+<li>
+<p>
+<strong>
+<span class="font-weight-bold text-primary">
+
+    traceroute
+
+
+</span>
+</strong>
+: Rastrea la ruta que toma un paquete hasta su destino.</p>
 <ul>
-<li><code>-r</code>: para copiar directorios de forma recursiva.</li>
-</ul>
-<h3 id="4-mv">4. <code>mv</code></h3>
-<p>Mueve o renombra archivos o directorios.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>mv archivo_origen archivo_destino</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="5-rm">5. <code>rm</code></h3>
-<p>Elimina archivos o directorios.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>rm archivo</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
+<li><strong>Descripción</strong>: <code>traceroute</code> muestra cada salto intermedio (router o dispositivo de red) que un paquete atraviesa para llegar a su destino. Es útil para diagnosticar problemas de latencia o rutas en la red.</li>
+<li><strong>Instalación</strong>: <code>traceroute</code> requiere el paquete <strong><code>traceroute</code></strong>.
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span><span style="display:flex;"><span>sudo apt install traceroute
+</span></span></code></pre></div></li>
+<li><strong>Opciones útiles</strong>:
 <ul>
-<li><code>-r</code>: elimina directorios de forma recursiva.</li>
-<li><code>-f</code>: fuerza la eliminación sin confirmación.</li>
+<li><strong><code>-n</code></strong>: Muestra las direcciones IP sin intentar resolverlas en nombres de dominio.</li>
+<li><strong><code>-m [saltos]</code></strong>: Establece el número máximo de saltos.</li>
 </ul>
-<h3 id="6-cat">6. <code>cat</code></h3>
-<p>Muestra el contenido de un archivo.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>cat archivo</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="7-grep">7. <code>grep</code></h3>
-<p>Busca texto dentro de archivos.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>grep <span style="color:#cd5555">&#39;texto&#39;</span> archivo</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="8-chmod">8. <code>chmod</code></h3>
-<p>Cambia permisos de archivos o directorios.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>chmod <span style="color:#b452cd">755</span> archivo</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="9-chown">9. <code>chown</code></h3>
-<p>Cambia el propietario de archivos o directorios.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>chown usuario</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="10-find">10. <code>find</code></h3>
-<p>Busca archivos en el sistema.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>find /ruta -name <span style="color:#cd5555">&#39;archivo*&#39;</span></span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h2 id="comandos-de-redes-y-comunicaciones">Comandos de Redes y Comunicaciones</h2>
-<h3 id="1-ifconfig">1. <code>ifconfig</code></h3>
-<p>Muestra o configura las interfaces de red.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ifconfig</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="2-ip">2. <code>ip</code></h3>
-<p>Muestra o manipula rutas, dispositivos y políticas de red.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ip addr show</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<ul>
-<li><code>ip route</code>: muestra la tabla de rutas.</li>
-<li><code>ip link</code>: muestra o configura dispositivos de red.</li>
+</li>
+<li><strong>Ejemplo de uso</strong>:
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>traceroute google.com  <span style="color:#228b22"># Muestra la ruta hasta google.com</span>
+</span></span></code></pre></div></li>
 </ul>
-<h3 id="3-ping">3. <code>ping</code></h3>
-<p>Envía paquetes ICMP para verificar la conectividad con una IP o dominio.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ping google.com</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="4-netstat">4. <code>netstat</code></h3>
-<p>Muestra conexiones de red, tablas de enrutamiento y estadísticas.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>netstat -tuln</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<ul>
-<li><code>-t</code>: muestra conexiones TCP.</li>
-<li><code>-u</code>: muestra conexiones UDP.</li>
-<li><code>-l</code>: muestra servicios en escucha.</li>
+</li>
 </ul>
-<h3 id="5-ss">5. <code>ss</code></h3>
-<p>Muestra información sobre sockets de red.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ss -tuln</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="6-traceroute">6. <code>traceroute</code></h3>
-<p>Muestra la ruta que siguen los paquetes hasta un host.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>traceroute google.com</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="7-nslookup">7. <code>nslookup</code></h3>
-<p>Interroga a servidores DNS para obtener información de dominios o IPs.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>nslookup google.com</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="8-dig">8. <code>dig</code></h3>
-<p>Realiza consultas DNS más detalladas.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>dig google.com</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="9-ftp--sftp">9. <code>ftp</code> / <code>sftp</code></h3>
-<p>Transfiere archivos entre sistemas mediante los protocolos FTP/SFTP.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ftp usuario@servidor sftp usuario@servidor</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="10-scp">10. <code>scp</code></h3>
-<p>Copia archivos entre sistemas de forma segura.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>scp archivo usuario@servidor:/ruta/destino</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="11-curl">11. <code>curl</code></h3>
-<p>Realiza peticiones HTTP desde la terminal.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>curl https://ejemplo.com</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="12-wget">12. <code>wget</code></h3>
-<p>Descarga archivos de una URL.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>wget https://ejemplo.com/archivo.tar.gz</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="13-nmap">13. <code>nmap</code></h3>
-<p>Escanea redes y puertos.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>nmap -sP <span style="color:#b452cd">192.168</span>.<span style="color:#b452cd">1.0</span>/<span style="color:#b452cd">24</span></span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="14-ssh">14. <code>ssh</code></h3>
-<p>Conexión remota segura a otro sistema.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ssh usuario@servidor</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="15-iptables">15. <code>iptables</code></h3>
-<p>Configura las reglas del cortafuegos en el sistema.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>iptables -L</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="comandos-útiles-para-configuración-de-redes">Comandos Útiles para Configuración de Redes</h2>
-<h3 id="1-hostname">1. <code>hostname</code></h3>
-<p>Muestra o cambia el nombre del host del sistema.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>****</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="2-systemctl">2. <code>systemctl</code></h3>
-<p>Gestiona servicios en el sistema.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>systemctl restart servicio</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<ul>
-<li><code>start</code>: inicia un servicio.</li>
-<li><code>stop</code>: detiene un servicio.</li>
-<li><code>status</code>: muestra el estado de un servicio.</li>
-</ul>
-<h3 id="3-nmcli">3. <code>nmcli</code></h3>
-<p>Configura y gestiona la red mediante NetworkManager desde la terminal.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>nmcli dev status</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h2 id="comandos-para-diagnóstico-de-red">Comandos para Diagnóstico de Red</h2>
-<h3 id="1-mtr">1. <code>mtr</code></h3>
-<p>Combina <code>ping</code> y <code>traceroute</code> para diagnosticar la red.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>mtr google.com</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
-<h3 id="2-tcpdump">2. <code>tcpdump</code></h3>
-<p>Captura y muestra tráfico de red.</p>
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>tcpdump -i eth0</span></span></code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="3-ethtool">3. <code>ethtool</code></h3>
-<p>Muestra o cambia los ajustes de las interfaces de red.
-<div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>ethtool dev</span></span></code></pre></td></tr></table>
-</div>
-</div></p>
 
 </div>
 

@@ -21,7 +21,7 @@
 
   <meta itemprop="name" content="Linux">
   <meta itemprop="description" content="🐧 Objetivos Repaso y práctica con comandos de linux Creando una virtualización con vagrant Comando de linux Comandos básicos Comandos de ficheros Comandos de redes Comandos de seguridad Instalación de vagrant Qué es vagrant Vagrant es una herramienta de código abierto diseñada para la creación y gestión de entornos virtualizados de forma eficiente.">
-  <meta itemprop="wordCount" content="770">
+  <meta itemprop="wordCount" content="1525">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Linux">
   <meta name="twitter:description" content="🐧 Objetivos Repaso y práctica con comandos de linux Creando una virtualización con vagrant Comando de linux Comandos básicos Comandos de ficheros Comandos de redes Comandos de seguridad Instalación de vagrant Qué es vagrant Vagrant es una herramienta de código abierto diseñada para la creación y gestión de entornos virtualizados de forma eficiente.">
@@ -246,6 +246,20 @@
       </ul>
     </li>
   </ul>
+
+  <ul>
+    <li><a href="#configuración-de-red-nat-por-defecto">Configuración de Red NAT por Defecto</a></li>
+    <li><a href="#opciones-de-red-en-vagrant">Opciones de Red en Vagrant</a>
+      <ul>
+        <li><a href="#1-red-privada-private-network">1. Red Privada (Private Network)</a></li>
+        <li><a href="#2-red-en-modo-puente-bridged-network">2. Red en Modo Puente (Bridged Network)</a></li>
+        <li><a href="#3-red-solo-para-host-host-only-network">3. Red Solo para Host (Host-Only Network)</a></li>
+        <li><a href="#combinaciones-comunes-de-redes-en-vagrant">Combinaciones Comunes de Redes en Vagrant</a></li>
+        <li><a href="#ejemplo-completo-del-vagrantfile-con-múltiples-redes">Ejemplo Completo del <code>Vagrantfile</code> con Múltiples Redes</a></li>
+        <li><a href="#verificación-de-conectividad">Verificación de Conectividad</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
       </div>
     
@@ -376,7 +390,7 @@
 
 </span>
 </strong>
- la instalación de software, lo que permite que todos los miembros del equipo de desarrollo trabajen en un entorno idéntico, evitando problemas de &ldquo;funciona en mi máquina&rdquo;.</li>
+ la instalación de software, lo que permite que todos los miembros del equipo de desarrollo trabajen en un entorno idéntico, evitando problemas de &ldquo;funciona en mi máquina&rdquo;, ideal para que independientemente de las máquinas que tenemos, todos podamos funcionar de la misma manera.</li>
 </ul>
 
 
@@ -412,10 +426,10 @@
 .</p>
 </li>
 <li>
-<p>Lo primero será lo descargamos y posteriormente procedemos a la instalación</p>
+<p>Debemos descargar el programa de instalación para proceder posteriormente a la misma.</p>
 </li>
 <li>
-<p>Seleccionaremos en función del sistema operativo.</p>
+<p>Una vez en la web de descargas, seleccionaremos en función del sistema operativo.</p>
 </li>
 <li>
 <p>
@@ -461,7 +475,7 @@
 
 </span>
 </strong>
-, que es el proveedor de virtualización más común que Vagrant utiliza.</p>
+, que es el proveedor de virtualización más común que Vagrant utiliza, y el que vamos a utilizar nosotros.</p>
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -470,11 +484,11 @@
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo apt install virtualbox -y</span></span></code></pre></td></tr></table>
 </div>
 </div>
-<p>Ahora vamos 
+<p>A continuación  
 <strong>
 <span class="font-weight-bold text-primary">
 
-    a descargar e instalar Vagrant
+    descargamos  e instalamos Vagrant
 
 
 </span>
@@ -489,7 +503,16 @@
 
 </span>
 </strong>
- para proceder a la instalación</p>
+ para proceder a la instalación, o bien añadimos el respositorio de 
+<strong>
+<span class="font-weight-bold text-primary">
+
+    HashiCorp
+
+
+</span>
+</strong>
+, donde se encuentra este paquete de instalación.</p>
 
 <strong>
 <span class="font-weight-bold text-primary">
@@ -510,7 +533,7 @@
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -</span></span></code></pre></td></tr></table>
 </div>
 </div></li>
-<li>Añadir el repositorio de HashiCorp a tu lista de fuentes
+<li>Añadir el repositorio de HashiCorp a la lista de fuentes
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -518,9 +541,8 @@
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-php" data-lang="php"><span style="display:flex; background-color:#d6d6c6"><span>sudo apt-add-repository <span style="color:#cd5555">&#34;deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main&#34;</span></span></span></code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-<p>Con el repositorio añadido, instalamos Vagrant :
+</div>
+Con el repositorio añadido, instalamos Vagrant:
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -531,8 +553,9 @@
 </span></span><span style="display:flex;"><span>sudo apt install vagrant 
 </span></span></code></pre></td></tr></table>
 </div>
-</div></p>
-<p>Para asegurarte de que Vagrant se ha instalado correctamente, miramos su versión
+</div></li>
+</ul>
+<p>Ahora, una vez instalado, si todo ha ido bien podemos mirar su versión
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -542,7 +565,7 @@
 </div>
 </div></p>
 <h3 id="configuración-y-uso-de-vagrant">Configuración y uso de vagrant</h3>
-<p>Una vez instalado, da lo mismo que tengamos windows o linux, funcionaremos de la misma forma.</p>
+<p>Independientemente que lo hayamnos instalado bajo  windows o linux, funcionaremos de la misma forma.</p>
 <ul>
 <li>Abrimos un terminal (en windows mucho mejor un power shell)</li>
 <li>Crea un directorio para nuestro proyecto de vagrant (es una forma de hablar, vamos a crear una virtualización de una máquina, gestinándolo con vagrant)</li>
@@ -557,10 +580,14 @@
 </span></span><span style="display:flex;"><span>cd vagrant-proyecto</span></span></code></pre></td></tr></table>
 </div>
 </div>
-<p>*Inicializa un nuevo entorno de Vagrant con una caja (box) básica:</p>
 <ul>
-<li>Podemos establecer el box o caja o virtualizacion que queremos
-<a href="https://app.vagrantup.com/boxes/search">https://app.vagrantup.com/boxes/search</a></li>
+<li>
+<p>Inicializa un nuevo entorno de Vagrant con una caja (box) básica:</p>
+</li>
+<li>
+<p>Podemos establecer el box o caja o virtualizacion que queremos
+<a href="https://app.vagrantup.com/boxes/search">https://app.vagrantup.com/boxes/search</a></p>
+</li>
 </ul>
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -651,7 +678,7 @@
 </div>
 </div>
 <h4 id="personalización-del-vagrantfile">Personalización del Vagrantfile</h4>
-<p>En el archivo Vagrantfile, puedes personalizar la configuración de tu entorno.
+<p>En el archivo Vagrantfile, se  personaliza la configuración del entorno que vamos a crear.
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -677,7 +704,7 @@
 <div class="alert alert-success" role="alert">
 <h4 class="alert-heading">Proveedor</h4>
 
-    Aunque en este ejemplo usamos VirtualBox como proveedor, también puedes usar otros como VMware o Hyper-V
+    Aunque en este ejemplo usamos VirtualBox como proveedor, también se pueden usar otros, como VMware o Hyper-V
 
 </div>
 
@@ -693,20 +720,22 @@
 
 </span>
 </strong>
- que cumple con los requisitos que has mencionado:</p>
-
+ con los siguientes requisitos:</p>
+<ul>
+<li>que tenga instalados los siguientes paquetes (para trabajar con php y apache):
+<ul>
+<li>apache2, php y libapache2-mod-php</li>
+<li>Compartkir la carpeta local ./app (o .\app), es decir una carpeta en el directorio actual llamada 
 <strong>
 <span class="font-weight-bold text-primary">
 
-    Instala Apache y PHP.
+    app
 
 
 </span>
 </strong>
-
-<ul>
-<li>Comparte la carpeta local ./app con /var/www/html en la máquina virtual.</li>
-<li>Mapea el puerto 8888 de la máquina anfitriona con el puerto 80 de la máquina virtual.
+ con /var/www/html en la máquina virtual.</li>
+<li>Mapea el puerto 8888 de la máquina anfitriona con el puerto 80 de la máquina virtual, para poder acceder al apache de nuestra virtualización
 <div class="highlight"><div style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="background-color:#d6d6c6"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -758,7 +787,81 @@
 </div>
 </div></li>
 </ul>
-
+</li>
+</ul>
+<p>markdown
+Copiar código</p>
+<h1 id="configuración-de-red-en-vagrant">Configuración de Red en Vagrant</h1>
+<p>Vagrant ofrece varias opciones de configuración de red para gestionar la conectividad de las máquinas virtuales (VMs) y su acceso tanto al host como a redes externas.</p>
+<h2 id="configuración-de-red-nat-por-defecto">Configuración de Red NAT por Defecto</h2>
+<p>La configuración de red de Vagrant, por defecto, utiliza una red <strong>NAT (Network Address Translation)</strong>. En este modo:</p>
+<ul>
+<li>La VM puede <strong>acceder a Internet</strong> a través de la interfaz de red del host.</li>
+<li><strong>No permite la comunicación directa</strong> con la red local del host (por ejemplo, la dirección <code>192.168.1.144</code> del host en este caso).</li>
+</ul>
+<p>Si necesitas que la VM se comunique directamente con el host o con otros dispositivos en la red local, puedes añadir configuraciones de red adicionales en el archivo <code>Vagrantfile</code>.</p>
+<h2 id="opciones-de-red-en-vagrant">Opciones de Red en Vagrant</h2>
+<h3 id="1-red-privada-private-network">1. Red Privada (Private Network)</h3>
+<p>La red privada permite que la VM tenga una <strong>dirección IP fija</strong>, accesible solo desde el host y otras VMs en el mismo <code>Vagrantfile</code>. Esto facilita la comunicación directa entre el host y la VM sin exponer la VM a la red local completa.</p>
+<p>En el archivo <code>Vagrantfile</code>, puedes añadir una red privada así:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>config.vm.network <span style="color:#cd5555">&#34;private_network&#34;</span>, <span style="color:#cd5555">ip</span>: <span style="color:#cd5555">&#34;192.168.56.10&#34;</span>
+</span></span></code></pre></div><h4 id="detalles">Detalles:</h4>
+<ul>
+<li><strong>Ventaja</strong>: Permite una conexión directa entre host y VM.</li>
+<li><strong>Desventaja</strong>: No permite salida directa a Internet sin una interfaz NAT adicional.</li>
+</ul>
+<p>Después de añadir esta configuración:</p>
+<ul>
+<li>Usa la IP <code>192.168.56.10</code> para comunicarte con la VM desde el host.</li>
+<li>La VM también podrá hacer ping a la IP local del host (como <code>192.168.1.144</code>), siempre que ambos dispositivos estén en el mismo rango de red.</li>
+</ul>
+<h3 id="2-red-en-modo-puente-bridged-network">2. Red en Modo Puente (Bridged Network)</h3>
+<p>En el modo puente, la VM obtiene una dirección IP de la misma red que el host, como si estuviera conectada directamente a la red física (por ejemplo, al router o switch).</p>
+<p>En el <code>Vagrantfile</code>, añade:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>config.vm.network <span style="color:#cd5555">&#34;public_network&#34;</span>
+</span></span></code></pre></div><h4 id="detalles-1">Detalles:</h4>
+<ul>
+<li><strong>Ventaja</strong>: La VM puede comunicarse con otros dispositivos en la red local y tener acceso a Internet (si la red lo permite).</li>
+<li><strong>Desventaja</strong>: Expone la VM a toda la red local, lo que puede representar riesgos de seguridad si no se configura adecuadamente.</li>
+</ul>
+<p>Ahora, la VM debería poder hacer ping a la IP del host (<code>192.168.1.144</code>) y viceversa.</p>
+<h3 id="3-red-solo-para-host-host-only-network">3. Red Solo para Host (Host-Only Network)</h3>
+<p>En el modo solo para host, la VM está conectada exclusivamente al host sin salida a Internet ni conexión con otras redes. Esto es ideal para entornos de desarrollo donde la VM no necesita conectividad externa.</p>
+<p>Para configurar una red solo para host:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span>config.vm.network <span style="color:#cd5555">&#34;private_network&#34;</span>, <span style="color:#cd5555">type</span>: <span style="color:#cd5555">&#34;dhcp&#34;</span>
+</span></span></code></pre></div><h4 id="detalles-2">Detalles:</h4>
+<ul>
+<li><strong>Ventaja</strong>: Mantiene la VM completamente aislada de la red externa, mejorando la seguridad.</li>
+<li><strong>Desventaja</strong>: La VM no tiene salida a Internet y solo puede comunicarse con el host.</li>
+</ul>
+<h3 id="combinaciones-comunes-de-redes-en-vagrant">Combinaciones Comunes de Redes en Vagrant</h3>
+<p>Vagrant permite combinar la red NAT con otras redes (privada o en modo puente) para obtener beneficios de ambas configuraciones. Algunas combinaciones prácticas son:</p>
+<ul>
+<li><strong>NAT + Red Privada</strong>: La interfaz NAT proporciona salida a Internet, mientras que la red privada permite la comunicación directa entre host y VM.</li>
+<li><strong>NAT + Red en Modo Puente</strong>: La interfaz NAT permite el acceso a Internet, y la red en modo puente proporciona acceso directo a la red local.</li>
+</ul>
+<p>Estas combinaciones permiten que la VM esté accesible tanto desde el host como desde la red local, sin perder la conexión a Internet.</p>
+<h3 id="ejemplo-completo-del-vagrantfile-con-múltiples-redes">Ejemplo Completo del <code>Vagrantfile</code> con Múltiples Redes</h3>
+<p>Aquí tienes un ejemplo de un <code>Vagrantfile</code> que configura una red NAT y una red en modo puente:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ruby" data-lang="ruby"><span style="display:flex;"><span><span style="color:#00688b">Vagrant</span>.configure(<span style="color:#cd5555">&#34;2&#34;</span>) <span style="color:#8b008b;font-weight:bold">do</span> |config|
+</span></span><span style="display:flex;"><span>  config.vm.box = <span style="color:#cd5555">&#34;ubuntu/bionic64&#34;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#228b22"># Mantiene la interfaz NAT por defecto para el acceso a Internet.</span>
+</span></span><span style="display:flex;"><span>  config.vm.network <span style="color:#cd5555">&#34;private_network&#34;</span>, <span style="color:#cd5555">ip</span>: <span style="color:#cd5555">&#34;192.168.56.10&#34;</span>  <span style="color:#228b22"># Red privada para conexión host-VM</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#228b22"># O bien:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#228b22"># config.vm.network &#34;public_network&#34;  # Modo puente para obtener IP en red local</span>
+</span></span><span style="display:flex;"><span><span style="color:#8b008b;font-weight:bold">end</span>
+</span></span></code></pre></div><h3 id="verificación-de-conectividad">Verificación de Conectividad</h3>
+<p>Para comprobar el acceso a Internet desde la VM, ejecuta:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ping google.com
+</span></span></code></pre></div><p>Si funciona, entonces la interfaz NAT sigue operativa para la salida a Internet.</p>
+<p>Para aplicar cambios de red en el archivo <code>Vagrantfile</code>, reinicia la VM con:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vagrant reload
+</span></span></code></pre></div><p>Una vez reiniciada, puedes verificar la IP asignada a cada interfaz en la VM usando:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ifconfig
+</span></span><span style="display:flex;"><span><span style="color:#228b22"># o bien</span>
+</span></span><span style="display:flex;"><span>ip addr
+</span></span></code></pre></div>
   <div class="section-index">
     
     
