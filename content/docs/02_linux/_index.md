@@ -174,7 +174,7 @@ Vamos a especificar un {{< color >}} Vagrantfile {{< /color >}} con los siguient
 {{< highlight php "linenos=table, hl_lines=1" >}}
   Vagrant.configure("2") do |config|
 
-* # Usar la imagen base de Ubuntu
+ # Usar la imagen base de Ubuntu
   config.vm.box = "bento/ubuntu-22.04"
 
   # Mapeo de puertos: 8888 en la máquina local al 80 en la máquina virtual
